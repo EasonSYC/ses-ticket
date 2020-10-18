@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ea8d929-95cb-424e-b793-2c489bc96e47" name="Default Changelist" comment="add js.">
-      <change afterPath="$PROJECT_DIR$/getd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5ea8d929-95cb-424e-b793-2c489bc96e47" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603028431947</updated>
-      <workItem from="1603028433059" duration="3291000" />
+      <workItem from="1603028433059" duration="3393000" />
     </task>
     <task id="LOCAL-00001" summary="add all basic files.">
       <created>1603029048760</created>
@@ -89,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603031754803</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add js.">
+      <created>1603031801010</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603031801010</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,10 +112,10 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837@0.23.1440.837" timestamp="1603028933024" />
-    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2" timestamp="1603031790754">
+    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2" timestamp="1603031800887">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1603031790754" />
+    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1603031800887" />
     <state x="144" y="96" key="DiffContextDialog" timestamp="1603031456959">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
@@ -180,10 +184,10 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state width="1379" height="254" key="GridCell.Tab.3.right/0.23.1440.837@0.23.1440.837" timestamp="1603030158384" />
-    <state x="320" y="181" key="Vcs.Push.Dialog.v2" timestamp="1603029059337">
+    <state x="320" y="181" key="Vcs.Push.Dialog.v2" timestamp="1603031805831">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="320" y="181" key="Vcs.Push.Dialog.v2/0.23.1440.837@0.23.1440.837" timestamp="1603029059337" />
+    <state x="320" y="181" key="Vcs.Push.Dialog.v2/0.23.1440.837@0.23.1440.837" timestamp="1603031805831" />
     <state x="542" y="342" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603028601817">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
