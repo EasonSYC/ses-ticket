@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>餐票生成 - 首页</title>
-    <link rel="shortcut icon" href="res/favicon-32.png">
+    <head>
+        <meta charset="UTF-8">
+        <title>餐票生成 - 首页</title>
+        <link rel="shortcut icon" href="res/favicon-32.png">
 
-    <!--TODO: Auto-Date-->
-    <!--TODO: getd.js <script src="src/getd.js"></script>-->
-<!--    <script>-->
-<!--        let m = getdate(0);-->
-<!--        let d = getdate(1);-->
-<!--        let InpM = document.getElementById(month);-->
-<!--        let InpD = document.getElementById(date);-->
-<!--        InpM.value = m;-->
-<!--        InpD.value = d;-->
-<!--    </script>-->
+        <!--TODO: Auto-Date-->
+        <!--TODO: getd.js <script src="src/getd.js"></script>-->
+    <!--    <script>-->
+    <!--        let m = getdate(0);-->
+    <!--        let d = getdate(1);-->
+    <!--        let InpM = document.getElementById(month);-->
+    <!--        let InpD = document.getElementById(date);-->
+    <!--        InpM.value = m;-->
+    <!--        InpD.value = d;-->
+    <!--    </script>-->
 
-</head>
-<body>
-    <h1 style="text-align: center">餐票生成系统</h1>
-    <br>
-    <div style="text-align: center">
-        <div style="margin-top: auto">
-            <label>姓名：</label>
-            <label>
-                <input id="name" type="text" value="菜菜" style="width: 100px">
-            </label>
+    </head>
+    <body>
+        <h1 style="text-align: center">餐票生成系统</h1>
+        <br>
+        <div style="text-align: center">
+            <div style="margin-top: auto">
+                <label>姓名：</label>
+                <label>
+                    <input id="name" type="text" value="菜菜" style="width: 100px">
+                </label>
+            </div>
+            <div style="margin-top: auto">
+                <label>餐类：</label>
+                <label>
+                    <select id="typ" style="width: auto">
+                        <option value="1">1区 自助餐</option>
+                        <option value="2">2区 套餐A</option>
+                        <option value="3">3区 套餐A</option>
+                        <option value="4">4区 套餐A</option>
+                        <option value="5">5区 套餐B</option>
+                        <option value="6">6区 盖浇饭</option>
+                        <option value="7">7区 套餐C</option>
+                        <option value="8">8区 面档</option>
+                        <option value="9">9区 套餐B</option>
+                    </select>
+                </label>
+            </div>
+            <div style="margin-top:auto">
+                <label>日期：</label>
+                <label>
+                    <input id="month" type="text" value="1" style="width: 30px">
+                </label>
+                <label>月</label>
+                <label>
+                    <input id="day" type="text" value="1" style="width: 30px">
+                </label>
+                <label>日</label>
+            </div>
+            <div style="margin-top:auto">
+                <button id="gen">生成</button>
+            </div>
+            <p>
+                <label>
+                    <input id="agree" type="checkbox" style="width: auto">
+                </label>
+                我已阅读并同意
+                <a href="policy.html">用户协议</a>
+                。
+            </p>
         </div>
-        <div style="margin-top: auto">
-            <label>餐类：</label>
-            <label>
-                <select id="typ" style="width: auto">
-                    <option value="1">1区 自助餐</option>
-                    <option value="2">2区 套餐A</option>
-                    <option value="3">3区 套餐A</option>
-                    <option value="4">4区 套餐A</option>
-                    <option value="5">5区 套餐B</option>
-                    <option value="6">6区 盖浇饭</option>
-                    <option value="7">7区 套餐C</option>
-                    <option value="8">8区 面档</option>
-                    <option value="9">9区 套餐B</option>
-                </select>
-            </label>
+        <br>
+        <div style="text-align: center">
+            <a href="help.html">帮助</a>
         </div>
-        <div style="margin-top:auto">
-            <label>日期：</label>
-            <label>
-                <input id="month" type="text" value="1" style="width: 30px">
-            </label>
-            <label>月</label>
-            <label>
-                <input id="day" type="text" value="1" style="width: 30px">
-            </label>
-            <label>日</label>
-        </div>
-        <div style="margin-top:auto">
-            <button id="gen">生成</button>
-        </div>
-        <p>
-            <label>
-                <input id="agree" type="checkbox" style="width: auto">
-            </label>
-            我已阅读并同意
-            <a href="policy.html">用户协议</a>
-            。
-        </p>
-    </div>
-    <br>
-    <div style="text-align: center">
-        <a href="help.html">帮助</a>
-    </div>
-    <script src="src/gene.js"></script>
+        <script src="src/gene.js"></script>
     </body>
 </html>
