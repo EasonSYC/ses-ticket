@@ -20,8 +20,8 @@ if ((mon < tom) || ((mon === tom) && (day < tot))){
 } else {
     dynum = new Date(toy + "/" + mon + "/" + day).getDay()
 }
-var food = foodArray[typ]; // Element 1
-var name = decodeURI(arr[0]); // Element 2
-var num = numArray[typ]; // Element 3
-var loc = locArray[typ]; // Element 4
-var wkd = mon + "/" + day + " 周" + weekArray[dynum] // Element 5
+var food = foodArray[typ];
+var name = decodeURI(arr[0]);
+var num = numArray[typ];
+var loc = locArray[typ];
+var wkd = mon + "/" + day + " 周" + weekArray[dynum];
