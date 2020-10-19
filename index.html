@@ -6,6 +6,7 @@
         <link rel="shortcut icon" href="res/favicon-32.png">
     </head>
     <body>
+        <script src="src/getd.js"></script>
         <h1 style="text-align: center">餐票生成系统</h1>
         <br>
         <div style="text-align: center">
@@ -34,14 +35,20 @@
             <div style="margin-top:auto">
                 <label>日期：</label>
                 <label>
-                    <input id="month" type="text" value="1" style="width: 30px">
+                    <input id="month" type="text" value="" style="width: 30px">
                 </label>
                 <label>月</label>
                 <label>
-                    <input id="day" type="text" value="1" style="width: 30px">
+                    <input id="day" type="text" value="" style="width: 30px">
                 </label>
                 <label>日</label>
             </div>
+            <script>
+                let InpM = document.getElementById("month");
+                let InpD = document.getElementById("day");
+                InpM.value = tomonth;
+                InpD.value = todate;
+            </script>
             <div style="margin-top:auto">
                 <button id="gen">生成</button>
             </div>
@@ -58,8 +65,6 @@
         <div style="text-align: center">
             <a href="help.html">帮助</a>
         </div>
-        <!-- <script src="src/getd.js"></script> -->
-        <!--TODO: Auto-Date-->
         <script src="src/gene.js"></script>
     </body>
 </html>
