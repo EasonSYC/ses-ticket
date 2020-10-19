@@ -9,7 +9,7 @@ gen.onclick = function() {
     if(agr.checked === false) {
         alert("请先勾选复选框！");
         location.reload(true);
-    } else if (/*!isValid(mon, day)*/mon < 1 || mon > 12 || day < 1 || day > 31) {
+    } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
         alert("请输入正确信息！");
         location.reload(true);
     } else {
@@ -19,4 +19,3 @@ gen.onclick = function() {
         window.open("print.html?"+nam+"&"+api, "_blank");
     }
 }
-// TODO: isValid
