@@ -14,4 +14,4 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 [Android](https://gitee.com/jiubugaosuni/ticket-gen-apk)
 
-[Website](https://jiubugaosuni.gitee.io/sesticket-gen)
+[Website Gitee](https://jiubugaosuni.gitee.io/sesticket-gen)
