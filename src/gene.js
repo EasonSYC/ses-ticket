@@ -14,7 +14,7 @@ gen.onclick = function() {
         location.reload(true);
     } else {
         let tim = mon * 32 + day;
-        let cs = typ * 415 + tim;
+        let cs = typ * 416 + tim;
         let api = cs.toString(16);
         window.open("print.html?"+nam+"&"+api, "_blank");
     }
