@@ -6,6 +6,7 @@
         <link rel="shortcut icon" href="res/favicon-32.png">
         <link rel="stylesheet" href="layout/common.min.css">
         <link rel="stylesheet" href="layout/all.min.css">
+        <script src="src/qrcode.js"></script>
     </head>
     <body>
         <script src="src/show.js"></script>
@@ -69,8 +70,19 @@
                                 <div class="order-name">
                                     <script>document.write(food);</script>
                                 </div>
-                                <img src="data:image/png;base64,一堆乱码"
-                                     class="img-qrcode border" alt=""> <!-- TODO: QR -->
+
+                                <div class="img-qrcode" id="qrc"></div>
+
+                                <script>
+                                    var qrcode = new QRCode(document.getElementById("qrc"), {
+                                        text: url,
+                                        colorDark : "#000000",
+                                        colorLight : "#ffffff",
+                                        correctLevel : QRCode.CorrectLevel.M
+                                    });
+                                </script>
+                                <!-- TODO: QRCODE -->
+
                                 <div class="user-name text-center">
                                     <span>
                                         <script>document.write(name);</script>
