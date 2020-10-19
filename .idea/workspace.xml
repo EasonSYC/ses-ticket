@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ea8d929-95cb-424e-b793-2c489bc96e47" name="Default Changelist" comment="change index.html">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon-32.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/favicon-32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/getd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/help.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/policy.html" afterDir="false" />
+    <list default="true" id="5ea8d929-95cb-424e-b793-2c489bc96e47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +39,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -78,7 +72,7 @@
       <updated>1603028431947</updated>
       <workItem from="1603028433059" duration="5146000" />
       <workItem from="1603075190656" duration="709000" />
-      <workItem from="1603075914948" duration="267000" />
+      <workItem from="1603075914948" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="add all basic files.">
       <created>1603029048760</created>
@@ -157,7 +151,35 @@
       <option name="project" value="LOCAL" />
       <updated>1603032440817</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="change workspace.xml">
+      <created>1603076347831</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603076347831</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change layout html">
+      <created>1603076362546</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1603076362546</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change javascript">
+      <created>1603076377018</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603076377018</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change icons">
+      <created>1603076385981</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1603076385981</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,16 +194,21 @@
     <MESSAGE value="add gene.js" />
     <MESSAGE value="change README.MD" />
     <MESSAGE value="change index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="change index.html" />
+    <MESSAGE value="change workspace.xml" />
+    <MESSAGE value="change layout html" />
+    <MESSAGE value="change javascript" />
+    <MESSAGE value="change icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="change icons" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603028933024">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837@0.23.1440.837" timestamp="1603028933024" />
-    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2" timestamp="1603032675137">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2" timestamp="1603076385850">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1603076385850" />
     <state x="297" y="23" width="846" height="837" key="CommitChangelistDialog2/0.23.1440.837@0.23.1440.837" timestamp="1603032675137" />
     <state x="144" y="96" key="DiffContextDialog" timestamp="1603031456959">
       <screen x="0" y="23" width="1440" height="837" />
@@ -251,9 +278,14 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state width="1379" height="254" key="GridCell.Tab.3.right/0.23.1440.837@0.23.1440.837" timestamp="1603075174223" />
-    <state x="320" y="181" key="Vcs.Push.Dialog.v2" timestamp="1603032443125">
-      <screen x="0" y="23" width="1440" height="837" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1603076335388">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603076335388" />
+    <state x="320" y="170" key="Vcs.Push.Dialog.v2" timestamp="1603076389611">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="170" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603076389611" />
     <state x="320" y="181" key="Vcs.Push.Dialog.v2/0.23.1440.837@0.23.1440.837" timestamp="1603032443125" />
     <state x="542" y="342" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603028601817">
       <screen x="0" y="23" width="1440" height="837" />
