@@ -9,6 +9,7 @@
     </head>
     <body>
         <script src="src/show.js"></script>
+        <script src="src/qrcode.js"></script>
 
         <style>.order-panel {
             width: 25em;
@@ -23,11 +24,17 @@
             padding: 2px 4px;
             color: #333;
             font-size: 2em;
-            font-weight: 700
+            font-weight: 700;
         }
 
         .img-qrcode {
             width: 9.6em;
+            height: 9.6em;
+            child-align: middle;
+            text-align: center;
+            justify-content:center;
+            align-items:center;
+            display:flex;
         }
 
         .user-name {
@@ -70,11 +77,27 @@
                                     <script>document.write(food);</script>
                                 </div>
 
-                                <img src="" class="img-qrcode border" alt="" id="qr">
+                                <div class="img-qrcode border" id="qrb">
+                                    <div id="qr"></div>
+                                </div>
 
                                 <script>
-                                    let qrr = document.getElementById("qr");
-                                    qrr.src = QRC;
+                                    // TODO: QRCode Size
+
+
+
+                                    var QR = new QRCode(document.getElementById("qr"), {
+                                        text: url,
+                                        width: 128,
+                                        height: 128,
+                                        correctLevel : QRCode.CorrectLevel.M
+                                    });
+
+                                    // let b64 = "data:image/png;base64,";
+                                    // var QRC = ;
+                                    // let qrr = document.getElementById("qr");
+                                    // qrr.src = qrdataURL;
+
                                 </script>
 
                                 <div class="user-name text-center">
