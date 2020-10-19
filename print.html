@@ -6,7 +6,6 @@
         <link rel="shortcut icon" href="res/favicon-32.png">
         <link rel="stylesheet" href="layout/common.min.css">
         <link rel="stylesheet" href="layout/all.min.css">
-        <script src="src/qrcode.js"></script>
     </head>
     <body>
         <script src="src/show.js"></script>
@@ -28,7 +27,7 @@
         }
 
         .img-qrcode {
-            width: 9.6em
+            width: 9.6em;
         }
 
         .user-name {
@@ -71,17 +70,12 @@
                                     <script>document.write(food);</script>
                                 </div>
 
-                                <div class="img-qrcode border" id="qrc"></div>
+                                <img src="" class="img-qrcode border" alt="" id="qr">
 
                                 <script>
-                                    var qrcode = new QRCode(document.getElementById("qrc"), {
-                                        text: url,
-                                        colorDark : "#000000",
-                                        colorLight : "#ffffff",
-                                        correctLevel : QRCode.CorrectLevel.M
-                                    });
+                                    let qrr = document.getElementById("qr");
+                                    qrr.src = QRC;
                                 </script>
-                                <!-- TODO: QRCODE -->
 
                                 <div class="user-name text-center">
                                     <span>
