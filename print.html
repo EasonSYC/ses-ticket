@@ -79,19 +79,13 @@
                                     <div id="qr"></div>
                                 </div>
                                 <script>
-                                    // TODO: QRCode Size
-
                                     let QRsize = document.getElementById("qrb").offsetWidth * 0.83;
-
-                                    alert(QRsize);
-
                                     new QRCode(document.getElementById("qr"), {
                                         text: url,
                                         width: QRsize,
                                         height: QRsize,
                                         correctLevel : QRCode.CorrectLevel.M
                                     });
-
                                 </script>
 
                                 <div class="user-name text-center">
