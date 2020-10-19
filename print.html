@@ -30,8 +30,6 @@
         .img-qrcode {
             width: 9.6em;
             height: 9.6em;
-            child-align: middle;
-            text-align: center;
             justify-content:center;
             align-items:center;
             display:flex;
@@ -62,6 +60,7 @@
             line-height: 2em;
             font-weight: 700
         }</style>
+
         <div id="gApp">
             <div>
                 <div class="text-right p-3 no-print">
@@ -76,27 +75,22 @@
                                 <div class="order-name">
                                     <script>document.write(food);</script>
                                 </div>
-
                                 <div class="img-qrcode border" id="qrb">
                                     <div id="qr"></div>
                                 </div>
-
                                 <script>
                                     // TODO: QRCode Size
 
+                                    let QRsize = document.getElementById("qrb").offsetWidth * 0.83;
 
+                                    alert(QRsize);
 
-                                    var QR = new QRCode(document.getElementById("qr"), {
+                                    new QRCode(document.getElementById("qr"), {
                                         text: url,
-                                        width: 128,
-                                        height: 128,
+                                        width: QRsize,
+                                        height: QRsize,
                                         correctLevel : QRCode.CorrectLevel.M
                                     });
-
-                                    // let b64 = "data:image/png;base64,";
-                                    // var QRC = ;
-                                    // let qrr = document.getElementById("qr");
-                                    // qrr.src = qrdataURL;
 
                                 </script>
 
