@@ -13,10 +13,10 @@ gen.onclick = function() {
         alert("请输入正确信息！");
         location.reload(true);
     } else {
-        let tim = mon * 31 + day;
-        let cs = typ * 403 + tim;
+        let tim = mon * 32 + day;
+        let cs = typ * 415 + tim;
         let api = cs.toString(16);
-        window.open("print#nam="+nam+"&typ="+api, "_blank");
+        window.open("print.html?"+nam+"&"+api, "_blank");
     }
 }
 // TODO: isValid
