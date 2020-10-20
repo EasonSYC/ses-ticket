@@ -18,4 +18,8 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Update layout.
+- QR Code position.
+
+- Print *floor* position.
+
+- Update layout to be more beautiful.
