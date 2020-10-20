@@ -18,6 +18,7 @@
             margin-top: 50px;
             text-align: center
         }</style>
+
         <style>.body-wrapper {
             position: absolute;
             top: 0;
@@ -115,7 +116,7 @@
                                                     <div id="qr"></div>
                                                 </div>
                                                 <script>
-                                                    let QRsize = document.getElementById("qrb").offsetWidth * 0.83;
+                                                    let QRsize = document.getElementById("qrb").offsetWidth * 0.8;
                                                     new QRCode(document.getElementById("qr"), {
                                                         text: url,
                                                         width: QRsize,
@@ -123,7 +124,7 @@
                                                         correctLevel : QRCode.CorrectLevel.M
                                                     });
                                                 </script>
-                                                <!-- TODO: Element 2 -->
+                                                <!-- TODO: QR Code pos: Xiaomi Mi9 up0.5mm; Apple Device Normal. maybe relate h5.css (mutiple style) -->
                                                 <div class="user-name text-center">
                                                     <span>
                                                         <script>document.write(name);</script>
