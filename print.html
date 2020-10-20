@@ -86,12 +86,12 @@
                                     <div class="qrc" id="qr"></div>
                                 </div>
                                 <script>
-                                    let QRsize = document.getElementById("qrb").offsetWidth * 0.8;
+                                    let QRsize = Math.floor(document.getElementById("qrb").offsetWidth * 0.8);
                                     new QRCode(document.getElementById("qr"), {
                                         text: urlqr,
                                         width: QRsize,
                                         height: QRsize,
-                                        correctLevel : QRCode.CorrectLevel.M
+                                        correctLevel : QRCode.CorrectLevel.L
                                     });
                                 </script>
 
