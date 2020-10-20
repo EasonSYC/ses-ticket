@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="UTF8">
+    <head>
+        <meta charset="utf-8">
+        <title> 我的预订 </title>
+        <link rel="shortcut icon" href="res/favicon-32.png">
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="layout/common.min.css">
+        <link rel="stylesheet" href="layout/all.min.css">
+        <link rel="stylesheet" href="layout/h5.css">
+        <style type="text/css">.verify-msg {
+            font-size: 3em;
+            font-weight: 700;
+            margin-top: 50px;
+            text-align: center
+        }</style>
+        <style>.body-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0;
+            z-index: 500
+        }
+
+        .content-bg {
+            background-color: #fff;
+            padding-bottom: 10em;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden
+        }
+
+        /*.body-container {*/
+        /*    padding-top: 3.8em*/
+        /*}*/
+        </style>
+
+        <style>.order-panel {
+            width: 25em;
+            padding: 1em;
+            border: solid 1px #ccc;
+            text-align: center;
+            color: #333
+        }
+
+        .order-name {
+            width: 4.8em;
+            padding: 2px 4px;
+            color: #333;
+            font-size: 2em;
+            font-weight: 700
+        }
+
+        .img-qrcode {
+            width: 9.6em
+        }
+
+        .user-name {
+            font-size: 2.4em;
+            margin-top: .2em
+        }
+
+        .ticket-body {
+            padding-right: 1em
+        }
+
+        .order-area {
+            margin: -.3em 0;
+            font-size: 10em;
+            font-weight: 700
+        }
+
+        .order-area-tail {
+            font-size: .2em
+        }
+
+        .order-location {
+            margin-top: .75em;
+            font-size: 1.8em;
+            line-height: 2em;
+            font-weight: 700
+        }</style>
+    </head>
+    <body>
+        <script src="src/show.js"></script>
+        <script src="src/qrcode.js"></script>
+
+        <div id="gApp">
+            <div class="body-wrapper">
+                <div class="container px-0">
+                    <div class="row no-gutters">
+                        <div class="col-xl-6 offset-xl-3">
+                            <div class="viewport">
+                                <div class="content-bg">
+                                    <div class="p-3 text-right"><a><i class="fa fa-times fa-2x"></i></a></div>
+                                    <div class="order-panel" style="font-size: 3.8vw !important;">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <div class="order-name">
+                                                    盖浇饭 <!-- TODO: Element 1 -->
+                                                </div>
+                                                <img alt="" src="data:image/png;base64,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"
+                                                     class="img-qrcode border">
+                                                <!-- TODO: Element 2 -->
+                                                <div class="user-name text-center">
+                                                    <span>
+                                                        胡悦熙
+                                                    </span>
+                                                </div>
+                                                <!-- TODO: Element 3 -->
+                                            </div>
+                                            <div class="ticket-body">
+                                                <div class="order-area">
+                                                    6 <!-- TODO: Element 4 -->
+                                                    <span class="order-area-tail">
+                                                        区
+                                                    </span>
+                                                </div>
+                                                <div class="order-location">
+                                                    <span>
+                                                        食堂二楼 <!-- TODO: Element 5 -->
+                                                        <span>
+                                                            <br>
+                                                            <span>
+                                                                10/20 周二 <!-- TODO: Element 5 -->
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div><!----></div>
+                                    </div>
+                                    <h2 class="verify-msg">
+                                        <!---->
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
