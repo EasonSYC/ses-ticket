@@ -121,12 +121,12 @@
                                                     <div class="qrc" id="qr"></div>
                                                 </div>
                                                 <script>
-                                                    let QRsize = document.getElementById("qrb").offsetWidth * 0.8;
+                                                    let QRsize = Math.floor(document.getElementById("qrb").offsetWidth * 0.8);
                                                     new QRCode(document.getElementById("qr"), {
                                                         text: url,
                                                         width: QRsize,
                                                         height: QRsize,
-                                                        correctLevel : QRCode.CorrectLevel.M
+                                                        correctLevel : QRCode.CorrectLevel.L
                                                     });
                                                 </script>
                                                 <!-- TODO: QR Code pos: Xiaomi Mi9 up0.5mm; Apple Device Normal. maybe relate h5.css (mutiple style) -->
