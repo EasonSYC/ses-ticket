@@ -20,6 +20,7 @@ if ((mon < tom) || ((mon === tom) && (day < tot))){
 } else {
     dynum = new Date(toy + "/" + mon + "/" + day).getDay()
 }
+var urlqr = url.replace("print", "scan");
 var food = foodArray[typ];
 var name = decodeURI(arr[0]);
 var num = numArray[typ];
