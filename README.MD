@@ -18,8 +18,8 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Verify message.
-
 - Print *floor* position.
 
 - Update layout to be more beautiful.
+
+- HarmonyOS
