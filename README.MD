@@ -14,8 +14,8 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Print *floor* position.
+- Update layout to be more beautiful, including auto-download system. Cancel CowTransfer and use website download.
 
-- Update layout to be more beautiful.
+- Print *floor* position.
 
 - HarmonyOS
