@@ -8,11 +8,7 @@ This is a system of generating tickets for SES canteen.
 
 DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
-#### Manuals & Apps & Websites
-
-[Manuals](https://gitee.com/jiubugaosuni/ticket-gen-docx)
-
-[Android](https://gitee.com/jiubugaosuni/ticket-gen-apk)
+#### Website
 
 [Website Gitee](https://jiubugaosuni.gitee.io/sesticket-gen)
 
