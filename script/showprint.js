@@ -15,14 +15,14 @@ let toy = tod.getFullYear();
 let tom = tod.getMonth() + 1;
 let tot = tod.getDate();
 let dynum;
-if ((mon < tom) || ((mon === tom) && (day < tot))){
+if ((mon < tom) || ((mon === tom) && (day < tot))) {
     dynum = new Date((toy + 1) + "/" + mon + "/" + day).getDay()
 } else {
     dynum = new Date(toy + "/" + mon + "/" + day).getDay()
 }
-var urlqr = url.replace("print", "scan");
-var food = foodArray[typ];
-var name = decodeURI(arr[0]);
-var num = numArray[typ];
-var loc = locArray[typ];
-var wkd = mon + "/" + day + " 周" + weekArray[dynum];
+var purlqr = url.replace("print", "scan");
+var pfood = foodArray[typ];
+var pname = decodeURI(arr[0]);
+var pnum = numArray[typ];
+var ploc = locArray[typ];
+var pwkd = mon + "/" + day + " 周" + weekArray[dynum];
