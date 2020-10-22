@@ -19,3 +19,5 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 - Print *floor* position.
 
 - HarmonyOS
+
+- Write csv for safety.
