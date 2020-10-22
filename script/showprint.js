@@ -20,9 +20,9 @@ if ((mon < tom) || ((mon === tom) && (day < tot))) {
 } else {
     dynum = new Date(toy + "/" + mon + "/" + day).getDay()
 }
-var purlqr = url.replace("print", "scan");
-var pfood = foodArray[typ];
-var pname = decodeURI(arr[0]);
-var pnum = numArray[typ];
-var ploc = locArray[typ];
-var pwkd = mon + "/" + day + " 周" + weekArray[dynum];
+var urlqr = url.replace("print", "scan");
+var food = foodArray[typ];
+var name = decodeURI(arr[0]);
+var num = numArray[typ];
+var loc = locArray[typ];
+var wkd = mon + "/" + day + " 周" + weekArray[dynum];
