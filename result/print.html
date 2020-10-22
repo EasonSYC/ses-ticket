@@ -1,112 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>我的预定</title>
-        <link href="../favicon-32.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
-        <link href="../layout/common.min.css" rel="stylesheet">
-        <link href="../layout/all.min.css" rel="stylesheet">
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <style>.order-panel {
-            width: 25em;
-            padding: 1em;
-            border: solid 1px #ccc;
-            text-align: center;
-            color: #333;
-        }
+<head>
+    <meta charset="UTF-8">
+    <title>我的预定</title>
+    <link href="../favicon-32.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
+    <link href="../layout/common.min.css" rel="stylesheet">
+    <link href="../layout/all.min.css" rel="stylesheet">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <style>.order-panel {
+        width: 25em;
+        padding: 1em;
+        border: solid 1px #ccc;
+        text-align: center;
+        color: #333;
+    }
 
-        .order-name {
-            width: 4.8em;
-            padding: 2px 4px;
-            color: #333;
-            font-size: 2em;
-            font-weight: 700;
-        }
+    .order-name {
+        width: 4.8em;
+        padding: 2px 4px;
+        color: #333;
+        font-size: 2em;
+        font-weight: 700;
+    }
 
-        .img-qrcode {
-            width: 9.6em;
-            height: 9.6em;
-            justify-content:center;
-            align-items:center;
-            display:flex;
-        }
+    .img-qrcode {
+        width: 9.6em;
+        height: 9.6em;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
 
-        .qrc {
-            display:flex;
-        }
+    .qrc {
+        display: flex;
+    }
 
-        .user-name {
-            font-size: 2.4em;
-            margin-top: .2em;
-        }
+    .user-name {
+        font-size: 2.4em;
+        margin-top: .2em;
+    }
 
-        .ticket-body {
-            padding-right: 1em;
-        }
+    .ticket-body {
+        padding-right: 1em;
+    }
 
-        .order-area {
-            margin: -.3em 0;
-            font-size: 10em;
-            font-weight: 700;
-        }
+    .order-area {
+        margin: -.3em 0;
+        font-size: 10em;
+        font-weight: 700;
+    }
 
-        .order-area-tail {
-            font-size: .2em;
-        }
+    .order-area-tail {
+        font-size: .2em;
+    }
 
-        .order-location {
-            margin-top: .75em;
-            font-size: 1.8em;
-            line-height: 2em;
-            font-weight: 700;
-        }</style>
-    </head>
-    <body>
-    <script src="../script/showprint.js"></script>
-    <script src="../script/qrcode.js"></script>
-    <div id="gApp">
-        <div>
-            <div class="text-right p-3 no-print">
-                <a>
-                    <i class="fa fa-times fa-2x"></i>
-                </a>
-            </div>
-            <div class="d-flex justify-content-center">
-                <div class="order-panel" style="font-size: 3.8vw !important;">
-                    <div class="d-flex justify-content-between">
-                            <div>
-                                <div class="order-name">
-                                    <script>document.write(food);</script>
-                                </div>
-                                <div class="img-qrcode border" id="qrb">
-                                    <div class="qrc" id="qr"></div>
-                                </div>
-                                <script>
-                                    let QRsize = Math.floor(document.getElementById("qrb").offsetWidth * 0.8);
-                                    new QRCode(document.getElementById("qr"), {
-                                        text: urlqr,
-                                        width: QRsize,
-                                        height: QRsize,
-                                        correctLevel : QRCode.CorrectLevel.L
-                                    });
-                                </script>
+    .order-location {
+        margin-top: .75em;
+        font-size: 1.8em;
+        line-height: 2em;
+        font-weight: 700;
+    }</style>
+</head>
+<body>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script src="../safety/record.js"></script>
+<script src="../script/showprint.js"></script>
+<script src="../script/qrcode.js"></script>
+<div id="gApp">
+    <div>
+        <div class="text-right p-3 no-print">
+            <a>
+                <i class="fa fa-times fa-2x"></i>
+            </a>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="order-panel" style="font-size: 3.8vw !important;">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="order-name">
+                            <script>document.write(food);</script>
+                        </div>
+                        <div class="img-qrcode border" id="qrb">
+                            <div class="qrc" id="qr"></div>
+                        </div>
+                        <script>
+                            let QRsize = Math.floor(document.getElementById("qrb").offsetWidth * 0.8);
+                            new QRCode(document.getElementById("qr"), {
+                                text: urlqr,
+                                width: QRsize,
+                                height: QRsize,
+                                correctLevel: QRCode.CorrectLevel.L
+                            });
+                        </script>
 
-                                <div class="user-name text-center">
+                        <div class="user-name text-center">
                                     <span>
                                         <script>document.write(name);</script>
                                     </span>
-                                </div>
-                            </div>
-                            <div class="ticket-body">
-                                <div class="order-area">
-                                    <script>document.write(num);</script>
-                                    <span class="order-area-tail">区</span>
-                                </div>
-                                <div class="order-location">
+                        </div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="order-area">
+                            <script>document.write(num);</script>
+                            <span class="order-area-tail">区</span>
+                        </div>
+                        <div class="order-location">
                                     <span>
                                         <script>document.write("食堂" + loc + "楼");</script>
                                         <span>
@@ -116,12 +118,12 @@
                                             </span>
                                         </span>
                                     </span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+</body>
 </html>
