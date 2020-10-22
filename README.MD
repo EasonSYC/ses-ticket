@@ -14,7 +14,7 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Update layout to be more beautiful, including auto-download system. Cancel CowTransfer and use website download.
+- Update layout to be more beautiful, including auto-decision-download system.
 
 - Print *floor* position.
 
