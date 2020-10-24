@@ -118,7 +118,7 @@ class GeneFragment : Fragment() {
                     }
                     val tim = moth * 32 + dy
                     val cs = type * 416 + tim
-                    val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/print.html?" + id + "&" + Integer.toHexString(cs)
+                    val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/result/print.html?" + id + "&" + Integer.toHexString(cs)
                     openurl(URL)
                 }
             }

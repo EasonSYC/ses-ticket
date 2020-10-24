@@ -26,14 +26,16 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/name"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:textColorHint="#95A1AA"
-                android:textSize="18sp" />
+                    android:id="@+id/name"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:inputType="text"
+                    android:text="菜菜"
+                    android:hint="菜菜"
+                    android:textAlignment="center"
+                    android:textColorHint="#95A1AA"
+                    android:textSize="18sp"/>
 
         </LinearLayout>
 
