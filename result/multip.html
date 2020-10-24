@@ -11,8 +11,131 @@
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <style>.order-panel {
+        width: 25em;
+        padding: 1em;
+        border: solid 1px #ccc;
+        text-align: center;
+        color: #333
+    }
+
+    .order-name {
+        width: 4.8em;
+        padding: 2px 4px;
+        color: #333;
+        font-size: 2em;
+        font-weight: 700
+    }
+
+    .img-qrcode {
+        width: 9.6em
+    }
+
+    .user-name {
+        font-size: 2.4em;
+        margin-top: .2em
+    }
+
+    .ticket-body {
+        padding-right: 1em
+    }
+
+    .order-area {
+        margin: -.3em 0;
+        font-size: 10em;
+        font-weight: 700
+    }
+
+    .order-area-tail {
+        font-size: .2em
+    }
+
+    .order-location {
+        margin-top: .75em;
+        font-size: 1.8em;
+        line-height: 2em;
+        font-weight: 700
+    }</style>
 </head>
 <body>
-
+<div id="gApp">
+    <div class="row no-gutters">
+        <div class="col-6 mt-2 d-flex justify-content-center">
+            <div class="order-panel" style="font-size: 1.9vw !important;">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="order-name">自助餐</div>
+                        <img class="img-qrcode border"
+                             src="data:image/png;base64,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">
+                        <div class="user-name text-center"><span>胡悦熙</span></div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="order-area">1 <span class="order-area-tail">区</span></div>
+                        <div class="order-location"><span>食堂一楼<span><br><span>10/19 周一</span></span></span></div>
+                    </div><!----></div>
+            </div>
+        </div>
+        <div class="col-6 mt-2 d-flex justify-content-center">
+            <div class="order-panel" style="font-size: 1.9vw !important;">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="order-name">盖浇饭</div>
+                        <img class="img-qrcode border"
+                             src="data:image/png;base64,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">
+                        <div class="user-name text-center"><span>胡悦熙</span></div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="order-area">6 <span class="order-area-tail">区</span></div>
+                        <div class="order-location"><span>食堂二楼<span><br><span>10/20 周二</span></span></span></div>
+                    </div><!----></div>
+            </div>
+        </div>
+        <div class="col-6 mt-2 d-flex justify-content-center">
+            <div class="order-panel" style="font-size: 1.9vw !important;">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="order-name">套餐A</div>
+                        <img class="img-qrcode border"
+                             src="data:image/png;base64,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">
+                        <div class="user-name text-center"><span>胡悦熙</span></div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="order-area">2 <span class="order-area-tail">区</span></div>
+                        <div class="order-location"><span>食堂一楼<span><br><span>10/21 周三</span></span></span></div>
+                    </div><!----></div>
+            </div>
+        </div>
+        <div class="col-6 mt-2 d-flex justify-content-center">
+            <div class="order-panel" style="font-size: 1.9vw !important;">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="order-name">套餐B</div>
+                        <img class="img-qrcode border"
+                             src="data:image/png;base64,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">
+                        <div class="user-name text-center"><span>胡悦熙</span></div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="order-area">5 <span class="order-area-tail">区</span></div>
+                        <div class="order-location"><span>食堂二楼<span><br><span>10/22 周四</span></span></span></div>
+                    </div><!----></div>
+            </div>
+        </div>
+        <div class="col-6 mt-2 d-flex justify-content-center">
+            <div class="order-panel" style="font-size: 1.9vw !important;">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="order-name">套餐C</div>
+                        <img class="img-qrcode border"
+                             src="data:image/png;base64,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">
+                        <div class="user-name text-center"><span>胡悦熙</span></div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="order-area">7 <span class="order-area-tail">区</span></div>
+                        <div class="order-location"><span>食堂二楼<span><br><span>10/23 周五</span></span></span></div>
+                    </div><!----></div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
