@@ -63,7 +63,7 @@
 <div id="gApp">
     <div class="row no-gutters">
         <div class="col-6 mt-2 d-flex justify-content-center">
-            <div class="order-panel" style="font-size: 1.9vw !important;">
+            <div class="order-panel">
                 <div class="d-flex justify-content-between">
                     <div>
                         <div class="order-name">
@@ -99,6 +99,10 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
+        document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+    </script>
 </div>
 </body>
 </html>
