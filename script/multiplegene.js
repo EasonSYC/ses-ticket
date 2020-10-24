@@ -16,6 +16,6 @@ gen.onclick = function () {
         let sdate = smon * 32 + sday;
         let edate = emon * 32 + eday;
         let api = typ;
-        window.open("./../result/multip.html?name=" + name + "&sdate=" + sdate + "&edate" + edate + "&api=" + api, "_blank");
+        window.open("./../result/multip.html?name=" + name + "&sdate=" + sdate + "&edate=" + edate + "&api=" + api, "_blank");
     }
 }

@@ -9,7 +9,7 @@ gen.onclick = function() {
     if(agr.checked === false) {
         alert("请先勾选复选框！");
     } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
-        alert("请输入正确信息！");
+        alert("请输入正确日期！");
     } else {
         let tim = mon * 32 + day;
         let cs = typ * 416 + tim;
