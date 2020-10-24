@@ -10,14 +10,14 @@ gen.onclick = function () {
     if (agr.checked === false) {
         alert("请先勾选复选框！");
         location.reload(true);
-        // } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
-        //     alert("请输入正确信息！");
-        //     location.reload(true);
+    } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
+        alert("请输入正确信息！");
+        location.reload(true);
     } else {
         let name = nam;
-        let date = smon * 32 + sday;
-        let len = 1;
+        let sdate = smon * 32 + sday;
+        let edate = emon * 32 + eday;
         let api = typ;
-        window.open("./../result/multiple.html?name=" + name + "&date=" + date + "&len=" + len + "&api=" + api, "_blank");
+        window.open("./../result/multiple.html?name=" + name + "&sdate=" + sdate + "&edate" + edate + "&len=" + len + "&api=" + api, "_blank");
     }
 }
