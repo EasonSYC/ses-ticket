@@ -35,11 +35,11 @@ if ((emo < tom) || ((emo === tom) && (edt < tot))) {
     eyr = toy;
 }
 
-var ret = "";
+var ret = "<p>" + nam + "的餐票</p>";
 
 if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt))))) {
     alert("请输入正确日期！");
-    ret = "<p>日期不正确。</p>";
+    ret += "<p>日期不正确。</p>";
 } else {
     let sdate = new Date(syr + "/" + smo + "/" + sdt);
     let edate = new Date(eyr + "/" + emo + "/" + edt);
