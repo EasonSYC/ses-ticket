@@ -14,6 +14,8 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
+- Multiple generation system.
+
 - Update layout to be more beautiful, including auto-decision-download system.
 
 - Print *floor* position.
