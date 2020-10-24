@@ -18,6 +18,6 @@ gen.onclick = function () {
         let sdate = smon * 32 + sday;
         let edate = emon * 32 + eday;
         let api = typ;
-        window.open("./../result/multiple.html?name=" + name + "&sdate=" + sdate + "&edate" + edate + "&len=" + len + "&api=" + api, "_blank");
+        window.open("./../result/multip.html?name=" + name + "&sdate=" + sdate + "&edate" + edate + "&len=" + len + "&api=" + api, "_blank");
     }
 }
