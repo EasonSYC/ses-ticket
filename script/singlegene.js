@@ -8,10 +8,8 @@ gen.onclick = function() {
     let day = parseInt(document.getElementById("day").value);
     if(agr.checked === false) {
         alert("请先勾选复选框！");
-        location.reload(true);
     } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
         alert("请输入正确信息！");
-        location.reload(true);
     } else {
         let tim = mon * 32 + day;
         let cs = typ * 416 + tim;
