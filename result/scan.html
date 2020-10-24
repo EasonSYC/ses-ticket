@@ -105,17 +105,17 @@
                         <div class="viewport">
                             <div class="content-bg">
                                 <div class="p-3 text-right"><a><i class="fa fa-times fa-2x"></i></a></div>
-                                <div class="order-panel" style="font-size: 3.8vw !important;">
-                                        <div class="d-flex justify-content-between">
-                                            <div>
-                                                <div class="order-name">
-                                                    <script>document.write(food);</script>
-                                                </div>
-                                                <img alt="" class="img-qrcode border" id="qrc" src="">
-                                                <script>
-                                                    QRCode.toDataURL(url, {errorCorrectionLevel: 'L'}, function (rtt, url) {
-                                                        document.getElementById("qrc").src = url;
-                                                    })
+                                <div class="order-panel">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <div class="order-name">
+                                                <script>document.write(food);</script>
+                                            </div>
+                                            <img alt="" class="img-qrcode border" id="qrc" src="">
+                                            <script>
+                                                QRCode.toDataURL(url, {errorCorrectionLevel: 'L'}, function (rtt, url) {
+                                                    document.getElementById("qrc").src = url;
+                                                })
                                                 </script>
                                                 <div class="user-name text-center">
                                                     <span>
@@ -147,12 +147,16 @@
                                     <h2 class="verify-msg">
                                         <!--verify message, maybe none-->
                                     </h2>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </body>
+    <script type="text/javascript">
+        var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
+        document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+    </script>
 </html>
