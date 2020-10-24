@@ -9,15 +9,13 @@ gen.onclick = function () {
     let typ = document.getElementById("typ").value;
     if (agr.checked === false) {
         alert("请先勾选复选框！");
-        location.reload(true);
     } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
         alert("请输入正确信息！");
-        location.reload(true);
     } else {
         let name = nam;
         let sdate = smon * 32 + sday;
         let edate = emon * 32 + eday;
         let api = typ;
-        window.open("./../result/multip.html?name=" + name + "&sdate=" + sdate + "&edate" + edate + "&len=" + len + "&api=" + api, "_blank");
+        window.open("./../result/multip.html?name=" + name + "&sdate=" + sdate + "&edate" + edate + "&api=" + api, "_blank");
     }
 }
