@@ -16,6 +16,6 @@ gen.onclick = function() {
         let tim = mon * 32 + day;
         let cs = typ * 416 + tim;
         let api = cs.toString(16);
-        window.open("../result/print.html?" + nam + "&" + api, "_blank");
+        window.open("./../result/print.html?" + nam + "&" + api, "_blank");
     }
 }
