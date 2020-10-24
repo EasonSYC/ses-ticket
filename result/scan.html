@@ -1,136 +1,136 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="UTF8">
-    <head>
-        <meta charset="utf-8">
-        <title> 我的预订 </title>
-        <link href="../favicon-32.png" rel="shortcut icon">
-        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <link href="../layout/common.min.css" rel="stylesheet">
-        <link href="../layout/all.min.css" rel="stylesheet">
-        <link href="../layout/h5.css" rel="stylesheet">
-        <style type="text/css">.verify-msg {
-            font-size: 3em;
-            font-weight: 700;
-            margin-top: 50px;
-            text-align: center
-        }</style>
+<head>
+    <meta charset="utf-8">
+    <title> 我的预订 </title>
+    <link href="../favicon-32.png" rel="shortcut icon">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link href="../layout/common.min.css" rel="stylesheet">
+    <link href="../layout/all.min.css" rel="stylesheet">
+    <link href="../layout/h5.css" rel="stylesheet">
+    <style type="text/css">.verify-msg {
+        font-size: 3em;
+        font-weight: 700;
+        margin-top: 50px;
+        text-align: center
+    }</style>
 
-        <style>.body-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 0;
-            z-index: 500
-        }
+    <style>.body-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+        z-index: 500
+    }
 
-        .content-bg {
-            background-color: #fff;
-            padding-bottom: 10em;
-            height: 100vh;
-            overflow-y: scroll;
-            overflow-x: hidden
-        }
+    .content-bg {
+        background-color: #fff;
+        padding-bottom: 10em;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden
+    }
 
-        /*.body-container {*/
-        /*    padding-top: 3.8em*/
-        /*}*/
-        </style>
+    /*.body-container {*/
+    /*    padding-top: 3.8em*/
+    /*}*/
+    </style>
 
-        <style>.order-panel {
-            width: 25em;
-            padding: 1em;
-            border: solid 1px #ccc;
-            text-align: center;
-            color: #333
-        }
+    <style>.order-panel {
+        width: 25em;
+        padding: 1em;
+        border: solid 1px #ccc;
+        text-align: center;
+        color: #333
+    }
 
-        .order-name {
-            width: 4.8em;
-            padding: 2px 4px;
-            color: #333;
-            font-size: 2em;
-            font-weight: 700
-        }
+    .order-name {
+        width: 4.8em;
+        padding: 2px 4px;
+        color: #333;
+        font-size: 2em;
+        font-weight: 700
+    }
 
-        .img-qrcode {
-            width: 9.6em;
-            height: 9.6em;
-            justify-content:center;
-            align-items:center;
-            display:flex;
-        }
+    .img-qrcode {
+        width: 9.6em;
+        height: 9.6em;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
 
-        .user-name {
-            font-size: 2.4em;
-            margin-top: .2em
-        }
+    .user-name {
+        font-size: 2.4em;
+        margin-top: .2em
+    }
 
-        .ticket-body {
-            padding-right: 1em
-        }
+    .ticket-body {
+        padding-right: 1em
+    }
 
-        .order-area {
-            margin: -.3em 0;
-            font-size: 10em;
-            font-weight: 700
-        }
+    .order-area {
+        margin: -.3em 0;
+        font-size: 10em;
+        font-weight: 700
+    }
 
-        .order-area-tail {
-            font-size: .2em
-        }
+    .order-area-tail {
+        font-size: .2em
+    }
 
-        .order-location {
-            margin-top: .75em;
-            font-size: 1.8em;
-            line-height: 2em;
-            font-weight: 700
-        }</style>
-    </head>
-    <body>
-    <script src="../script/showscan.js"></script>
-    <script src="../script/qrcode.min.js"></script>
-    <div id="gApp">
-        <div class="body-wrapper">
-            <div class="container px-0">
-                <div class="row no-gutters">
-                    <div class="col-xl-6 offset-xl-3">
-                        <div class="viewport">
-                            <div class="content-bg">
-                                <div class="p-3 text-right"><a><i class="fa fa-times fa-2x"></i></a></div>
-                                <div class="order-panel">
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <div class="order-name">
-                                                <script>document.write(food);</script>
-                                            </div>
-                                            <img alt="" class="img-qrcode border" id="qrc" src="">
-                                            <script>
-                                                QRCode.toDataURL(url, {errorCorrectionLevel: 'L'}, function (rtt, url) {
-                                                    document.getElementById("qrc").src = url;
-                                                })
-                                                </script>
-                                                <div class="user-name text-center">
+    .order-location {
+        margin-top: .75em;
+        font-size: 1.8em;
+        line-height: 2em;
+        font-weight: 700
+    }</style>
+</head>
+<body>
+<script src="../script/showscan.js"></script>
+<script src="../script/qrcode.min.js"></script>
+<div id="gApp">
+    <div class="body-wrapper">
+        <div class="container px-0">
+            <div class="row no-gutters">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="viewport">
+                        <div class="content-bg">
+                            <div class="p-3 text-right"><a><i class="fa fa-times fa-2x"></i></a></div>
+                            <div class="order-panel">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <div class="order-name">
+                                            <script>document.write(food);</script>
+                                        </div>
+                                        <img alt="" class="img-qrcode border" id="qrc" src="">
+                                        <script>
+                                            QRCode.toDataURL(url, {errorCorrectionLevel: 'L'}, function (rtt, url) {
+                                                document.getElementById("qrc").src = url;
+                                            })
+                                        </script>
+                                        <div class="user-name text-center">
                                                     <span>
                                                         <script>document.write(name);</script>
                                                     </span>
-                                                </div>
-                                            </div>
-                                            <div class="ticket-body">
-                                                <div class="order-area">
-                                                    <script>document.write(num);</script>
-                                                    <span class="order-area-tail">
+                                        </div>
+                                    </div>
+                                    <div class="ticket-body">
+                                        <div class="order-area">
+                                            <script>document.write(num);</script>
+                                            <span class="order-area-tail">
                                                         区
                                                     </span>
-                                                </div>
-                                                <div class="order-location">
+                                        </div>
+                                        <div class="order-location">
                                                     <span>
                                                         <script>document.write("食堂" + loc + "楼");</script>
                                                         <span>
@@ -140,23 +140,23 @@
                                                             </span>
                                                         </span>
                                                     </span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                    <h2 class="verify-msg">
-                                        <!--verify message, maybe none-->
-                                    </h2>
+                                </div>
                             </div>
+                            <h2 class="verify-msg">
+                                <!--verify message, maybe none-->
+                            </h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </body>
-    <script type="text/javascript">
-        var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
-        document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
-    </script>
+</div>
+<script type="text/javascript">
+    var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
+    document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+</script>
+</body>
 </html>
