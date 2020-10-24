@@ -35,7 +35,7 @@ if ((emo < tom) || ((emo === tom) && (edt < tot))) {
     eyr = toy;
 }
 
-var ret = "<p>" + nam + "的餐票</p>";
+var ret = "<h3>" + nam + "的餐票</h3><br>";
 
 if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt))))) {
     alert("请输入正确日期！");
