@@ -113,7 +113,7 @@
                                                 </div>
                                                 <img alt="" class="img-qrcode border" id="qrc" src="">
                                                 <script>
-                                                    QRCode.toDataURL(urlqr, {errorCorrectionLevel: 'L'}, function (rtt, url) {
+                                                    QRCode.toDataURL(url, {errorCorrectionLevel: 'L'}, function (rtt, url) {
                                                         document.getElementById("qrc").src = url;
                                                     })
                                                 </script>
