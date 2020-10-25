@@ -111,7 +111,7 @@
                                         <div class="order-name">
                                             <script>document.write(food);</script>
                                         </div>
-                                        <img alt="" class="img-qrcode border" id="qrc" src="">
+                                        <img class="img-qrcode border" id="qrc">
                                         <script>
                                             QRCode.toDataURL(url, {errorCorrectionLevel: 'L'}, function (rtt, url) {
                                                 document.getElementById("qrc").src = url;
