@@ -23,6 +23,7 @@ let edt = ed % 32;
 let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
+let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 
 var ret = "";
 
@@ -54,13 +55,11 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
             let ncs = dyr * 416 + ntim;
             let ncss = ncs * 10 + chc;
             let napi = ncss.toString(16);
-            let purl = "\"" + "./../result/print.html?" + nam + "&" + napi + "\"";
-            let surl = "\"" + "./../result/scan.html?" + nam + "&" + napi + "\"";
-
-            // ret += "<p>" + dyr + "/" + dmo + "/" + ddy + " " + are + "区" + typ + "的餐票：" +
-            //     "<a href=" + url + ">点击此处</a>" +
-            //     "</p>";
-
+            let wkday = new Date(dyr + "/" + dmo + "/" + ddy).getDay();
+            let purl = "\"" + ".\/..\/result\/print.html?" + nam + "&" + napi + "\"";
+            let surl = "\"" + ".\/..\/result\/scan.html?" + nam + "&" + napi + "\"";
+            let datestr = dmo + "/" + ddy + " 周" + weekArray[wkday];
+            let b64;
             ret +=
                 "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
                 "<div class=\"order-panel\"> " +
@@ -69,7 +68,15 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
                 "<div class=\"order-name\">" +
                 typ +
                 "</div>" +
-                "<img class=\"img-qrcode border\" id = \"qrc\" src=\"\" alt=\"\">" + //TODO: Change It
+                "<a href=" +
+                purl +
+                ">" +
+                "<img alt=\"\" class=\"img-qrcode border\" src=\"\">" +
+                "</a>" +
+                "<script>" +
+                "QRCode.toDataURL(surl, {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
+                "b64 = url;" +
+                "})</script>" +
                 "<div class=\"user-name text-center\">" +
                 "<span>" +
                 nam +
@@ -91,7 +98,7 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
                 "<span>" +
                 "<br>" +
                 "<span>" +
-                "10/19 周一" + //TODO: Change it
+                datestr +
                 "</span>" +
                 "</span>" +
                 "</span>" +
