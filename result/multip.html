@@ -70,9 +70,9 @@
     res.innerHTML = ret;
 </script>
 <script type="text/javascript">
-    let ratio = 1.9 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
     let arrr = document.getElementsByClassName("order-panel")
     for (let i = 0; i < arrr.length; ++i) {
+        let ratio = 1.9 * (arrr[i].resize || 100) / 100;
         arrr[i].style = "font-size: " + ratio + "vw !important;";
     }
 </script>
