@@ -89,6 +89,7 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
                 "<div class=\"ticket-body\">" +
                 "<div class=\"order-area\">" +
                 are +
+                " " +
                 "<span class=\"order-area-tail\">" +
                 "区" +
                 "</span>" +
