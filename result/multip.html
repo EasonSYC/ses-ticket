@@ -65,13 +65,16 @@
 
     </div>
 </div>
-<script type="text/javascript">
-    var ratio = 1.9 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
-    document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
-</script>
 <script>
     let res = document.getElementById("res");
     res.innerHTML = ret;
+</script>
+<script type="text/javascript">
+    let ratio = 1.9 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
+    let arrr = document.getElementsByClassName("order-panel")
+    for (let i = 0; i < arrr.length; ++i) {
+        arrr[i].style = "font-size: " + ratio + "vw !important;";
+    }
 </script>
 </body>
 </html>
