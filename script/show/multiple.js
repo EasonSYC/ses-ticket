@@ -10,7 +10,7 @@ let etd = eda[1];
 let apa = arr[3].split("=");
 let api = apa[1];
 
-let urlNew = url.replace("multip", "scan");
+let urlNew = url.replace("multiple", "scan");
 urlNew = urlNew.split("?")[0];
 
 let syr = Math.floor(std / 416);
