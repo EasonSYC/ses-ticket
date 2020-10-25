@@ -1,0 +1,10 @@
+let today = new Date();
+let toyear = today.getFullYear();
+let tomonth = today.getMonth() + 1;
+let todate = today.getDate();
+let InpY = document.getElementById("year");
+let InpM = document.getElementById("month");
+let InpD = document.getElementById("day");
+InpY.value = toyear;
+InpM.value = tomonth;
+InpD.value = todate;
