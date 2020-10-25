@@ -10,6 +10,9 @@ let etd = eda[1];
 let apa = arr[3].split("=");
 let api = apa[1];
 
+let urlNew = url.replace("multip", "scan");
+urlNew = urlNew.split("?")[0];
+
 let syr = Math.floor(std / 416);
 let sd = std % 416;
 let smo = Math.floor(sd / 32);
@@ -26,6 +29,7 @@ let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "�
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 
 var ret = "";
+var ret2 = "";
 
 if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt))))) {
     alert("请输入正确日期！");
@@ -57,9 +61,8 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
             let napi = ncss.toString(16);
             let wkday = new Date(dyr + "/" + dmo + "/" + ddy).getDay();
             let purl = "\"" + ".\/..\/result\/print.html?" + nam + "&" + napi + "\"";
-            let surl = "\"" + ".\/..\/result\/scan.html?" + nam + "&" + napi + "\"";
+            let surl = "\"" + urlNew + "?" + nam + "&" + napi + "\"";
             let datestr = dmo + "/" + ddy + " 周" + weekArray[wkday];
-            let b64;
             ret +=
                 "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
                 "<div class=\"order-panel\"> " +
@@ -71,12 +74,12 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
                 "<a href=" +
                 purl +
                 ">" +
-                "<img alt=\"\" class=\"img-qrcode border\" src=\"\">" +
+                "<img class=\"img-qrcode border\" id=\"" +
+                "qrc" +
+                i +
+                "\"" +
+                ">" +
                 "</a>" +
-                "<script>" +
-                "QRCode.toDataURL(surl, {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
-                "b64 = url;" +
-                "})</script>" +
                 "<div class=\"user-name text-center\">" +
                 "<span>" +
                 nam +
@@ -107,6 +110,14 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
                 "</div>" +
                 "</div>" +
                 "</div>"
+            ret2 +=
+                "QRCode.toDataURL(" +
+                surl +
+                ", {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
+                "document.getElementById(\"" +
+                "qrc" +
+                i +
+                "\").src=url;});";
         }
     }
 }
