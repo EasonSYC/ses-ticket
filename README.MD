@@ -14,8 +14,10 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Update layout to be more beautiful, including auto-decision-download system.
+- Layout
 
-- Print *floor* position.
+- *Floor* position
 
-- Write csv for safety.
+- Accounts
+
+- HarmonyOS
