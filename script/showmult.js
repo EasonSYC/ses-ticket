@@ -61,7 +61,7 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
             let napi = ncss.toString(16);
             let wkday = new Date(dyr + "/" + dmo + "/" + ddy).getDay();
             let purl = "\"" + ".\/..\/result\/print.html?" + nam + "&" + napi + "\"";
-            let surl = "\"" + urlNew + "?" + nam + "&" + napi + "\"";
+            let surl = urlNew + "?" + nam + "&" + napi;
             let datestr = dmo + "/" + ddy + " 周" + weekArray[wkday];
             ret +=
                 "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
@@ -111,16 +111,13 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
                 "</div>" +
                 "</div>"
             ret2 +=
-                "QRCode.toDataURL(" +
+                "QRCode.toDataURL(\"" +
                 surl +
-                ", {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
+                "\", {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
                 "document.getElementById(\"" +
                 "qrc" +
                 i +
-                "\").src=url;});" +
-                "alert(" +
-                surl +
-                ");";
+                "\").src=url;});";
         }
     }
 }
