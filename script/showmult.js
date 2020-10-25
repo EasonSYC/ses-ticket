@@ -9,31 +9,19 @@ let eda = arr[2].split("=");
 let etd = eda[1];
 let apa = arr[3].split("=");
 let api = apa[1];
-let smo = Math.floor(std / 32);
-let sdt = std % 32;
-let syr;
-let emo = Math.floor(etd / 32);
-let edt = etd % 32;
-let eyr;
+
+let syr = Math.floor(std / 416);
+let sd = std % 416;
+let smo = Math.floor(sd / 32);
+let sdt = sd % 32;
+
+let eyr = Math.floor(etd / 416);
+let ed = etd % 416;
+let emo = Math.floor(ed / 32);
+let edt = ed % 32;
+
 let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
-
-let tod = new Date();
-let toy = tod.getFullYear();
-let tom = tod.getMonth() + 1;
-let tot = tod.getDate();
-
-if ((smo < tom) || ((smo === tom) && (sdt < tot))) {
-    syr = toy + 1;
-} else {
-    syr = toy;
-}
-
-if ((emo < tom) || ((emo === tom) && (edt < tot))) {
-    eyr = toy + 1;
-} else {
-    eyr = toy;
-}
 
 var ret = "<h3>" + nam + "的餐票</h3><br>";
 
@@ -51,8 +39,9 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
         let are = numArray[chc];
         let typ = foodArray[chc];
         let ntim = dmo * 32 + ddy;
-        let ncs = chc * 416 + ntim;
-        let napi = ncs.toString(16);
+        let ncs = dyr * 416 + ntim;
+        let ncss = ncs * 10 + chc;
+        let napi = ncss.toString(16);
         let url = "\"" + "./../result/print.html?" + nam + "&" + napi + "\"";
 
         ret += "<p>" + dyr + "/" + dmo + "/" + ddy + " " + are + "区" + typ + "的餐票：" +

@@ -40,6 +40,10 @@
     <div style="margin-top:auto">
         <label>日期：</label>
         <label>
+            <input id="year" style="width: 30px" type="text" value="">
+        </label>
+        <label>年</label>
+        <label>
             <input id="month" style="width: 30px" type="text" value="">
         </label>
         <label>月</label>
@@ -49,8 +53,10 @@
         <label>日</label>
     </div>
     <script>
+        let InpY = document.getElementById("year");
         let InpM = document.getElementById("month");
         let InpD = document.getElementById("day");
+        InpY.value = toyear;
         InpM.value = tomonth;
         InpD.value = todate;
     </script>

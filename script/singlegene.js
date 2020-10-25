@@ -4,6 +4,7 @@ gen.onclick = function() {
     let nam = document.getElementById("name").value;
     let typ = document.getElementById("typ");
     typ = parseInt(typ.options[typ.selectedIndex].value);
+    let yr = parseInt(document.getElementById("year").value);
     let mon = parseInt(document.getElementById("month").value);
     let day = parseInt(document.getElementById("day").value);
     if(agr.checked === false) {
@@ -12,8 +13,9 @@ gen.onclick = function() {
         alert("请输入正确日期！");
     } else {
         let tim = mon * 32 + day;
-        let cs = typ * 416 + tim;
-        let api = cs.toString(16);
+        let cs = yr * 416 + tim;
+        let css = cs * 10 + typ;
+        let api = css.toString(16);
         window.open("./../result/print.html?" + nam + "&" + api, "_blank");
     }
 }
