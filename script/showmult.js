@@ -32,20 +32,31 @@ if (syr > eyr || ((syr === eyr) && ((smo > emo) || ((smo === emo) && (sdt > edt)
     let sdate = new Date(syr + "/" + smo + "/" + sdt);
     let edate = new Date(eyr + "/" + emo + "/" + edt);
     for (let d = sdate, i = 0; d <= edate; d.setDate(d.getDate() + 1), ++i) {
-        let chc = parseInt(api[i]);
-        let dyr = d.getFullYear();
-        let dmo = d.getMonth() + 1;
-        let ddy = d.getDate();
-        let are = numArray[chc];
-        let typ = foodArray[chc];
-        let ntim = dmo * 32 + ddy;
-        let ncs = dyr * 416 + ntim;
-        let ncss = ncs * 10 + chc;
-        let napi = ncss.toString(16);
-        let url = "\"" + "./../result/print.html?" + nam + "&" + napi + "\"";
+        let chc = api[i];
+        if ((chc === "1") ||
+            (chc === "2") ||
+            (chc === "3") ||
+            (chc === "4") ||
+            (chc === "5") ||
+            (chc === "6") ||
+            (chc === "7") ||
+            (chc === "8") ||
+            (chc === "9")) {
+            chc = parseInt(chc);
+            let dyr = d.getFullYear();
+            let dmo = d.getMonth() + 1;
+            let ddy = d.getDate();
+            let are = numArray[chc];
+            let typ = foodArray[chc];
+            let ntim = dmo * 32 + ddy;
+            let ncs = dyr * 416 + ntim;
+            let ncss = ncs * 10 + chc;
+            let napi = ncss.toString(16);
+            let url = "\"" + "./../result/print.html?" + nam + "&" + napi + "\"";
 
-        ret += "<p>" + dyr + "/" + dmo + "/" + ddy + " " + are + "区" + typ + "的餐票：" +
-            "<a href=" + url + ">点击此处</a>" +
-            "</p>";
+            ret += "<p>" + dyr + "/" + dmo + "/" + ddy + " " + are + "区" + typ + "的餐票：" +
+                "<a href=" + url + ">点击此处</a>" +
+                "</p>";
+        }
     }
 }
