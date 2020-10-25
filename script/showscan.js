@@ -18,3 +18,4 @@ var name = decodeURI(arr[0]);
 var num = numArray[typ];
 var loc = locArray[typ];
 var wkd = mon + "/" + day + " 周" + weekArray[dynum];
+url = decodeURI(url);
