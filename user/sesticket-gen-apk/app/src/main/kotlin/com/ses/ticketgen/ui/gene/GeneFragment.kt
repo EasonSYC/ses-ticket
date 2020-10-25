@@ -22,6 +22,7 @@ import java.util.*
 class GeneFragment : Fragment() {
     private var geneViewModel: GeneViewModel? = null
     var nam: EditText? = null
+    var year: EditText? = null
     var month: EditText? = null
     var day: EditText? = null
     var rdb: CheckBox? = null
@@ -42,13 +43,17 @@ class GeneFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_gene, container, false)
         mContext = root.context
         val calendar = Calendar.getInstance()
+        val yyear = calendar[Calendar.YEAR]
         val mmonth = calendar[Calendar.MONTH] + 1
         val dday = calendar[Calendar.DAY_OF_MONTH]
         nam = root.findViewById(R.id.name)
+        year = root.findViewById(R.id.year)
         month = root.findViewById(R.id.month)
         day = root.findViewById(R.id.day)
+        year?.setText(Integer.toString(yyear))
         month?.setText(Integer.toString(mmonth))
         day?.setText(Integer.toString(dday))
+        year?.setHint(Integer.toString(yyear))
         month?.setHint(Integer.toString(mmonth))
         day?.setHint(Integer.toString(dday))
         AF = root.findViewById(R.id.AF)
@@ -87,7 +92,8 @@ class GeneFragment : Fragment() {
             if (TextUtils.isEmpty(nam!!.text) || TextUtils.isEmpty(month!!.text) || TextUtils.isEmpty(day!!.text)) {
                 popup_invalid(v)
             } else {
-                var id = nam!!.text.toString();
+                var id = nam!!.text.toString()
+                val yr = year!!.text.toString().toInt()
                 val moth = month!!.text.toString().toInt()
                 val dy = day!!.text.toString().toInt()
                 if (!rdb!!.isChecked) {
@@ -117,8 +123,9 @@ class GeneFragment : Fragment() {
                         type = 9
                     }
                     val tim = moth * 32 + dy
-                    val cs = type * 416 + tim
-                    val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/result/print.html?" + id + "&" + Integer.toHexString(cs)
+                    val cs = yr * 416 + tim
+                    val css = cs * 10 + type
+                    val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/result/print.html?" + id + "&" + Integer.toHexString(css)
                     openurl(URL)
                 }
             }
