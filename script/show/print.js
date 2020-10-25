@@ -18,5 +18,5 @@ urlqr = decodeURI(urlqr);
 var food = foodArray[typ];
 var name = decodeURI(arr[0]);
 var num = numArray[typ];
-var loc = locArray[typ];
+var loc = "食堂" + locArray[typ] + "楼";
 var wkd = mon + "/" + day + " 周" + weekArray[dynum];

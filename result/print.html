@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>我的预定</title>
+    <title>我的预订</title>
     <link href="../favicon-32.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
     <link href="../layout/common.min.css" rel="stylesheet">
     <link href="../layout/all.min.css" rel="stylesheet">
@@ -96,10 +96,9 @@
                             <span class="order-area-tail">区</span>
                         </div>
                         <div class="order-location">
-                            <span>
-                                <script>document.write("食堂" + loc + "楼");</script>
+                            <span id="loc">
+                                <script>document.getElementById("loc").innerHTML = ("<div>" + loc + "</div>");</script>
                                 <span>
-                                    <br>
                                     <span>
                                         <script>document.write(wkd);</script>
                                     </span>
