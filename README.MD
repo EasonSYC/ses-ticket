@@ -16,8 +16,6 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 - Layout
 
-- *Floor* position
-
 - Accounts
 
 - HarmonyOS
