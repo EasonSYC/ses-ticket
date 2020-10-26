@@ -12825,7 +12825,6 @@ th .btn, th .btn.btn-sm {
 }
 
 .dropdown-backdrop {
-    /* !!! fix iOS/Android bug */
     position: static !important;
 }
 
