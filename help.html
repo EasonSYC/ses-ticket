@@ -9,19 +9,157 @@
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <link href="layout/common.min.css" rel="stylesheet">
+    <link href="layout/all.min.css" rel="stylesheet">
+    <link href="layout/h5.css" rel="stylesheet">
+    <script src="script/jump.js"></script>
+
+    <style>.body-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+        z-index: 500
+    }
+
+    .content-bg {
+        background-color: #fff;
+        padding-bottom: 10em;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden
+    }
+
+    .body-container {
+        padding-top: 3.8em
+    }</style>
+    <style>.footer-wrapper {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: auto;
+        z-index: 1000
+    }
+
+    .footer {
+        height: 56px;
+        background: #fff;
+        border-top: solid 1px #ccc;
+        padding-top: 6px;
+        font-size: .8em
+    }
+
+    .footer a {
+        position: relative
+    }
+
+    .footer-badge {
+        position: absolute;
+        top: 0;
+        right: -1.5em;
+        display: block;
+        min-width: 1.6em;
+        height: 1.6em;
+        border-radius: .8em;
+        padding: 0 .5em;
+        background-color: #d00;
+        text-align: center;
+        color: #fff;
+        font-weight: 700
+    }
+
+    .footer a.focus {
+        color: #40cc9d
+    }
+
+    .footer .footer-icon {
+        margin: 2px;
+        font-size: 24px
+    }</style>
 </head>
 <body>
-<h1 style="text-align: center">帮助</h1>
-<br>
-<div style="text-align: center">
-    <h3>信息有误</h3>
-    <p>部分浏览器有缓存问题，请清空历史记录并刷新重试。</p>
-    <h3>安卓链接失效</h3>
-    <p>网站管理员每7天会更新下载链接，请稍候刷新重试。</p>
-    <h3>404 502</h3>
-    <p>网页正在更新中，请稍候刷新重试。</p>
-    <h3>504</h3>
-    <p>Gitee Pages崩溃，请稍候刷新重试。</p>
+<div id="gApp">
+    <div class="body-wrapper">
+        <div class="container px-0">
+            <div class="row no-gutters">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="viewport">
+                        <div class="content-bg">
+                            <div class="p-2">
+                                <div class="row no-gutters">
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-address-card icon-orange fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>信息有误</h4>
+                                            <p>部分浏览器有缓存问题，请清空历史记录并刷新重试。</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-wrench icon-green fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>安卓链接失效</h4>
+                                            <p>网站管理员每7天会更新下载链接，请稍候刷新重试。</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-question icon-red fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>404 502</h4>
+                                            <p>网页正在更新中，请稍候刷新重试。</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-window-close icon-orange fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>504</h4>
+                                            <p>Gitee Pages崩溃，请稍候刷新重试。</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper no-print">
+        <div class="container px-0">
+            <div class="row no-gutters">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="viewport">
+                        <div class="bg-light border-top"></div>
+                        <div class="footer shadow-sm d-flex justify-content-around text-center">
+                            <a data-nav="gen" href="index.html">
+                                <i class="fa fa-cubes footer-icon"></i>
+                                <br>
+                                生成
+                            </a>
+                            <a data-nav="pol" href="policy.html">
+                                <i class="fa fa-comments footer-icon"></i>
+                                <br>
+                                协议
+                            </a>
+                            <a class="focus" data-nav="tickets" href="help.html">
+                                <i class="fa fa-question-circle footer-icon"></i>
+                                <br>
+                                帮助
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

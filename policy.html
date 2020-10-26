@@ -2,24 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>餐票生成 - 用户协议</title>
+    <title>餐票生成 - 帮助</title>
     <link href="favicon-32.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <link href="layout/common.min.css" rel="stylesheet">
+    <link href="layout/all.min.css" rel="stylesheet">
+    <link href="layout/h5.css" rel="stylesheet">
+    <script src="script/jump.js"></script>
+
+    <style>.body-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+        z-index: 500
+    }
+
+    .content-bg {
+        background-color: #fff;
+        padding-bottom: 10em;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden
+    }
+
+    .body-container {
+        padding-top: 3.8em
+    }</style>
+    <style>.footer-wrapper {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: auto;
+        z-index: 1000
+    }
+
+    .footer {
+        height: 56px;
+        background: #fff;
+        border-top: solid 1px #ccc;
+        padding-top: 6px;
+        font-size: .8em
+    }
+
+    .footer a {
+        position: relative
+    }
+
+    .footer-badge {
+        position: absolute;
+        top: 0;
+        right: -1.5em;
+        display: block;
+        min-width: 1.6em;
+        height: 1.6em;
+        border-radius: .8em;
+        padding: 0 .5em;
+        background-color: #d00;
+        text-align: center;
+        color: #fff;
+        font-weight: 700
+    }
+
+    .footer a.focus {
+        color: #40cc9d
+    }
+
+    .footer .footer-icon {
+        margin: 2px;
+        font-size: 24px
+    }</style>
 </head>
 <body>
-<h1 style="text-align: center">用户协议</h1>
-<br>
-<h2>一、使用协议的接受</h2>
-<p>通过访问本站点，你表示同意接受本协议的所有条件和条款。如果你不接受本协议的全部条件和条款，请不要访问本站点。</p>
-<h2>二、用户的安全</h2>
-<p>用户无需注册即可使用本站点。用户在本网站上的上的任何行为，由用户承担一切法律及连带责任，承担一切由此带来的损失或损害，本站点不承担任何责任。</p>
-<p>未经本站点允许，用户不应以文字、软件、音乐、照片、图形、信息或其他形式传播本站点的内容。</p>
-<p>本站点认为用户行为有可能影响正常运行的，有权在不通知的情况下，封禁该用户的IP/IP组。</p>
-<h2>三、服务的终止</h2>
-<p>本站点有权在任何时候，暂时或永久终止本站点全部或部分服务，无论是否通知用户。本站点不对用户服务的终止负任何责任。</p>
+<div id="gApp">
+    <div class="body-wrapper">
+        <div class="container px-0">
+            <div class="row no-gutters">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="viewport">
+                        <div class="content-bg">
+                            <div class="p-2">
+                                <div class="row no-gutters">
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-check icon-orange fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>使用协议的接受</h4>
+                                            <br>
+                                            <p>通过访问本站点，你表示同意接受本协议的所有条件和条款。</p>
+                                            <p>如果你不接受本协议的全部条件和条款，请不要访问本站点。</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-lock icon-green fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>用户的安全</h4>
+                                            <br>
+                                            <p>用户无需注册即可使用本站点。</p>
+                                            <p>用户在本网站上的上的任何行为，由用户承担一切责任，承担一切损失。</p>
+                                            <p>未经本站点允许，用户不应以任何形式传播本站点的内容。</p>
+                                            <p>本站点认为用户有可能造成不良影响的，有权在不通知的情况下，</p>
+                                            <p>封禁该用户的IP/IP组。</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 p-1">
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                            <i class="fa fa-window-close icon-red fa-2x mb-2"></i>
+                                            <br>
+                                            <h4>服务的终止</h4>
+                                            <br>
+                                            <p>本站点有权在任何时候，暂时或永久终止本站点全部或部分服务。</p>
+                                            <p>本站点不对用户服务的终止负任何责任。</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper no-print">
+        <div class="container px-0">
+            <div class="row no-gutters">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="viewport">
+                        <div class="bg-light border-top"></div>
+                        <div class="footer shadow-sm d-flex justify-content-around text-center">
+                            <a data-nav="gen" href="index.html">
+                                <i class="fa fa-cubes footer-icon"></i>
+                                <br>
+                                生成
+                            </a>
+                            <a class="focus" data-nav="pol" href="policy.html">
+                                <i class="fa fa-comments footer-icon"></i>
+                                <br>
+                                协议
+                            </a>
+                            <a data-nav="tickets" href="help.html">
+                                <i class="fa fa-question-circle footer-icon"></i>
+                                <br>
+                                帮助
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
