@@ -14,8 +14,8 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Layout
+- Interface：Generation Layout
 
-- Accounts
+- Safety：Name + Password
 
-- HarmonyOS
+- Apply：HarmonyOS App
