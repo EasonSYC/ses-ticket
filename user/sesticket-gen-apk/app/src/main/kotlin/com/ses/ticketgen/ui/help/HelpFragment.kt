@@ -28,14 +28,14 @@ class HelpFragment : Fragment() {
 
     private inner class HpListener : View.OnClickListener {
         override fun onClick(v: View) {
-            val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/help.html"
+            val URL = "https://ses-1987.gitee.io/sesticketgen/help.html"
             openurl(URL)
         }
     }
 
     private inner class HpPolListener : View.OnClickListener {
         override fun onClick(v: View) {
-            val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/policy.html"
+            val URL = "https://ses-1987.gitee.io/sesticketgen/policy.html"
             openurl(URL)
         }
     }

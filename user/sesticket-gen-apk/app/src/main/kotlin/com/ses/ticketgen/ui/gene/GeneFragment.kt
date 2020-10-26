@@ -82,7 +82,7 @@ class GeneFragment : Fragment() {
 
     private inner class PolicyListener : View.OnClickListener {
         override fun onClick(v: View) {
-            val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/policy.html"
+            val URL = "https://ses-1987.gitee.io/sesticketgen/policy.html"
             openurl(URL)
         }
     }
@@ -125,7 +125,7 @@ class GeneFragment : Fragment() {
                     val tim = moth * 32 + dy
                     val cs = yr * 416 + tim
                     val css = cs * 10 + type
-                    val URL = "https://jiubugaosuni.gitee.io/sesticket-gen/result/print.html?" + id + "&" + Integer.toHexString(css)
+                    val URL = "https://ses-1987.gitee.io/sesticketgen/result/print.html?" + id + "&" + Integer.toHexString(css)
                     openurl(URL)
                 }
             }
