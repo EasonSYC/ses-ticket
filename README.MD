@@ -10,7 +10,7 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### Website
 
-[Website Gitee](https://jiubugaosuni.gitee.io/sesticket-gen)
+[Website Gitee](https://ses-1987.gitee.io/sesticket-gen)
 
 #### TODO:
 
