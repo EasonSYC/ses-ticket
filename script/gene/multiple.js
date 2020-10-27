@@ -72,7 +72,8 @@ str.onclick = function () {
 }
 gen.onclick = function () {
     let agr = document.getElementById("agree");
-    let nam = document.getElementById("name").value;
+    let cook = getCookie("acc");
+    let nam = decodeURI(cook.split("@")[0]);
     let syear = parseInt(document.getElementById("syear").value);
     let smon = parseInt(document.getElementById("smonth").value);
     let sday = parseInt(document.getElementById("sday").value);
