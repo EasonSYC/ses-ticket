@@ -11,11 +11,3 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 #### Website
 
 [Website Gitee](https://ses-1987.gitee.io/sesticketgen/)
-
-#### TODO:
-
-- Interface：Generation Layout
-
-- Safety：Name + Password
-
-- Apply：HarmonyOS App
