@@ -16,7 +16,16 @@ let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
 var urlqr = url.replace("print", "scan");
 urlqr = decodeURI(urlqr);
 var food = foodArray[typ];
+
 var name = decodeURI(arr[0]);
+
+let cook = getCookie("acc");
+let nam2 = decodeURI(cook.split("@")[0]);
+
+if (name !== nam2) {
+    alert("姓名不匹配！");
+    window.history.back();
+}
 var num = numArray[typ];
 var loc = "食堂" + locArray[typ] + "楼";
 var wkd = mon + "/" + day + " 周" + weekArray[dynum];
