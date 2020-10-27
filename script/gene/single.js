@@ -16,6 +16,6 @@ gen.onclick = function() {
         let cs = yr * 416 + tim;
         let css = cs * 10 + typ;
         let api = css.toString(16);
-        window.open("./../result/print.html?" + nam + "&" + api, "_blank");
+        window.open("./../result/print.html?" + nam + "&" + api);
     }
 }
