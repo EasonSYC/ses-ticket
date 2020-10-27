@@ -89,6 +89,6 @@ gen.onclick = function () {
         let sdate = syear * 416 + smon * 32 + sday;
         let edate = eyear * 416 + emon * 32 + eday;
         let api = typ;
-        window.open("./../result/multiple.html?name=" + name + "&sdate=" + sdate + "&edate=" + edate + "&api=" + api, "_blank");
+        window.open("./../result/multiple.html?name=" + name + "&sdate=" + sdate + "&edate=" + edate + "&api=" + api);
     }
 }
