@@ -82,6 +82,11 @@
     }</style>
 </head>
 <body>
+<script src="script/safety/sha1.js"></script>
+<script src="script/safety/account.js"></script>
+<script>
+    if (!exists()) window.location.replace("login.html");
+</script>
 <div id="gApp">
     <div class="body-wrapper">
         <div class="container px-0">
@@ -92,7 +97,7 @@
                             <div class="p-2">
                                 <div class="row no-gutters">
                                     <div class="col-6 p-1">
-                                        <a class="d-block rounded shadow-sm text-center px-1 py-3" href=""
+                                        <a class="d-block rounded shadow-sm text-center px-1 py-3"
                                            href="generate/single.html">
                                             <i class="fa fa-utensils icon-orange fa-2x mb-2"></i>
                                             <br>
