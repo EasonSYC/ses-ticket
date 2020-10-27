@@ -1,7 +1,23 @@
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 function exists() {
-    let cookie = document.cookie.split(";")[0].split("=")[1];
-    let acc = sha1(decodeURI(cookie.split("@")[0]));
-    let pwd = cookie.split("@")[1];
+    let cook = getCookie("acc");
+    if (cook === "") return 0;
+    let acc = sha1(decodeURI(cook.split("@")[0]));
+    let pwd = cook.split("@")[1];
     let num = 5;
     let nameArray = [
         "d033e22ae348aeb5660fc2140aec35850c4da997",
@@ -23,7 +39,7 @@ function exists() {
 
 function index() {
     if (exists()) {
-        window.open("./index.html");
+        window.location.reload();
     } else {
         alert("用户名或密码错误！");
         window.location.reload();
