@@ -28,5 +28,19 @@ if (truname !== nam2) {
 }
 
 var trunum = numArray[typ];
+
+let acc2 = sha1(nam2);
+let i = 0;
+for (; i < num; ++i) {
+    if (nameArray[i] === acc2) break;
+}
+
+let allow = allArray[typArray[i]];
+
+if (!allow.includes(trunum)) {
+    alert("权限不足以生成该餐票！");
+    window.history.back();
+}
+
 var truloc = "食堂" + locArray[typ] + "楼";
 var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
