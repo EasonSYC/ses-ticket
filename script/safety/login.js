@@ -12,9 +12,10 @@ log.onclick = function () {
         expdate = 0.5;
     }
     let d = new Date();
+    let timeline = d.getTime();
     d.setTime(d.getTime() + (expdate * 24 * 60 * 60 * 1000));
     let expires = d.toUTCString();
-    let cookie = "acc=" + username + "@" + password + ";expires=" + expires + ";path=/";
+    let cookie = "acc=" + username + "@" + password + "@" + timeline + ";expires=" + expires + ";path=/";
     document.cookie = cookie;
     index();
 }
