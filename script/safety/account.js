@@ -22,7 +22,7 @@ let typArray = [
     2,
     2,
     2,
-    2];
+    1];
 let tynArray = [
     "根用户",
     "开发者",
