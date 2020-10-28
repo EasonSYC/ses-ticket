@@ -89,7 +89,7 @@ function allowance() {
     for (; i < num; ++i) {
         if (nameArray[i] === acc) break;
     }
-    let tyn = tynArray[i];
-    let all = allArray[i];
+    let tyn = tynArray[typArray[i]];
+    let all = allArray[typArray[i]];
     alert("用户类别：" + tyn + "\n生成餐区：" + all);
 }
