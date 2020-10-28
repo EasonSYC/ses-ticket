@@ -20,7 +20,7 @@
     if (exists()) {
         let url = document.location.toString();
         let urlParmStr = url.slice(url.indexOf("?") + 1);
-        let lnk = urlParmStr.split("=")[1];
+        let lnk = urlParmStr.slice(urlParmStr.indexOf("=") + 1);
         if (lnk === undefined || lnk === null) window.location.replace("index.html");
         window.location.replace(lnk);
     }
