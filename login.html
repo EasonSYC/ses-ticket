@@ -19,10 +19,20 @@
 <script>
     if (exists()) {
         let url = document.location.toString();
-        let urlParmStr = url.slice(url.indexOf("?") + 1);
-        let lnk = urlParmStr.slice(urlParmStr.indexOf("=") + 1);
-        if (lnk === undefined || lnk === null) window.location.replace("index.html");
-        window.location.replace(lnk);
+        let qlocurl = url.indexOf("?");
+        if (qlocurl === -1) window.location.replace("index.html");
+        else {
+            let urlParmStr = url.slice(qlocurl + 1);
+            let ulocurl = urlParmStr.indexOf("=");
+            if (ulocurl === -1) window.location.replace("index.html");
+            else {
+                let lnk = urlParmStr.slice(ulocurl + 1);
+                if (lnk === undefined || lnk === null) window.location.replace("index.html");
+                else {
+                    window.location.replace(lnk);
+                }
+            }
+        }
     }
 </script>
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 mb-3 bg-white border-bottom shadow-sm no-print"
