@@ -69,6 +69,20 @@ for (let d = sdate, i = 0; d <= edate; d.setDate(d.getDate() + 1), ++i) {
         let purl = "\"" + ".\/..\/result\/print.html?" + nam + "&" + napi + "\"";
         let surl = urlNew + "?" + nam + "&" + napi;
         let datestr = dmo + "/" + ddy + " 周" + weekArray[wkday];
+
+        let acc2 = sha1(nam2);
+        let j = 0;
+        for (; j < num; ++j) {
+            if (nameArray[j] === acc2) break;
+        }
+
+        let allow = allArray[typArray[j]];
+
+        if (!allow.includes(are)) {
+            alert("权限不足以生成" + dyr + "/" + dmo + "/" + ddy + "的餐票！");
+            continue;
+        }
+
         ret +=
             "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
             "<div class=\"order-panel\"> " +
