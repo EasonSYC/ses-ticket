@@ -14,7 +14,7 @@ let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "�
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
 var truurlqr = url.replace("print", "scan");
-urlqr = decodeURI(urlqr);
+truurlqr = decodeURI(truurlqr);
 var trufood = foodArray[typ];
 
 var truname = decodeURI(arr[0]);
