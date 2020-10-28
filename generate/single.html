@@ -14,7 +14,7 @@
 <script src="../script/safety/sha1.js"></script>
 <script src="../script/safety/account.js"></script>
 <script>
-    if (!exists()) window.location.replace("../login.html");
+    if (!exists()) window.location.replace("../login.html?ref=" + window.location.pathname.replace("/sesticketgen/", ""));
 </script>
 <h1 style="text-align: center">单张生成</h1>
 <br>
