@@ -16,7 +16,8 @@ function getCookie(cname) {
 function exists() {
     let cook = getCookie("acc");
     if (cook === "") return 0;
-    let acc = sha1(decodeURI(cook.split("@")[0]));
+    let nam = decodeURI(cook.split("@")[0]);
+    let acc = sha1(nam);
     let pwd = cook.split("@")[1];
     let num = 7;
     let nameArray = [
@@ -48,4 +49,10 @@ function index() {
         alert("用户名或密码错误！");
         window.location.reload();
     }
+}
+
+function exit() {
+    let d = new Date();
+    d.setTime(d.getTime() - 1);
+    document.cookie = "acc=;expires=" + d.toUTCString() + ";path=/";
 }
