@@ -77,12 +77,6 @@ function index() {
     }
 }
 
-function exit() {
-    let d = new Date();
-    d.setTime(d.getTime() - 1);
-    document.cookie = "acc=;expires=" + d.toUTCString() + ";path=/";
-}
-
 function allowance() {
     let cook = getCookie("acc");
     if (cook === "") return 0;
