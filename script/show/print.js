@@ -13,11 +13,11 @@ let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
-var urlqr = url.replace("print", "scan");
+var truurlqr = url.replace("print", "scan");
 urlqr = decodeURI(urlqr);
-var food = foodArray[typ];
+var trufood = foodArray[typ];
 
-var name = decodeURI(arr[0]);
+var truname = decodeURI(arr[0]);
 
 let cook = getCookie("acc");
 let nam2 = decodeURI(cook.split("@")[0]);
@@ -26,6 +26,6 @@ if (name !== nam2) {
     alert("姓名不匹配！");
     window.history.back();
 }
-var num = numArray[typ];
-var loc = "食堂" + locArray[typ] + "楼";
-var wkd = mon + "/" + day + " 周" + weekArray[dynum];
+var trunum = numArray[typ];
+var truloc = "食堂" + locArray[typ] + "楼";
+var truwkd = mon + "/" + day + " 周" + weekArray[dynum];

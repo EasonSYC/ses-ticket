@@ -81,31 +81,31 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <div class="order-name">
-                            <script>document.write(food);</script>
+                            <script>document.write(trufood);</script>
                         </div>
                         <img class="img-qrcode border" id="qrc">
                         <script>
-                            QRCode.toDataURL(urlqr, {errorCorrectionLevel: 'L'}, function (rtt, url) {
+                            QRCode.toDataURL(truurlqr, {errorCorrectionLevel: 'L'}, function (rtt, url) {
                                 document.getElementById("qrc").src = url;
                             })
                         </script>
                         <div class="user-name text-center">
                                 <span>
-                                    <script>document.write(name);</script>
+                                    <script>document.write(truname);</script>
                                 </span>
                         </div>
                     </div>
                     <div class="ticket-body">
                         <div class="order-area">
-                            <script>document.write(num);</script>
+                            <script>document.write(trunum);</script>
                             <span class="order-area-tail">区</span>
                         </div>
                         <div class="order-location">
                             <span id="loc">
-                                <script>document.getElementById("loc").innerHTML = ("<div>" + loc + "</div>");</script>
+                                <script>document.getElementById("loc").innerHTML = ("<div>" + truloc + "</div>");</script>
                                 <span>
                                     <span>
-                                        <script>document.write(wkd);</script>
+                                        <script>document.write(truwkd);</script>
                                     </span>
                                 </span>
                             </span>
