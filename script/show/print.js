@@ -22,10 +22,11 @@ var truname = decodeURI(arr[0]);
 let cook = getCookie("acc");
 let nam2 = decodeURI(cook.split("@")[0]);
 
-if (name !== nam2) {
+if (truname !== nam2) {
     alert("姓名不匹配！");
     window.history.back();
 }
+
 var trunum = numArray[typ];
 var truloc = "食堂" + locArray[typ] + "楼";
 var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
