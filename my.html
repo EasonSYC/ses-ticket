@@ -127,10 +127,19 @@
                                     </a>
                                 </div>
                                 <div class="list-group mt-3">
-                                    <a class="list-group-item" href="" onclick="exit()">
+                                    <a class="list-group-item" id="exit">
                                         <i class="fa fa-power-off"></i>
                                         退出
                                     </a>
+                                    <script>
+                                        let exit = document.getElementById("exit");
+                                        exit.onclick = function () {
+                                            let d = new Date();
+                                            d.setTime(d.getTime() - 1);
+                                            document.cookie = "acc=;expires=" + d.toUTCString() + ";path=/";
+                                            window.location.replace("login.html?ref=index.html");
+                                        }
+                                    </script>
                                 </div>
                             </div>
                         </div>
