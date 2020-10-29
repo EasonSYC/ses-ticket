@@ -12,8 +12,9 @@
     <link href="./../layout/common.min.css" rel="stylesheet">
     <link href="./../layout/all.min.css" rel="stylesheet">
     <link href="./../layout/h5.css" rel="stylesheet">
+
     <style>.supply-date-list {
-        width: 100%
+        width: 100%;
     }
 
     .supply-date-list > li {
@@ -69,6 +70,7 @@
         background-color: #fff;
         color: #666
     }</style>
+
     <style>.body-wrapper {
         position: absolute;
         top: 0;
@@ -92,6 +94,7 @@
     .body-container {
         padding-top: 3.8em
     }</style>
+
     <style>.footer-wrapper {
         width: 100%;
         position: fixed;
@@ -177,7 +180,7 @@
                             <div>
                                 <ul class="supply-date-list px-3">
                                     <li class="py-2">
-                                        <div class="row no-gutters">
+                                        <div class="row no-gutters" onclick="showChoice()">
                                             <div class="col-3">
                                                 <div class="date-icon" id="1">
                                                 </div>
@@ -185,204 +188,15 @@
                                             <div class="col-9">
                                                 <div class="row no-gutters">
                                                     <div class="col-12">
-                                                        <div class="px-3">
-                                                            <!--                                                            <b class="title">1区 自助餐</b>-->
-                                                            <!--                                                            <span class="float-right">-->
-                                                            <!--                                                                <span class="badge badge-orange">-->
-                                                            <!--                                                                    已选餐-->
-                                                            <!--                                                                </span>-->
-                                                            <!--                                                            </span>-->
-                                                            <!--                                                            <br>-->
-                                                            <!--                                                            <small>-->
-                                                            <!--                                                                <span class="text-muted">食堂一楼</span>-->
-                                                            <!--                                                            </small>-->
-                                                            <!--                                                            <div>-->
-                                                            <!--                                                                <i class="fa fa-exclamation-triangle icon-red"></i>-->
-                                                            <!--                                                                <small class="mr-1">-->
-                                                            <!--                                                                    经常扫描-->
-                                                            <!--                                                                </small>-->
-                                                            <!--                                                            </div>-->
-                                                            <!--                                                            <div class="text-muted text-center mt-4">点击这里选餐</div>-->
-                                                            <div class="text-muted text-center mt-4">随便你点不点</div>
+                                                        <div class="px-3" id="shc">
+                                                            <div class="text-muted text-center mt-4">点击这里选餐</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="supply-list my-3 shadow-sm">
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">1区 自助餐</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(1)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂一楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-red"></i>
-                                                                <small class="mr-1">
-                                                                    经常扫描
-                                                                </small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">2区 套餐A</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(2)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂一楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-green"></i>
-                                                                <small class="mr-1">不常扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">3区 套餐A</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(3)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂一楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-green"></i>
-                                                                <small class="mr-1">不常扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">4区 套餐A</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(4)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂二楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-green"></i>
-                                                                <small class="mr-1">不常扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">5区 套餐B</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(5)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂二楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-green"></i>
-                                                                <small class="mr-1">不常扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">6区 盖浇饭</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(6)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂二楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-orange"></i>
-                                                                <small class="mr-1">有时扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">7区 套餐C</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(7)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂二楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-green"></i>
-                                                                <small class="mr-1">不常扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">8区 面档</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(8)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂二楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-orange"></i>
-                                                                <small class="mr-1">有时扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row no-gutters">
-                                                    <div class="col-12">
-                                                        <div class="px-3">
-                                                            <b class="title">9区 套餐B</b>
-                                                            <a class="btn btn-sm btn-outline-secondary"
-                                                               onclick="chooseType(9)">选餐</a>
-                                                            <br>
-                                                            <small>
-                                                                <span class="text-muted">食堂二楼</span>
-                                                            </small>
-                                                            <div>
-                                                                <i class="fa fa-exclamation-triangle icon-green"></i>
-                                                                <small class="mr-1">不常扫描</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                        <ul class="supply-list shadow-sm" id="chc">
+
                                         </ul>
                                     </li>
                                 </ul>
