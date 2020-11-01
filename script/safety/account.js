@@ -62,6 +62,13 @@ function getCookie(cname) {
     return "";
 }
 
+function delCookie(cname) {
+    let d = new Date();
+    d.setTime(d.getTime() - 1);
+    let c = getCookie(cname);
+    document.cookie = cname + "=" + c + ";expires=" + d.toUTCString() + ";path=/";
+}
+
 function exists() {
     let cook = getCookie("acc");
     if (cook === "") return 0;
@@ -71,6 +78,7 @@ function exists() {
     for (let i = 0; i < num; ++i)
         if (acc === nameArray[i] && pwd === pwdArray[i])
             return 1;
+    delCookie("acc");
     return 0;
 }
 
@@ -79,7 +87,6 @@ function index() {
         window.location.reload();
     } else {
         alert("用户名或密码错误！");
-        window.location.reload();
     }
 }
 
