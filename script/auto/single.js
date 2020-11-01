@@ -355,7 +355,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">9区 套餐B</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(5)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(9)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
