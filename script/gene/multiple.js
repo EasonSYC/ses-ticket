@@ -20,7 +20,6 @@ gen.onclick = function () {
         res += choose;
     }
     res = res.replace(/undefined/g, "0");
-    alert(res);
     if (agr.checked === false) {
         alert("请先勾选复选框！");
     } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
