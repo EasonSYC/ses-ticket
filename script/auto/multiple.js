@@ -1,4 +1,4 @@
-var choice = [1, 2, 3, 4, 5];
+var choice = [];
 var on = [];
 
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
