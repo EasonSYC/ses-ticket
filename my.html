@@ -134,9 +134,7 @@
                                     <script>
                                         let exit = document.getElementById("exit");
                                         exit.onclick = function () {
-                                            let d = new Date();
-                                            d.setTime(d.getTime() - 1);
-                                            document.cookie = "acc=;expires=" + d.toUTCString() + ";path=/";
+                                            delCookie("acc");
                                             window.location.replace("login.html?ref=index.html");
                                         }
                                     </script>
