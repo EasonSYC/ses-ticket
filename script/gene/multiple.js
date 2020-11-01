@@ -1,26 +1,7 @@
 let gen = document.getElementById("gen");
-let str = document.getElementById("str");
-str.onclick = function () {
+gen.onclick = function () {
     let res = "";
 
-    let syear = parseInt(document.getElementById("syear").value);
-    let smon = parseInt(document.getElementById("smonth").value);
-    let sday = parseInt(document.getElementById("sday").value);
-    let eyear = parseInt(document.getElementById("eyear").value);
-    let emon = parseInt(document.getElementById("emonth").value);
-    let eday = parseInt(document.getElementById("eday").value);
-    let sdate = new Date(syear + "/" + smon + "/" + sday);
-    let edate = new Date(eyear + "/" + emon + "/" + eday);
-    let len = (edate - sdate) / 86400000 + 1;
-
-    for (let i = 0; i < len; ++i) {
-        let chc = document.getElementById("typ" + i);
-        chc = parseInt(chc.options[chc.selectedIndex].value);
-        res += chc;
-    }
-    document.getElementById("typ").value = res;
-}
-gen.onclick = function () {
     let agr = document.getElementById("agree");
     let cook = getCookie("acc");
     let nam = decodeURI(cook.split("@")[0]);
@@ -30,7 +11,16 @@ gen.onclick = function () {
     let eyear = parseInt(document.getElementById("eyear").value);
     let emon = parseInt(document.getElementById("emonth").value);
     let eday = parseInt(document.getElementById("eday").value);
-    let typ = document.getElementById("typ").value;
+
+    let sdate = new Date(syear + "/" + smon + "/" + sday);
+    let edate = new Date(eyear + "/" + emon + "/" + eday);
+    let len = (edate - sdate) / 86400000 + 1;
+    for (let d = sdate, i = 0; i < len; ++i, d.setDate(d.getDate() + 1)) {
+        let choose = choice[i];
+        res += choose;
+    }
+    res = res.replace(/undefined/g, "0");
+    alert(res);
     if (agr.checked === false) {
         alert("请先勾选复选框！");
     } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
@@ -39,7 +29,7 @@ gen.onclick = function () {
         let name = nam;
         let sdate = syear * 416 + smon * 32 + sday;
         let edate = eyear * 416 + emon * 32 + eday;
-        let api = typ;
+        let api = res;
         window.open("./../result/multiple.html?name=" + name + "&sdate=" + sdate + "&edate=" + edate + "&api=" + api);
     }
 }
