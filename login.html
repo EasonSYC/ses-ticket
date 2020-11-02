@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>餐票生成 - 登录</title>
-    <link href="image/favicon-32.png" rel="shortcut icon">
+    <link href="/favicon.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link href="layout/common.min.css" rel="stylesheet">
-    <link href="layout/all.min.css" rel="stylesheet">
-    <link href="layout/web.css" rel="stylesheet">
+    <link href="/layout/common.min.css" rel="stylesheet">
+    <link href="/layout/all.min.css" rel="stylesheet">
+    <link href="/layout/web.css" rel="stylesheet">
 </head>
 <body>
-<script src="script/safety/sha1.js"></script>
-<script src="script/safety/account.js"></script>
+<script src="/script/safety/sha1.js"></script>
+<script src="/script/safety/account.js"></script>
 <script>
     if (exists()) {
         let url = document.location.toString();
         let qlocurl = url.indexOf("?");
-        if (qlocurl === -1) window.location.replace("index.html");
+        if (qlocurl === -1) window.location.replace("/index.html");
         else {
             let urlParmStr = url.slice(qlocurl + 1);
             let ulocurl = urlParmStr.indexOf("=");
-            if (ulocurl === -1) window.location.replace("index.html");
+            if (ulocurl === -1) window.location.replace("/index.html");
             else {
                 let lnk = urlParmStr.slice(ulocurl + 1);
-                if (lnk === undefined || lnk === null) window.location.replace("index.html");
+                if (lnk === undefined || lnk === null) window.location.replace("/index.html");
                 else {
                     window.location.replace(lnk);
                 }
@@ -78,6 +78,6 @@
         </div>
     </div>
 </div>
-<script src="script/safety/login.js"></script>
+<script src="/script/safety/login.js"></script>
 </body>
 </html>
