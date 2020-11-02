@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>我的预订</title>
-    <link href="../favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
-    <link href="../layout/common.min.css" rel="stylesheet">
-    <link href="../layout/all.min.css" rel="stylesheet">
+    <link href="/favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
+    <link href="/layout/common.min.css" rel="stylesheet">
+    <link href="/layout/all.min.css" rel="stylesheet">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
@@ -62,15 +62,15 @@
     }</style>
 </head>
 <body>
-<script src="../script/safety/sha1.js"></script>
-<script src="../script/safety/account.js"></script>
+<script src="/script/safety/sha1.js"></script>
+<script src="/script/safety/account.js"></script>
 <script>
     let urll = document.location.toString();
     let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
-    if (!exists()) window.location.replace("../login.html?ref=" + window.location.pathname.replace("/sesticketgen/", "") + "?" + urlParmmStr);
+    if (!exists()) window.location.replace("/login.html?ref=" + window.location.pathname.replace("/sesticketgen/", "") + "?" + urlParmmStr);
 </script>
-<script src="../script/show/print.js"></script>
-<script src="../script/qrcode.min.js"></script>
+<script src="/script/show/print.js"></script>
+<script src="/script/qrcode.min.js"></script>
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">
