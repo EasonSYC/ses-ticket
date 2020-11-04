@@ -1,8 +1,8 @@
-# SES Ticket Generation
+# SES Ticket
 
 #### Introduction
 
-This is a system of generating tickets for SES canteen.
+This is a system of generating or pulling tickets for SES canteen.
 
 #### Rules
 
