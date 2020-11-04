@@ -1,4 +1,4 @@
-let num = 10;
+let num = 12;
 let nameArray = [
     "d033e22ae348aeb5660fc2140aec35850c4da997",
     "a28079aa9ed5861504d0fde60544f715df764110",
@@ -9,7 +9,9 @@ let nameArray = [
     "a7a12ba71f7ab5331cfffe1a0c1e12baa2661069",
     "ebf91f6760eef10753bed9bf00b46945f253a2e1",
     "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
-    "9bb63820ef3c5518cd3b7572778a05e8f3d0fd51"];
+    "9bb63820ef3c5518cd3b7572778a05e8f3d0fd51",
+    "87bcfe46af9de8e5d1cd0c17d5fcd0304a9df0ed",
+    "fccfac5ea6317fb43541816f476a0b614a1efa5f"];
 let pwdArray = [
     "d033e22ae348aeb5660fc2140aec35850c4da997",
     "2e92ac4a17994f037461eb2b476415b11bab3319",
@@ -20,7 +22,9 @@ let pwdArray = [
     "7319be0502b21f03904b0b680e3c44a4ed266d14",
     "2f42c22ec0cc1e08f446a46c9fd2ea1bf204e8e1",
     "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
-    "c11c41262e19826e0edac6846a84ea654a05a0f7"];
+    "c11c41262e19826e0edac6846a84ea654a05a0f7",
+    "eb820fc7799df7d8130225a3052a3e9d36a237fc",
+    "49760f017daccda000140283ecdcdcdbdfa55579"];
 let typArray = [
     0,
     1,
@@ -31,7 +35,9 @@ let typArray = [
     1,
     2,
     5,
-    2];
+    2,
+    2,
+    1];
 let tynArray = [
     "根用户",
     "开发者",
