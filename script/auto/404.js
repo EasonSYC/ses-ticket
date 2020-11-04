@@ -1,3 +1,7 @@
+let before =
+    "\n" +
+    "\t\t\t<p class=\"display-1 text-danger py-3\"> 404 </p>\n" +
+    "\t\t\t<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
 let home =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/\" id=\"g-but\">\n" +
     "\t\t\t\t首页\n" +
@@ -6,12 +10,17 @@ let back =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"\" id=\"g-but\" onclick=\"history.back(-1);\">\n" +
     "\t\t\t\t返回\n" +
     "\t\t\t</a>";
+let after =
+    "\n" +
+    "\t\t\t<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/help.html#NotFound\">\n" +
+    "\t\t\t\t帮助\n" +
+    "\t\t\t</a>";
 let but = document.getElementById("but");
 // if (document.referrer === "" || document.referrer === undefined || document.referrer === null) {
 if (document.referrer) {
-    but.innerHTML = back;
+    but.innerHTML = before + back + after;
 } else {
-    but.innerHTML = home;
+    but.innerHTML = before + home + after;
 }
 
 let eggs = ["随机数的范围不包括这串字符，你是怎么让它显示出来的？",
