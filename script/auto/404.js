@@ -1,11 +1,17 @@
-let but = document.getElementById("g-but");
+let home =
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/\" id=\"g-but\">\n" +
+    "\t\t\t\t首页\n" +
+    "\t\t\t</a>";
+let back =
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"\" id=\"g-but\" onclick=\"history.back(-1);\">\n" +
+    "\t\t\t\t返回\n" +
+    "\t\t\t</a>";
+let but = document.getElementById("but");
 // if (document.referrer === "" || document.referrer === undefined || document.referrer === null) {
-if (history.length === 0) {
-    but.innerHTML = "首页";
-    but.href = "/";
-    but.onclick = ""
+if (document.referrer) {
+    but.innerHTML = back;
 } else {
-    but.innerHTML = "返回";
+    but.innerHTML = home;
 }
 
 let eggs = ["随机数的范围不包括这串字符，你是怎么让它显示出来的？",
