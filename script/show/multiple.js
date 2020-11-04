@@ -139,6 +139,6 @@ for (let i = 0; i < api.length; ++i) {
             "qrc" +
             i +
             "\").src=url;});";
-        sdate = sdate.setDate(sdate.getDate() + 1);
+        sdate.setDate(sdate.getDate() + 1);
     }
 }
