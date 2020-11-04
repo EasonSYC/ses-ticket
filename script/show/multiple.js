@@ -55,9 +55,9 @@ for (let i = 0; i < api.length; ++i) {
         (chc === "8") ||
         (chc === "9")) {
         chc = parseInt(chc);
-        let dyr = d.getFullYear();
-        let dmo = d.getMonth() + 1;
-        let ddy = d.getDate();
+        let dyr = sdate.getFullYear();
+        let dmo = sdate.getMonth() + 1;
+        let ddy = sdate.getDate();
         let are = numArray[chc];
         let typ = foodArray[chc];
         let loc = locArray[chc];
