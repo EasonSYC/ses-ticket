@@ -18,7 +18,7 @@ let after =
 let but = document.getElementById("but");
 // if (document.referrer === "" || document.referrer === undefined || document.referrer === null) {
 alert(document.referrer);
-if (!document.referrer) {
+if (document.referrer === '') {
     but.innerHTML = before + home + after;
 } else {
     but.innerHTML = before + back + after;
