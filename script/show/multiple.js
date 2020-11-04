@@ -42,8 +42,8 @@ var ret = "";
 var ret2 = "";
 
 let sdate = new Date(syr + "/" + smo + "/" + sdt);
-let edate = new Date(eyr + "/" + emo + "/" + edt);
-for (let d = sdate, i = 0; d <= edate; d.setDate(d.getDate() + 1), ++i) {
+//let edate = new Date(eyr + "/" + emo + "/" + edt);
+for (let i = 0; i < api.length; ++i) {
     let chc = api[i];
     if ((chc === "1") ||
         (chc === "2") ||
@@ -139,5 +139,6 @@ for (let d = sdate, i = 0; d <= edate; d.setDate(d.getDate() + 1), ++i) {
             "qrc" +
             i +
             "\").src=url;});";
+        sdate = sdate.setDate(sdate.getDate() + 1);
     }
 }
