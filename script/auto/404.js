@@ -16,8 +16,7 @@ let after =
     "\t\t\t\t帮助\n" +
     "\t\t\t</a>";
 let but = document.getElementById("but");
-// if (document.referrer === "" || document.referrer === undefined || document.referrer === null) {
-alert(document.referrer);
+
 if (document.referrer === '') {
     but.innerHTML = before + home + after;
 } else {
