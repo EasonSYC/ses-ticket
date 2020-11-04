@@ -1,5 +1,5 @@
 let but = document.getElementById("g-but");
-if (document.referrer === "") {
+if (document.referrer === "" || document.referrer === undefined || document.referrer === null) {
     but.innerHTML = "首页";
     but.href = "/";
     but.onclick = "";
