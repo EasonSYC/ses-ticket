@@ -3,9 +3,9 @@ let but = document.getElementById("g-but");
 if (history.length === 0) {
     but.innerHTML = "首页";
     but.href = "/";
+    but.onclick = ""
 } else {
     but.innerHTML = "返回";
-    but.onclick = "history.back(-1)";
 }
 
 let eggs = ["随机数的范围不包括这串字符，你是怎么让它显示出来的？",
