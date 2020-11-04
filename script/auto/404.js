@@ -3,10 +3,8 @@ let but = document.getElementById("g-but");
 if (history.length === 0) {
     but.innerHTML = "首页";
     but.href = "/";
-    but.onclick = "";
 } else {
     but.innerHTML = "返回";
-    but.href = "";
     but.onclick = "history.back(-1)";
 }
 
