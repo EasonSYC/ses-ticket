@@ -17,10 +17,11 @@ let after =
     "\t\t\t</a>";
 let but = document.getElementById("but");
 // if (document.referrer === "" || document.referrer === undefined || document.referrer === null) {
-if (document.referrer) {
-    but.innerHTML = before + back + after;
-} else {
+alert(document.referrer);
+if (!document.referrer) {
     but.innerHTML = before + home + after;
+} else {
+    but.innerHTML = before + back + after;
 }
 
 let eggs = ["随机数的范围不包括这串字符，你是怎么让它显示出来的？",
