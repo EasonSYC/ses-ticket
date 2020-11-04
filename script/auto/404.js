@@ -1,7 +1,7 @@
 let but = document.getElementById("g-but");
-if (history.back(-1) == undefined) {
+if (document.referrer == "") {
     but.innerHTML = "首页";
-    but.href = "https://ses-1987.gitee.io";
+    but.href = "/";
     but.onclick = "";
 }
 else {
