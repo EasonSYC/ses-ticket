@@ -7,7 +7,7 @@ let home =
     "\t\t\t\t首页\n" +
     "\t\t\t</a>";
 let back =
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"\" id=\"g-but\" onclick=\"history.go(-1);\">\n" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"\" id=\"g-but\" onclick=\"window.history.go(-1);\">\n" +
     "\t\t\t\t返回\n" +
     "\t\t\t</a>";
 let after =
