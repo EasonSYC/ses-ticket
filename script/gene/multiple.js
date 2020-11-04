@@ -1,6 +1,6 @@
 let gen = document.getElementById("gen");
 gen.onclick = function () {
-    let res = "";
+    let res = "", res0 = 0;
 
     let agr = document.getElementById("agree");
     let cook = getCookie("acc");
@@ -19,7 +19,15 @@ gen.onclick = function () {
         let choose = choice[i];
         res += choose;
     }
+    for (let i = res.length - 1; i >= 0; i--) {
+        res0 = res0 * 10 + parseInt(res[i]);
+    }
+    res = "";
+    for (let i = res0.toString().length - 1; i >= 0; i--) {
+        res += res0.toString()[i];
+    }
     res = res.replace(/undefined/g, "0");
+
     if (agr.checked === false) {
         alert("请先勾选复选框！");
     } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
@@ -27,8 +35,7 @@ gen.onclick = function () {
     } else {
         let name = nam;
         let sdate = syear * 416 + smon * 32 + sday;
-        let edate = eyear * 416 + emon * 32 + eday;
         let api = res;
-        window.open("/result/multiple.html?name=" + name + "&sdate=" + sdate + "&edate=" + edate + "&api=" + api);
+        window.open("/result/multiple.html?name=" + name + "&sdate=" + sdate + "&api=" + api);
     }
 }
