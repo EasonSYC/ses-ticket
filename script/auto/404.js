@@ -1,10 +1,9 @@
 let but = document.getElementById("g-but");
-if (document.referrer == "") {
+if (document.referrer === "") {
     but.innerHTML = "首页";
     but.href = "/";
     but.onclick = "";
-}
-else {
+} else {
     but.innerHTML = "返回";
     but.href = "";
     but.onclick = "history.back(-1)";
