@@ -7,17 +7,17 @@ function gAlert(txt) {
 }
 
 document.getElementById("gAlertButton").onclick = function(){
-    document.getElementById("gAlertModal").style.display = "none";
-    document.getElementById("gAlertBack").style.display = "none";
     document.getElementById("gAlertModal").classList.remove("show");
     document.getElementById("gAlertBack").classList.remove("show");
+    document.getElementById("gAlertModal").style.display = "none";
+    document.getElementById("gAlertBack").style.display = "none";
 }
 
 document.getElementById("gAlertBack").onclick = function(){
-    document.getElementById("gAlertModal").style.display = "none";
-    document.getElementById("gAlertBack").style.display = "none";
     document.getElementById("gAlertModal").classList.remove("show");
     document.getElementById("gAlertBack").classList.remove("show");
+    document.getElementById("gAlertModal").style.display = "none";
+    document.getElementById("gAlertBack").style.display = "none";
 }
 
 /*
