@@ -88,6 +88,8 @@
 <script src="/script/safety/sha1.js"></script>
 <script src="/script/safety/account.js"></script>
 <script>
+    let urll = document.location.toString();
+    let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
     if (!exists()) {
         noLogin(window.location.pathname.replace("/sesticketgen/", "/") + "?" + urlParmmStr);
     }
