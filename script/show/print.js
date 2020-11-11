@@ -24,6 +24,7 @@ let nam2 = decodeURI(cook.split("@")[0]);
 
 if (truname !== nam2) {
     gAlert("姓名不匹配！");
+    alert("姓名不匹配！");
     setTimeout(function () {
         window.history.back();
     }, 3000);
