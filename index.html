@@ -93,17 +93,17 @@
     }</style>
 </head>
 <body>
-<div aria-hidden="true" class="modal fade global-alert" id="gAlertModal" style="display: none;" tabindex="-1">
-    <div class="modal-dialog modal-sm" role="document">
+<div class="modal fade global-alert" id="gAlertModal" style="display: block;">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            <button class="close float-right" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+            <button class="close float-right" id="gAlertButton" type="button">
+                <span aria-hidden="true">×</span>
             </button>
-            <div class="text-center font-weight-bold" id="gAlertMsg">
-                欢迎回来！
-            </div>
+            <div class="text-center font-weight-bold" id="gAlertMsg">Welcome back!</div>
         </div>
     </div>
 </div>
+<div class="modal-backdrop fade" id="gAlertBack"></div>
 <script src="/script/auto/alert.js"></script>
 <script src="/script/safety/sha1.js"></script>
 <script src="/script/safety/account.js"></script>
