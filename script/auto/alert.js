@@ -20,7 +20,7 @@ document.getElementById("gAlertButton").onclick = function () {
     document.getElementById("gAlertBack").style.display = "none";
 }
 
-document.getElementById("gAlertBack").onclick = function(){
+document.getElementById("gAlertModal").onclick = function(){
     document.getElementById("gAlertModal").classList.remove("show");
     document.getElementById("gAlertBack").classList.remove("show");
     document.getElementById("gAlertModal").style.display = "none";
