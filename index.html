@@ -93,15 +93,6 @@
     }</style>
 </head>
 <body>
-<script src="/script/auto/alert.js"></script>
-<script src="/script/safety/sha1.js"></script>
-<script src="/script/safety/account.js"></script>
-<script>
-    if (!exists()) {
-        gAlertModel("您还没有登录！");
-        window.location.replace("/login.html?ref=/index.html");
-    }
-</script>
 <div aria-hidden="true" class="modal fade global-alert" id="gAlertModal" style="display: none;" tabindex="-1">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
@@ -113,9 +104,13 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    var g_alert = function (l) {
-        $("#gAlertMsg").html(l), $("#gAlertModal").modal()
+<script src="/script/auto/alert.js"></script>
+<script src="/script/safety/sha1.js"></script>
+<script src="/script/safety/account.js"></script>
+<script>
+    if (!exists()) {
+        gAlert("您还没有登录！");
+        window.location.replace("/login.html?ref=/index.html");
     }
 </script>
 <div id="gApp">

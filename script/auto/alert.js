@@ -1,4 +1,4 @@
-function alert(txt){
+function gAlert(txt) {
     document.getElementById("gAlertMsg").innerHTML = txt;
     document.getElementById("gAlertModal").classList.add("show");
     document.getElementById("gAlertBack").classList.add("show");
