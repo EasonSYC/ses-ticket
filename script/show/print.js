@@ -23,24 +23,24 @@ let cook = getCookie("acc");
 let nam2 = decodeURI(cook.split("@")[0]);
 
 if (truname !== nam2) {
-    alert("姓名不匹配！");
+    gAlert("姓名不匹配！");
     window.history.back();
+} else {
+    var trunum = numArray[typ];
+
+    let acc2 = sha1(nam2);
+    let i = 0;
+    for (; i < num; ++i) {
+        if (nameArray[i] === acc2) break;
+    }
+
+    let allow = allArray[typArray[i]];
+
+    if (!allow.includes(trunum)) {
+        gAlert("权限不足以生成该餐票！");
+        window.history.back();
+    } else {
+        var truloc = "食堂" + locArray[typ] + "楼";
+        var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
+    }
 }
-
-var trunum = numArray[typ];
-
-let acc2 = sha1(nam2);
-let i = 0;
-for (; i < num; ++i) {
-    if (nameArray[i] === acc2) break;
-}
-
-let allow = allArray[typArray[i]];
-
-if (!allow.includes(trunum)) {
-    alert("权限不足以生成该餐票！");
-    window.history.back();
-}
-
-var truloc = "食堂" + locArray[typ] + "楼";
-var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
