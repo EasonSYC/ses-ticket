@@ -92,7 +92,7 @@ function index() {
     if (exists()) {
         window.location.reload();
     } else {
-        gAlertModel("用户名或密码错误！");
+        gAlert("用户名或密码错误！");
     }
 }
 
@@ -107,5 +107,5 @@ function allowance() {
     }
     let tyn = tynArray[typArray[i]];
     let all = allArray[typArray[i]];
-    gAlertModel("用户类别：" + tyn + "\n生成餐区：" + all);
+    gAlert("用户类别：" + tyn + "\n生成餐区：" + all);
 }
