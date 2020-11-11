@@ -107,5 +107,5 @@ function allowance() {
     }
     let tyn = tynArray[typArray[i]];
     let all = allArray[typArray[i]];
-    gAlert("用户类别：" + tyn + "\n生成餐区：" + all);
+    gAlert("用户类别：" + tyn + "<br>生成餐区：" + all);
 }
