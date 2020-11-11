@@ -12,8 +12,20 @@
     <link href="/layout/common.min.css" rel="stylesheet">
     <link href="/layout/all.min.css" rel="stylesheet">
     <link href="/layout/web.css" rel="stylesheet">
+    <style>.global-alert {
+        z-index: 2000
+    }
+
+    #gAlertModal .modal-content {
+        padding: 8px
+    }
+
+    #gAlertModal #gAlertMsg {
+        padding: 20px 8px
+    }</style>
 </head>
 <body>
+<script src="/script/auto/alert.js"></script>
 <script src="/script/safety/sha1.js"></script>
 <script src="/script/safety/account.js"></script>
 <script>

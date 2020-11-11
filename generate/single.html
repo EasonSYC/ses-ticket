@@ -139,8 +139,20 @@
         margin: 2px;
         font-size: 24px
     }</style>
+    <style>.global-alert {
+        z-index: 2000
+    }
+
+    #gAlertModal .modal-content {
+        padding: 8px
+    }
+
+    #gAlertModal #gAlertMsg {
+        padding: 20px 8px
+    }</style>
 </head>
 <body>
+<script src="/script/auto/alert.js"></script>
 <script src="/script/safety/sha1.js"></script>
 <script src="/script/safety/account.js"></script>
 <script>
