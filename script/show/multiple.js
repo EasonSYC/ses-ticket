@@ -75,67 +75,67 @@ if (nam !== nam2) {
             if (!allow.includes(are)) {
                 gAlert("权限不足以生成" + dyr + "/" + dmo + "/" + ddy + "的餐票！");
                 setTimeout(function () {
+                    ;
                 }, 3000);
-                continue;
+            } else {
+                ret +=
+                    "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
+                    "<div class=\"order-panel\"> " +
+                    "<div class=\"d-flex justify-content-between\">" +
+                    "<div>" +
+                    "<div class=\"order-name\">" +
+                    typ +
+                    "</div>" +
+                    "<a href=" +
+                    purl +
+                    ">" +
+                    "<img class=\"img-qrcode border\" id=\"" +
+                    "qrc" +
+                    i +
+                    "\"" +
+                    ">" +
+                    "</a>" +
+                    "<div class=\"user-name text-center\">" +
+                    "<span>" +
+                    nam +
+                    "</span>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div class=\"ticket-body\">" +
+                    "<div class=\"order-area\">" +
+                    are +
+                    " " +
+                    "<span class=\"order-area-tail\">" +
+                    "区" +
+                    "</span>" +
+                    "</div>" +
+                    "<div class=\"order-location\">" +
+                    "<span>" +
+                    "食堂" +
+                    loc +
+                    "楼" +
+                    "<span>" +
+                    "<br>" +
+                    "<span>" +
+                    datestr +
+                    "</span>" +
+                    "</span>" +
+                    "</span>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>"
+                ret2 +=
+                    "QRCode.toDataURL(\"" +
+                    surl +
+                    "\", {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
+                    "document.getElementById(\"" +
+                    "qrc" +
+                    i +
+                    "\").src=url;});";
+                sdate.setDate(sdate.getDate() + 1);
             }
-
-            ret +=
-                "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
-                "<div class=\"order-panel\"> " +
-                "<div class=\"d-flex justify-content-between\">" +
-                "<div>" +
-                "<div class=\"order-name\">" +
-                typ +
-                "</div>" +
-                "<a href=" +
-                purl +
-                ">" +
-                "<img class=\"img-qrcode border\" id=\"" +
-                "qrc" +
-                i +
-                "\"" +
-                ">" +
-                "</a>" +
-                "<div class=\"user-name text-center\">" +
-                "<span>" +
-                nam +
-                "</span>" +
-                "</div>" +
-                "</div>" +
-                "<div class=\"ticket-body\">" +
-                "<div class=\"order-area\">" +
-                are +
-                " " +
-                "<span class=\"order-area-tail\">" +
-                "区" +
-                "</span>" +
-                "</div>" +
-                "<div class=\"order-location\">" +
-                "<span>" +
-                "食堂" +
-                loc +
-                "楼" +
-                "<span>" +
-                "<br>" +
-                "<span>" +
-                datestr +
-                "</span>" +
-                "</span>" +
-                "</span>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "</div>"
-            ret2 +=
-                "QRCode.toDataURL(\"" +
-                surl +
-                "\", {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
-                "document.getElementById(\"" +
-                "qrc" +
-                i +
-                "\").src=url;});";
-            sdate.setDate(sdate.getDate() + 1);
         }
     }
 }
