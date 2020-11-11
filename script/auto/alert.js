@@ -41,7 +41,6 @@ code needed to be added before-hand
         </div>
     </div>
 </div>
-
 <div id="gAlertBack" class="modal-backdrop fade" style="display: none;"></div>
 
 */
