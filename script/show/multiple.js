@@ -10,7 +10,9 @@ let nam2 = decodeURI(cook.split("@")[0]);
 
 if (nam !== nam2) {
     gAlert("姓名不匹配！");
-    window.history.back();
+    setTimeout(function () {
+        window.history.back();
+    }, 3000);
 } else {
     let sda = arr[1].split("=");
     let std = sda[1];
@@ -72,7 +74,8 @@ if (nam !== nam2) {
 
             if (!allow.includes(are)) {
                 gAlert("权限不足以生成" + dyr + "/" + dmo + "/" + ddy + "的餐票！");
-                continue;
+                setTimeout(function () {
+                }, 3000);
             }
 
             ret +=
