@@ -76,6 +76,7 @@ if (nam !== nam2) {
                 gAlert("权限不足以生成" + dyr + "/" + dmo + "/" + ddy + "的餐票！");
                 setTimeout(function () {
                 }, 3000);
+                continue;
             }
 
             ret +=
