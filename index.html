@@ -109,7 +109,7 @@
 <script src="/script/safety/account.js"></script>
 <script>
     if (!exists()) {
-        gAlert("您还没有登录！");
+        setTimeout(gAlert("您还没有登录！"), 2000)
         window.location.replace("/login.html?ref=/index.html");
     }
 </script>
