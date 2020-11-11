@@ -18,8 +18,6 @@ document.getElementById("gAlertButton").onclick = function () {
     document.getElementById("gAlertBack").classList.remove("show");
     document.getElementById("gAlertModal").style.display = "none";
     document.getElementById("gAlertBack").style.display = "none";
-
-    doSomething(userfunction);
 }
 
 document.getElementById("gAlertBack").onclick = function(){
