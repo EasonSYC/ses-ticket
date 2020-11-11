@@ -103,14 +103,6 @@
         </div>
     </div>
 </div>
-<script src="/script/auto/alert.js"></script>
-<script src="/script/safety/sha1.js"></script>
-<script src="/script/safety/account.js"></script>
-<script>
-    if (!exists()) {
-        noLogin("/my.html");
-    }
-</script>
 <div id="gApp">
     <div class="body-wrapper">
         <div class="container px-0">
@@ -205,5 +197,13 @@
     </div>
 </div>
 <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+<script src="/script/auto/alert.js"></script>
+<script src="/script/safety/sha1.js"></script>
+<script src="/script/safety/account.js"></script>
+<script>
+    if (!exists()) {
+        noLogin("/my.html");
+    }
+</script>
 </body>
 </html>
