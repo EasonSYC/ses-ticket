@@ -25,17 +25,17 @@
     }</style>
 </head>
 <body>
-<div class="modal fade global-alert" id="gAlertModal" style="display: block;">
+<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <button class="close float-right" id="gAlertButton" type="button">
                 <span aria-hidden="true">×</span>
             </button>
-            <div class="text-center font-weight-bold" id="gAlertMsg">Welcome back!</div>
+            <div class="text-center font-weight-bold" id="gAlertMsg"></div>
         </div>
     </div>
 </div>
-<div class="modal-backdrop fade" id="gAlertBack"></div>
+<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
 <script src="/script/auto/alert.js"></script>
 <script src="/script/safety/sha1.js"></script>
 <script src="/script/safety/account.js"></script>
