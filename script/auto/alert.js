@@ -1,3 +1,10 @@
+function noLogin(source) {
+    gAlert("您还没有登录！");
+    setTimeout(function () {
+        window.location.replace("/login.html?ref=" + source);
+    }, 3000);
+}
+
 function gAlert(txt) {
     document.getElementById("gAlertModal").style.display = "block";
     document.getElementById("gAlertBack").style.display = "block";
@@ -6,11 +13,13 @@ function gAlert(txt) {
     document.getElementById("gAlertBack").classList.add("show");
 }
 
-document.getElementById("gAlertButton").onclick = function(){
+document.getElementById("gAlertButton").onclick = function () {
     document.getElementById("gAlertModal").classList.remove("show");
     document.getElementById("gAlertBack").classList.remove("show");
     document.getElementById("gAlertModal").style.display = "none";
     document.getElementById("gAlertBack").style.display = "none";
+
+    doSomething(userfunction);
 }
 
 document.getElementById("gAlertBack").onclick = function(){

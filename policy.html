@@ -97,7 +97,9 @@
 <script src="/script/safety/sha1.js"></script>
 <script src="/script/safety/account.js"></script>
 <script>
-    if (!exists()) window.location.replace("/login.html?ref=policy.html");
+    if (!exists()) {
+        noLogin("/policy.html");
+    }
 </script>
 <div id="gApp">
     <div class="body-wrapper">
