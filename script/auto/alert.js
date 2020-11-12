@@ -1,8 +1,5 @@
 function noLogin(source) {
-    gAlert("您还没有登录！");
-    setTimeout(function () {
-        window.location.replace("/login.html?ref=" + source);
-    }, 3000);
+    window.location.replace("/login.html?ref=" + source);
 }
 
 function gAlert(txt) {
