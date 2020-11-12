@@ -9,22 +9,25 @@ function gAlert(txt) {
     document.getElementById("gAlertModal").style.display = "block";
     document.getElementById("gAlertBack").style.display = "block";
     document.getElementById("gAlertMsg").innerHTML = txt;
-    document.getElementById("gAlertModal").classList.add("show");
-    document.getElementById("gAlertBack").classList.add("show");
+    setTimeout(function(){
+        document.getElementById("gAlertModal").classList.add("show");
+        document.getElementById("gAlertBack").classList.add("show");},10);
 }
 
 document.getElementById("gAlertButton").onclick = function () {
     document.getElementById("gAlertModal").classList.remove("show");
     document.getElementById("gAlertBack").classList.remove("show");
-    document.getElementById("gAlertModal").style.display = "none";
-    document.getElementById("gAlertBack").style.display = "none";
+    setTimeout(function(){
+        document.getElementById("gAlertModal").style.display = "none";
+        document.getElementById("gAlertBack").style.display = "none";},160);
 }
 
 document.getElementById("gAlertModal").onclick = function(){
     document.getElementById("gAlertModal").classList.remove("show");
     document.getElementById("gAlertBack").classList.remove("show");
-    document.getElementById("gAlertModal").style.display = "none";
-    document.getElementById("gAlertBack").style.display = "none";
+    setTimeout(function(){
+        document.getElementById("gAlertModal").style.display = "none";
+        document.getElementById("gAlertBack").style.display = "none";},160);
 }
 
 /*
