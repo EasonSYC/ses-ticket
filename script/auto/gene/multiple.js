@@ -612,6 +612,7 @@ function showChoice(a) {
         let ret = "";
         for (let i = 1; i <= 9; ++i) {
             let j = 0;
+            let nam2 = decodeURI(cook.split("@")[0]);
             for (; j < num; ++j) {
                 if (nameArray[j] === sha1(nam2)) break;
             }
