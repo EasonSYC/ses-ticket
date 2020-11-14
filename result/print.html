@@ -97,16 +97,6 @@
 </script>
 <script src="/script/show/print.js"></script>
 <script src="/script/qrcode.min.js"></script>
-<script>
-    if (trunum === "1") {
-        gAlert("1区机器正在适配中，<br>请勿使用此餐票！");
-    } else if (trunum === "6") {
-        gAlert("6区微信登录正在适配中，<br>请勿使用此餐票！");
-    } else {
-        gAlert("请警惕餐票扫描！");
-    }
-
-</script>
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">
@@ -157,6 +147,16 @@
 <script type="text/javascript">
     var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+</script>
+<script>
+    if (trunum === "1") {
+        gAlert("1区机器正在适配中，<br>请勿使用此餐票！");
+    } else if (trunum === "6") {
+        gAlert("6区微信登录正在适配中，<br>请勿使用此餐票！");
+    } else {
+        gAlert("请警惕餐票扫描！");
+    }
+
 </script>
 </body>
 </html>
