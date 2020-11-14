@@ -29,9 +29,9 @@ gen.onclick = function () {
     res = res.replace(/undefined/g, "0");
 
     if (agr.checked === false) {
-        alert("请先勾选复选框！");
+        gAlert("请先勾选复选框！");
     } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
-        alert("请输入正确信息！");
+        gAlert("请输入正确信息！");
     } else {
         let name = nam;
         let sdate = syear * 416 + smon * 32 + sday;

@@ -8,11 +8,11 @@ gen.onclick = function() {
     let mon = parseInt(document.getElementById("month").value);
     let day = parseInt(document.getElementById("day").value);
     if (agr.checked === false) {
-        alert("请先勾选复选框！");
+        gAlert("请先勾选复选框！");
     } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
-        alert("请输入正确日期！");
+        gAlert("请输入正确日期！");
     } else if (ntyp === 0) {
-        alert("请在生成前选餐！");
+        gAlert("请在生成前选餐！");
     } else {
         let tim = mon * 32 + day;
         let cs = yr * 416 + tim;
