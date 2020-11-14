@@ -176,16 +176,6 @@ let clook =
     "                                    </li>\n" +
     "                                </ul>";
 
-let agr =
-    "<div class=\"mt-3 text-center\">\n" +
-    "                                    <label>\n" +
-    "                                        <input id=\"agree\" style=\"width: auto\" type=\"checkbox\">\n" +
-    "                                    </label>\n" +
-    "                                    我已阅读并同意\n" +
-    "                                    <a href=\"../policy.html\">用户协议</a>\n" +
-    "                                    。\n" +
-    "                                </div>";
-
 let choicArray = ["",
     [
         "                                            <li>\n" +
@@ -595,7 +585,6 @@ function changeDate() {
         res = res.replace("ChoiceNow", moc[choose]);
     }
 
-    res += agr;
 
     document.getElementById("chs").innerHTML = res;
 }
