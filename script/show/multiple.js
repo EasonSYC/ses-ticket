@@ -27,11 +27,6 @@ if (nam !== nam2) {
     let smo = Math.floor(sd / 32);
     let sdt = sd % 32;
 
-    let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
-    let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
-    let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-
     var ret = "";
     var ret2 = "";
 
