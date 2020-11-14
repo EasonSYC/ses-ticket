@@ -611,6 +611,11 @@ function showChoice(a) {
     if (on[a] === 0 || on[a] === undefined) {
         let ret = "";
         for (let i = 1; i <= 9; ++i) {
+            let j = 0;
+            for (; j < num; ++j) {
+                if (nameArray[j] === sha1(nam2)) break;
+            }
+            if(allArray[typArray[j]].includes(i) == false)continue;
             if (i === choice[a]) {
                 ret += choicArray[i][1];
             } else {
