@@ -109,31 +109,41 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <div class="order-name">
-                            <script>document.write(trufood);</script>
+                            <script>
+                                if (ok) document.write(trufood);
+                            </script>
                         </div>
                         <img class="img-qrcode border" id="qrc">
                         <script>
                             QRCode.toDataURL(truurlqr, {errorCorrectionLevel: 'L'}, function (rtt, url) {
-                                document.getElementById("qrc").src = url;
+                                if (ok) document.getElementById("qrc").src = url;
                             })
                         </script>
                         <div class="user-name text-center">
                                 <span>
-                                    <script>document.write(truname);</script>
+                                    <script>
+                                        if (ok) document.write(truname);
+                                    </script>
                                 </span>
                         </div>
                     </div>
                     <div class="ticket-body">
                         <div class="order-area">
-                            <script>document.write(trunum);</script>
+                            <script>
+                                if (ok) document.write(trunum);
+                            </script>
                             <span class="order-area-tail">区</span>
                         </div>
                         <div class="order-location">
                             <span id="loc">
-                                <script>document.getElementById("loc").innerHTML = ("<div>" + truloc + "</div>");</script>
+                                <script>
+                                    if (ok) document.getElementById("loc").innerHTML = ("<div>" + truloc + "</div>");
+                                </script>
                                 <span>
                                     <span>
-                                        <script>document.write(truwkd);</script>
+                                        <script>
+                                            if (ok) document.write(truwkd);
+                                        </script>
                                     </span>
                                 </span>
                             </span>
@@ -149,14 +159,15 @@
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
 </script>
 <script>
-    if (trunum === "1") {
-        gAlert("1区机器正在适配中，<br>请勿使用此餐票！");
-    } else if (trunum === "6") {
-        gAlert("6区微信登录正在适配中，<br>请勿使用此餐票！");
-    } else {
-        gAlert("请警惕餐票扫描！");
+    if (ok) {
+        if (trunum === "1") {
+            gAlert("1区机器正在适配中，<br>请勿使用此餐票！");
+        } else if (trunum === "6") {
+            gAlert("6区微信登录正在适配中，<br>请勿使用此餐票！");
+        } else {
+            gAlert("请警惕餐票扫描！");
+        }
     }
-
 </script>
 </body>
 </html>

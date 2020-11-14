@@ -18,6 +18,8 @@ var truname = decodeURI(arr[0]);
 let cook = getCookie("acc");
 let nam2 = decodeURI(cook.split("@")[0]);
 
+var ok = 0;
+
 if (truname !== nam2) {
     gAlert("姓名不匹配！");
     setTimeout(function () {
@@ -42,5 +44,6 @@ if (truname !== nam2) {
     } else {
         var truloc = "食堂" + locArray[typ] + "楼";
         var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
+        ok = 1;
     }
 }
