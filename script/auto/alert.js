@@ -20,8 +20,8 @@ function gAlertClose() {
     }, 160);
 }
 
-document.getElementById("gAlertButton").onclick = gAlertClose;
-document.getElementById("gAlertModal").onclick = gAlertClose;
+document.getElementById("gAlertButton").onclick = gAlertClose();
+document.getElementById("gAlertModal").onclick = gAlertClose();
 
 /*
 
