@@ -535,6 +535,13 @@ function showChoice() {
     if (on === 0) {
         let ret = "";
         for (let i = 1; i <= 9; ++i) {
+            let j = 0;
+            let cook = getCookie("acc");
+            let nam2 = decodeURI(cook.split("@")[0]);
+            for (; j < num; ++j) {
+                if (nameArray[j] === sha1(nam2)) break;
+            }
+            if(allArray[typArray[j]].includes(i) == false)continue;
             if (i === choice) {
                 ret += choicArray[i][1];
             } else {
