@@ -69,9 +69,7 @@ if (nam !== nam2) {
 
             if (!allow.includes(are)) {
                 gAlert("权限不足以生成" + dyr + "/" + dmo + "/" + ddy + "的餐票！");
-                setTimeout(function () {
-                    ;
-                }, 3000);
+                // wait(untilpress);
             } else {
                 ret +=
                     "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
