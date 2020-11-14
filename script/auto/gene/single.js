@@ -541,7 +541,7 @@ function showChoice() {
             for (; j < num; ++j) {
                 if (nameArray[j] === sha1(nam2)) break;
             }
-            if(allArray[typArray[j]].includes(i) == false)continue;
+            if (allArray[typArray[j]].includes(i) === false) continue;
             if (i === choice) {
                 ret += choicArray[i][1];
             } else {
