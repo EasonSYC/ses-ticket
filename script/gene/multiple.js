@@ -27,7 +27,7 @@ gen.onclick = function () {
     for (i = res.length - 1; i >= 0; --i) {
         if (res[i] !== '0') break;
     }
-    res = res.substr(0, i+1);
+    res = res.substr(0, i + 1);
     res = res.replace(/undefined/g, "0");
 
     if (agr.checked === false) {
