@@ -19,7 +19,7 @@ gen.onclick = function () {
     let sdate = new Date(syear + "/" + smon + "/" + sday);
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
-    for (let d = sdate, i = 0; i < min(len, 366); ++i, d.setDate(d.getDate() + 1)) {
+    for (let d = sdate, i = 0; i < min(len, 250); ++i, d.setDate(d.getDate() + 1)) {
         let choose = choice[i];
         res += choose;
     }
