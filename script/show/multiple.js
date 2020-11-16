@@ -35,7 +35,6 @@ if (nam !== nam2) {
     var ret2 = "";
 
     let sdate = new Date(syr + "/" + smo + "/" + sdt);
-//let edate = new Date(eyr + "/" + emo + "/" + edt);
     for (let i = 0; i < min(api.length, 366); ++i) {
         let chc = api[i];
         if ((chc === "1") ||
@@ -132,7 +131,7 @@ if (nam !== nam2) {
                     i +
                     "\").src=url;});";
             }
-            sdate.setDate(sdate.getDate() + 1);
         }
+        sdate.setDate(sdate.getDate() + 1);
     }
 }
