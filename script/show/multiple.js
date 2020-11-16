@@ -35,7 +35,7 @@ if (nam !== nam2) {
     var ret2 = "";
 
     let sdate = new Date(syr + "/" + smo + "/" + sdt);
-    for (let i = 0; i < min(api.length, 366); ++i) {
+    for (let i = 0; i < min(api.length, 250); ++i) {
         let chc = api[i];
         if ((chc === "1") ||
             (chc === "2") ||
