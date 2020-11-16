@@ -35,6 +35,7 @@ if (nam !== nam2) {
     var ret2 = "";
 
     let sdate = new Date(syr + "/" + smo + "/" + sdt);
+    let flg = 0;
     for (let i = 0; i < min(api.length, 250); ++i) {
         let chc = api[i];
         if ((chc === "1") ||
@@ -71,7 +72,7 @@ if (nam !== nam2) {
             let allow = allArray[typArray[j]];
 
             if (!allow.includes(are)) {
-                gAlert("权限不足以生成某（些）日期的餐票！");
+                flg = 1;
             } else {
                 ret +=
                     "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
@@ -132,5 +133,8 @@ if (nam !== nam2) {
             }
         }
         sdate.setDate(sdate.getDate() + 1);
+    }
+    if (flg) {
+        gAlert("权限不足以生成某些餐票！");
     }
 }
