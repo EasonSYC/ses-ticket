@@ -71,8 +71,7 @@ if (nam !== nam2) {
             let allow = allArray[typArray[j]];
 
             if (!allow.includes(are)) {
-                gAlert("权限不足以生成" + dyr + "/" + dmo + "/" + ddy + "的餐票！");
-                // wait(untilpress);
+                gAlert("权限不足以生成某（些）日期的餐票！");
             } else {
                 ret +=
                     "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
