@@ -23,13 +23,11 @@ gen.onclick = function () {
         let choose = choice[i];
         res += choose;
     }
-    for (let i = res.length - 1; i >= 0; i--) {
-        res0 = res0 * 10 + parseInt(res[i]);
+    let i;
+    for (i = res.length - 1; i >= 0; --i) {
+        if (res[i] !== '0') break;
     }
-    res = "";
-    for (let i = res0.toString().length - 1; i >= 0; i--) {
-        res += res0.toString()[i];
-    }
+    res = res.substr(0, i);
     res = res.replace(/undefined/g, "0");
 
     if (agr.checked === false) {
