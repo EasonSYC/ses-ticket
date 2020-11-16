@@ -546,6 +546,10 @@ let choicArray = ["",
     ]
 ];
 
+function min(a, b) {
+    return a < b ? a : b;
+}
+
 function changeDate() {
     let res = "";
 
@@ -558,7 +562,7 @@ function changeDate() {
     let sdate = new Date(syear + "/" + smon + "/" + sday);
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
-    for (let d = sdate, i = 0; i < len; ++i, d.setDate(d.getDate() + 1)) {
+    for (let d = sdate, i = 0; i < min(len, 366); ++i, d.setDate(d.getDate() + 1)) {
 
         let dmo = d.getMonth() + 1;
         let ddy = d.getDate();

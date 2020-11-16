@@ -1,3 +1,7 @@
+function min(a, b) {
+    return a < b ? a : b;
+}
+
 let url = document.location.toString();
 let urlParmStr = url.slice(url.indexOf("?") + 1);
 let arr = urlParmStr.split("&");
@@ -32,7 +36,7 @@ if (nam !== nam2) {
 
     let sdate = new Date(syr + "/" + smo + "/" + sdt);
 //let edate = new Date(eyr + "/" + emo + "/" + edt);
-    for (let i = 0; i < api.length; ++i) {
+    for (let i = 0; i < min(api.length, 366); ++i) {
         let chc = api[i];
         if ((chc === "1") ||
             (chc === "2") ||
