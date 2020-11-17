@@ -808,7 +808,9 @@ function showChoice(a) {
             for (; j < num; ++j) {
                 if (nameArray[j] === sha1(nam2)) break;
             }
-            if (allArray[typArray[j]].includes(i) === false) ret += choicArray[i][2];
+            if (allArray[typArray[j]].includes(i) === false){
+                ret += choicArray[i][2];
+            }
             else {
                 if (i === choice[a]) {
                     ret += choicArray[i][1];
@@ -817,7 +819,6 @@ function showChoice(a) {
                 }
             }
         }
-    }
     ret = ret.replace(/Number/g, a);
     chc.innerHTML = ret;
     on[a] = 1;
