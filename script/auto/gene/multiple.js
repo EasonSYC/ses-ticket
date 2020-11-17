@@ -766,6 +766,8 @@ function changeDate() {
         let ddy = d.getDate();
         let dda = d.getDay();
 
+        if(dda === undefined) continue;
+
         let choose = choice[i];
 
         if (choose !== 1 &&
