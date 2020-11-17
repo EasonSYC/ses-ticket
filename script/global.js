@@ -154,7 +154,7 @@ function encodeUTF8(s) {
             else r.push(0xE0 + (c >> 12 & 0xF));
             r.push(0x80 + (c >> 6 & 0x3F), 0x80 + (c & 0x3F));
         }
-    ;
+
     return r;
 }
 
@@ -194,7 +194,7 @@ function sha1(s) {
                 m[1] = rol(m[1], 30), m.pop(), m.unshift(t);
         for (j = 0; j < 5; j++) m[j] = m[j] + o[j] | 0;
     }
-    ;
+
     t = new DataView(new Uint32Array(m).buffer);
     for (var i = 0; i < 5; i++) m[i] = t.getUint32(i << 2);
 
@@ -202,6 +202,16 @@ function sha1(s) {
         return (e < 16 ? "0" : "") + e.toString(16);
     }).join("");
     return hex;
+}
+
+// Logic Functions
+
+function min(a, b) {
+    return a < b ? a : b;
+}
+
+function max(a, b) {
+    return a > b ? a : b;
 }
 
 // Date Functions
