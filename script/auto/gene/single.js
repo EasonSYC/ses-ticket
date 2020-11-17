@@ -9,7 +9,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">1区 自助餐</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(1)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 1)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
@@ -31,7 +31,29 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">1区 自助餐</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(1)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 1)\">已选择</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-red\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    经常扫描\n" +
+        "                                                                </small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">1区 自助餐</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 1)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
@@ -53,7 +75,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">2区 套餐A</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(2)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 2)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
@@ -73,7 +95,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">2区 套餐A</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(2)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 2)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
@@ -81,6 +103,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
         "                                                                <small class=\"mr-1\">不常扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">2区 套餐A</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 2)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    不常扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -93,7 +137,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">3区 套餐A</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(3)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 3)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
@@ -113,7 +157,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">3区 套餐A</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(3)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 3)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
@@ -125,6 +169,28 @@ let choicArray = ["",
         "                                                        </div>\n" +
         "                                                    </div>\n" +
         "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">3区 套餐A</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 3)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    不常扫描\n" +
+        "                                                                </small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
         "                                            </li>\n"
     ], [
         "                                            <li>\n" +
@@ -133,7 +199,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">4区 套餐A</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(4)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 4)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -153,7 +219,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">4区 套餐A</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(4)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 4)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -161,6 +227,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
         "                                                                <small class=\"mr-1\">不常扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">4区 套餐A</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 4)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    不常扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -173,7 +261,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">5区 套餐B</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(5)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 5)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -193,7 +281,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">5区 套餐B</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(5)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 5)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -201,6 +289,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
         "                                                                <small class=\"mr-1\">不常扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">5区 套餐B</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 5)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    不常扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -213,7 +323,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">6区 盖浇饭</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(6)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 6)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -234,7 +344,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">6区 盖浇饭</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(6)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 6)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -242,6 +352,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-orange\"></i>\n" +
         "                                                                <small class=\"mr-1\">有时扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">6区 盖浇饭</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 6)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-orange\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    有时扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -254,7 +386,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">7区 套餐C</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(7)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 7)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -274,7 +406,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">7区 套餐C</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(7)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 7)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -282,6 +414,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
         "                                                                <small class=\"mr-1\">不常扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">7区 套餐C</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 7)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    不常扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -294,7 +448,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">8区 面档</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(8)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 8)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -314,7 +468,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">8区 面档</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(8)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 8)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -322,6 +476,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-orange\"></i>\n" +
         "                                                                <small class=\"mr-1\">有时扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">8区 面档</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 8)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-orange\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    有时扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -334,7 +510,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">9区 套餐B</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-outline-secondary\"\n" +
-        "                                                               onclick=\"chooseType(9)\">选餐</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 9)\">选餐</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -355,7 +531,7 @@ let choicArray = ["",
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">9区 套餐B</b>\n" +
         "                                                            <a class=\"btn btn-sm btn-orange\"\n" +
-        "                                                               onclick=\"chooseType(9)\">已选择</a>\n" +
+        "                                                               onclick=\"chooseType(Number, 9)\">已选择</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
         "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
@@ -363,6 +539,28 @@ let choicArray = ["",
         "                                                            <div>\n" +
         "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
         "                                                                <small class=\"mr-1\">不常扫描</small>\n" +
+        "                                                            </div>\n" +
+        "                                                        </div>\n" +
+        "                                                    </div>\n" +
+        "                                                </div>\n" +
+        "                                            </li>\n",
+
+        "                                            <li>\n" +
+        "                                                <div class=\"row no-gutters\">\n" +
+        "                                                    <div class=\"col-12\">\n" +
+        "                                                        <div class=\"px-3\">\n" +
+        "                                                            <b class=\"title\">9区 套餐C</b>\n" +
+        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                               onclick=\"chooseType(Number, 9)\">暂无权限</a>\n" +
+        "                                                            <br>\n" +
+        "                                                            <small>\n" +
+        "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
+        "                                                            </small>\n" +
+        "                                                            <div>\n" +
+        "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
+        "                                                                <small class=\"mr-1\">\n" +
+        "                                                                    不常扫描\n" +
+        "                                                                </small>\n" +
         "                                                            </div>\n" +
         "                                                        </div>\n" +
         "                                                    </div>\n" +
@@ -541,11 +739,13 @@ function showChoice() {
             for (; j < num; ++j) {
                 if (nameArray[j] === sha1(nam2)) break;
             }
-            if (allArray[typArray[j]].includes(i) === false) continue;
-            if (i === choice) {
-                ret += choicArray[i][1];
-            } else {
-                ret += choicArray[i][0];
+            if (allArray[typArray[j]].includes(i) === false) ret += choicArray[i][2];
+            else {
+                if (i === choice[a]) {
+                    ret += choicArray[i][1];
+                } else {
+                    ret += choicArray[i][0];
+                }
             }
         }
         chc.innerHTML = ret;
