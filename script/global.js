@@ -72,10 +72,6 @@ function gAlertClose() {
 // </div>
 // <div id="gAlertBack" class="modal-backdrop fade" style="display: none;"></div>
 
-// User Values
-
-var num = 16;
-
 // User Strings
 
 var tynArray = [
@@ -227,6 +223,7 @@ function index() {
 
 // Account Strings
 
+var num = 16;
 
 var nameArray = [
     "d033e22ae348aeb5660fc2140aec35850c4da997",
@@ -246,6 +243,7 @@ var nameArray = [
     "9bb63820ef3c5518cd3b7572778a05e8f3d0fd51",
     "87bcfe46af9de8e5d1cd0c17d5fcd0304a9df0ed",
     "fccfac5ea6317fb43541816f476a0b614a1efa5f"];
+
 var pwdArray = [
     "346de590de624b35df35ca0e5431c12cd1bd0ceb",
     "1a9f35e469dd557845ba707710e89b8da52205d0",
@@ -264,6 +262,7 @@ var pwdArray = [
     "c11c41262e19826e0edac6846a84ea654a05a0f7",
     "eb820fc7799df7d8130225a3052a3e9d36a237fc",
     "49760f017daccda000140283ecdcdcdbdfa55579"];
+
 var typArray = [
     0,
     1,
