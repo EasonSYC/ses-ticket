@@ -724,6 +724,7 @@ function changeDate() {
     let day = parseInt(document.getElementById("day").value);
     let d = new Date(yr + "/" + mon + "/" + day);
     let wkday = "周" + weekArray[d.getDay()];
+    if(d.getDay() === undefined) return;
     let date = document.getElementById("1");
     date.innerHTML = mon + "/" + day + "<br>" + wkday;
 }
