@@ -1,6 +1,3 @@
-var choice = 0;
-var on = 0;
-
 let choicArray = ["",
     [
         "                                            <li>\n" +
@@ -717,14 +714,29 @@ let choiceArray = [
     "                                                            </div>"
 ];
 
+var choice = 0;
+var on = 0;
+
+function toDay() {
+    let toD = getTo();
+    let InpY = document.getElementById("year");
+    let InpM = document.getElementById("month");
+    let InpD = document.getElementById("day");
+    InpY.value = toD.yr;
+    InpM.value = toD.mo;
+    InpD.value = toD.da;
+    changeDate();
+}
+
 function changeDate() {
-    let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
     let yr = parseInt(document.getElementById("year").value);
     let mon = parseInt(document.getElementById("month").value);
     let day = parseInt(document.getElementById("day").value);
     let d = new Date(yr + "/" + mon + "/" + day);
     let wkday = "周" + weekArray[d.getDay()];
-    if(d.getDay() === undefined) return;
+    if (d.getDay() === undefined) {
+        return;
+    }
     let date = document.getElementById("1");
     date.innerHTML = mon + "/" + day + "<br>" + wkday;
 }
@@ -742,8 +754,7 @@ function showChoice() {
             }
             if (allArray[typArray[j]].includes(i) === false) {
                 ret += choicArray[i][2];
-            }
-            else {
+            } else {
                 if (i === choice) {
                     ret += choicArray[i][1];
                 } else {
@@ -768,4 +779,28 @@ function updateLook(v) {
 function chooseType(tp) {
     choice = tp;
     updateLook(tp);
+}
+
+let gen = document.getElementById("gen");
+gen.onclick = function () {
+    let agr = document.getElementById("agree");
+    let cook = getCookie("acc");
+    let nam = decodeURI(cook.split("@")[0]);
+    let ntyp = choice;
+    let yr = parseInt(document.getElementById("year").value);
+    let mon = parseInt(document.getElementById("month").value);
+    let day = parseInt(document.getElementById("day").value);
+    if (agr.checked === false) {
+        gAlert("请先勾选复选框！");
+    } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
+        gAlert("请输入正确日期！");
+    } else if (ntyp === 0) {
+        gAlert("请在生成前选餐！");
+    } else {
+        let tim = mon * 32 + day;
+        let cs = yr * 416 + tim;
+        let css = cs * 10 + ntyp;
+        let api = css.toString(16);
+        window.open("/result/print.html?" + nam + "&" + api);
+    }
 }

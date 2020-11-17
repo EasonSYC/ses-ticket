@@ -206,6 +206,47 @@ function sha1(s) {
 
 // Date Functions
 
+function getTo() {
+    let today = new Date();
+    let toyear = today.getFullYear();
+    let tomonth = today.getMonth() + 1;
+    let todate = today.getDate();
+    let tod = today.getDay();
+    return {
+        "yr": toyear,
+        "mo": tomonth,
+        "da": todate,
+        "wk": weekArray[tod],
+        "al": today
+    };
+}
+
+function getWk() {
+    let sday = getTo().al;
+    for (; sday.getDay() !== 1; sday.setDate(sday.getDate() + 1)) ;
+    let eday = new Date(sday);
+    eday.setDate(eday.getDate() + 4);
+    let syear = sday.getFullYear();
+    let smonth = sday.getMonth() + 1;
+    let sdate = sday.getDate();
+    let sod = sday.getDay();
+    let eyear = eday.getFullYear();
+    let emonth = eday.getMonth() + 1;
+    let edate = eday.getDate();
+    let eod = eday.getDay();
+    return {
+        "syr": syear,
+        "smo": smonth,
+        "sda": sdate,
+        "swk": weekArray[sod],
+        "sal": sday,
+        "eyr": eyear,
+        "emo": emonth,
+        "eda": edate,
+        "ewk": weekArray[eod],
+        "eal": eday
+    };
+}
 
 // Action Functions
 
