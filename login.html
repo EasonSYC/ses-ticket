@@ -23,6 +23,7 @@
     #gAlertModal #gAlertMsg {
         padding: 20px 8px
     }</style>
+    <script src="/script/global.js"></script>
 </head>
 <body>
 <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
@@ -36,9 +37,6 @@
     </div>
 </div>
 <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
-<script src="/script/auto/alert.js"></script>
-<script src="/script/safety/sha1.js"></script>
-<script src="/script/safety/account.js"></script>
 <script>
     if (exists()) {
         let url = document.location.toString();
@@ -101,6 +99,6 @@
         </div>
     </div>
 </div>
-<script src="/script/safety/login.js"></script>
+<script src="/script/login.js"></script>
 </body>
 </html>

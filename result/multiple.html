@@ -67,9 +67,9 @@
     #gAlertModal #gAlertMsg {
         padding: 20px 8px
     }</style>
+    <script src="/script/global.js"></script>
 </head>
 <body>
-<script src="/script/values/values.js"></script>
 <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -81,9 +81,6 @@
     </div>
 </div>
 <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
-<script src="/script/auto/alert.js"></script>
-<script src="/script/safety/sha1.js"></script>
-<script src="/script/safety/account.js"></script>
 <script>
     let urll = document.location.toString();
     let urlParmmStr = urll.slice(urll.indexOf("?") + 1);

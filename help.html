@@ -80,8 +80,20 @@
         margin: 2px;
         font-size: 24px
     }</style>
+    <script src="/script/global.js"></script>
 </head>
 <body>
+<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <button class="close float-right" id="gAlertButton" type="button">
+                <span aria-hidden="true">×</span>
+            </button>
+            <div class="text-center font-weight-bold" id="gAlertMsg"></div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
 <div id="gApp">
     <div class="body-wrapper">
         <div class="container px-0">
