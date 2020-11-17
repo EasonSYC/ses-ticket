@@ -754,12 +754,10 @@ function showChoice() {
             }
             if (allArray[typArray[j]].includes(i) === false) {
                 ret += choicArray[i][2];
+            } else if (i === choice) {
+                ret += choicArray[i][1];
             } else {
-                if (i === choice) {
-                    ret += choicArray[i][1];
-                } else {
-                    ret += choicArray[i][0];
-                }
+                ret += choicArray[i][0];
             }
         }
         chc.innerHTML = ret;

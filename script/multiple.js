@@ -1,8 +1,6 @@
 var choice = [];
 var on = [];
 
-let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-
 let moc = [
     "                                                            <div class=\"text-muted text-center mt-4\">点击这里选餐</div>",
     "                                                            <b class=\"title\">1区 自助餐</b>\n" +
@@ -744,8 +742,24 @@ let choicArray = ["",
     ]
 ];
 
-function min(a, b) {
-    return a < b ? a : b;
+function toDay() {
+    let syr = document.getElementById("syear");
+    let smo = document.getElementById("smonth");
+    let sdt = document.getElementById("sday");
+    let eyr = document.getElementById("eyear");
+    let emo = document.getElementById("emonth");
+    let edt = document.getElementById("eday");
+
+    let arr = getWk();
+
+    syr.value = arr.syr;
+    smo.value = arr.smo;
+    sdt.value = arr.sda;
+    eyr.value = arr.eyr;
+    emo.value = arr.emo;
+    edt.value = arr.eda;
+
+    changeDate();
 }
 
 function changeDate() {
@@ -766,7 +780,7 @@ function changeDate() {
         let ddy = d.getDate();
         let dda = d.getDay();
 
-        if(dda === undefined) continue;
+        if (dda === undefined) continue;
 
         let choose = choice[i];
 
@@ -810,10 +824,9 @@ function showChoice(a) {
             for (; j < num; ++j) {
                 if (nameArray[j] === sha1(nam2)) break;
             }
-            if (allArray[typArray[j]].includes(i) === false){
+            if (allArray[typArray[j]].includes(i) === false) {
                 ret += choicArray[i][2];
-            }
-            else {
+            } else {
                 if (i === choice[a]) {
                     ret += choicArray[i][1];
                 } else {
@@ -821,11 +834,55 @@ function showChoice(a) {
                 }
             }
         }
-    ret = ret.replace(/Number/g, a);
-    chc.innerHTML = ret;
-    on[a] = 1;
-} else {
-    chc.innerHTML = "";
-    on[a] = 0;
+        ret = ret.replace(/Number/g, a);
+        chc.innerHTML = ret;
+        on[a] = 1;
+    } else {
+        chc.innerHTML = "";
+        on[a] = 0;
+    }
 }
+
+function min(a, b) {
+    return a < b ? a : b;
+}
+
+let gen = document.getElementById("gen");
+gen.onclick = function () {
+    let res = "", res0 = 0;
+
+    let agr = document.getElementById("agree");
+    let cook = getCookie("acc");
+    let nam = decodeURI(cook.split("@")[0]);
+    let syear = parseInt(document.getElementById("syear").value);
+    let smon = parseInt(document.getElementById("smonth").value);
+    let sday = parseInt(document.getElementById("sday").value);
+    let eyear = parseInt(document.getElementById("eyear").value);
+    let emon = parseInt(document.getElementById("emonth").value);
+    let eday = parseInt(document.getElementById("eday").value);
+
+    let sdate = new Date(syear + "/" + smon + "/" + sday);
+    let edate = new Date(eyear + "/" + emon + "/" + eday);
+    let len = (edate - sdate) / 86400000 + 1;
+    for (let d = sdate, i = 0; i < min(len, 250); ++i, d.setDate(d.getDate() + 1)) {
+        let choose = choice[i];
+        res += choose;
+    }
+    let i;
+    for (i = res.length - 1; i >= 0; --i) {
+        if (res[i] !== '0') break;
+    }
+    res = res.substr(0, i + 1);
+    res = res.replace(/undefined/g, "0");
+
+    if (agr.checked === false) {
+        gAlert("请先勾选复选框！");
+    } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
+        gAlert("请输入正确信息！");
+    } else {
+        let name = nam;
+        let sdate = syear * 416 + smon * 32 + sday;
+        let api = res;
+        window.open("/result/multiple.html?name=" + name + "&sdate=" + sdate + "&api=" + api);
+    }
 }
