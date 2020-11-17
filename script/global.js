@@ -72,17 +72,6 @@ function gAlertClose() {
 // </div>
 // <div id="gAlertBack" class="modal-backdrop fade" style="display: none;"></div>
 
-// Alert Setup
-
-document.getElementById("gAlertButton").onclick = gAlertClose;
-document.getElementById("gAlertModal").onclick = gAlertClose;
-
-// Auto Functions
-
-function noLogin(source) {
-    window.location.replace("/login.html?ref=" + source);
-}
-
 // User Values
 
 var num = 16;
@@ -195,14 +184,6 @@ function exists() {
     return 0;
 }
 
-function index() {
-    if (exists()) {
-        window.location.reload();
-    } else {
-        gAlert("用户名或密码错误！");
-    }
-}
-
 function allowance() {
     let cook = getCookie("acc");
     if (cook === "") return 0;
@@ -283,3 +264,17 @@ function sha1(s) {
 
 // Date Functions
 
+
+// Action Functions
+
+function noLogin(source) {
+    window.location.replace("/login.html?ref=" + source);
+}
+
+function index() {
+    if (exists()) {
+        window.location.reload();
+    } else {
+        gAlert("用户名或密码错误！");
+    }
+}
