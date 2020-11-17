@@ -21,7 +21,10 @@ let nam2 = decodeURI(cook.split("@")[0]);
 var ok = 0;
 
 if (truname !== nam2) {
-    window.history.back();
+    gAlert("姓名不匹配！");
+    setTimeout(function () {
+        window.history.back();
+    }, 3000);
 } else {
     var trunum = numArray[typ];
 
@@ -35,6 +38,9 @@ if (truname !== nam2) {
 
     if (!allow.includes(trunum)) {
         gAlert("权限不足以生成该餐票！");
+ 	    setTimeout(function () {
+ 	        window.history.back();
+	    }, 3000);
     } else {
         var truloc = "食堂" + locArray[typ] + "楼";
         var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
