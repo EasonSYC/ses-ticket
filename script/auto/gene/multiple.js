@@ -808,18 +808,21 @@ function showChoice(a) {
             for (; j < num; ++j) {
                 if (nameArray[j] === sha1(nam2)) break;
             }
-            if (allArray[typArray[j]].includes(i) === false)ret += choicArray[i][2];
-            if (i === choice[a]) {
-                ret += choicArray[i][1];
-            } else {
-                ret += choicArray[i][0];
+            if (allArray[typArray[j]].includes(i) === false) ret += choicArray[i][2];
+            else {
+                if (i === choice[a]) {
+                    ret += choicArray[i][1];
+                } else {
+                    ret += choicArray[i][0];
+                }
             }
         }
-        ret = ret.replace(/Number/g, a);
-        chc.innerHTML = ret;
-        on[a] = 1;
-    } else {
-        chc.innerHTML = "";
-        on[a] = 0;
     }
+    ret = ret.replace(/Number/g, a);
+    chc.innerHTML = ret;
+    on[a] = 1;
+} else {
+    chc.innerHTML = "";
+    on[a] = 0;
+}
 }
