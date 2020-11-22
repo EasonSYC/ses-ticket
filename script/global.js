@@ -91,7 +91,7 @@ var allArray = [
 // User Functions
 
 function getUserInfo(reqContent, reqType, resType) {
-    let resGetId = 0;
+    let resGetId = -1;
     if (reqType === "name") {
         for (let i = 0; i < num; i++) {
             if (nameArray[i] === sha1(reqContent)) {
