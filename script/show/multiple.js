@@ -1,3 +1,7 @@
+function min(a, b) {
+    return a < b ? a : b;
+}
+
 let url = document.location.toString();
 let urlParmStr = url.slice(url.indexOf("?") + 1);
 let arr = urlParmStr.split("&");
