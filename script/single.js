@@ -799,6 +799,6 @@ gen.onclick = function () {
         let cs = yr * 416 + tim;
         let css = cs * 10 + ntyp;
         let api = css.toString(16);
-        window.open("/result/print.html?" + nam + "&" + api);
+        window.open("../result/print.html?" + nam + "&" + api);
     }
 }

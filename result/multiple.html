@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>我的预订</title>
-    <link href="/favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
-    <link href="/layout/common.min.css" rel="stylesheet">
-    <link href="/layout/all.min.css" rel="stylesheet">
+    <link href="../favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
+    <link href="../layout/common.min.css" rel="stylesheet">
+    <link href="../layout/all.min.css" rel="stylesheet">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
@@ -67,7 +67,7 @@
     #gAlertModal #gAlertMsg {
         padding: 20px 8px
     }</style>
-    <script src="/script/global.js"></script>
+    <script src="../script/global.js"></script>
 </head>
 <body>
 <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
@@ -85,11 +85,11 @@
     let urll = document.location.toString();
     let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
     if (!exists()) {
-        noLogin(window.location.pathname.replace("/sesticketgen/", "/") + "?" + urlParmmStr);
+        noLogin(window.location.pathname.replace("/sesticket/", "/") + "?" + urlParmmStr);
     }
 </script>
-<script src="/script/show/multiple.js"></script>
-<script src="/script/qrcode.min.js"></script>
+<script src="../script/show/multiple.js"></script>
+<script src="../script/qrcode.min.js"></script>
 <div id="gApp">
     <div class="row no-gutters" id="res">
 

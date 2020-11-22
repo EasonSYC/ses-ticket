@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>餐票 - 登录</title>
-    <link href="/favicon.png" rel="shortcut icon">
+    <link href="./favicon.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link href="/layout/common.min.css" rel="stylesheet">
-    <link href="/layout/all.min.css" rel="stylesheet">
-    <link href="/layout/web.css" rel="stylesheet">
+    <link href="./layout/common.min.css" rel="stylesheet">
+    <link href="./layout/all.min.css" rel="stylesheet">
+    <link href="./layout/web.css" rel="stylesheet">
     <style>.global-alert {
         z-index: 2000
     }
@@ -23,7 +23,7 @@
     #gAlertModal #gAlertMsg {
         padding: 20px 8px
     }</style>
-    <script src="/script/global.js"></script>
+    <script src="./script/global.js"></script>
 </head>
 <body>
 <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
@@ -41,14 +41,14 @@
     if (exists()) {
         let url = document.location.toString();
         let qlocurl = url.indexOf("?");
-        if (qlocurl === -1) window.location.replace("/index.html");
+        if (qlocurl === -1) window.location.replace("./index.html");
         else {
             let urlParmStr = url.slice(qlocurl + 1);
             let ulocurl = urlParmStr.indexOf("=");
-            if (ulocurl === -1) window.location.replace("/index.html");
+            if (ulocurl === -1) window.location.replace("./index.html");
             else {
                 let lnk = urlParmStr.slice(ulocurl + 1);
-                if (lnk === undefined || lnk === null) window.location.replace("/index.html");
+                if (lnk === undefined || lnk === null) window.location.replace("./index.html");
                 else {
                     window.location.replace(lnk);
                 }
@@ -99,7 +99,7 @@
         </div>
     </div>
 </div>
-<script src="/script/login.js"></script>
+<script src="./script/login.js"></script>
 <script>
     document.getElementById("gAlertButton").onclick = gAlertClose;
     document.getElementById("gAlertModal").onclick = gAlertClose;

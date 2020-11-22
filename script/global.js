@@ -25,7 +25,7 @@ var before =
     "<p class=\"display-1 text-danger py-3\"> 404 </p>\n" +
     "<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
 var home =
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/\" id=\"g-but\">\n" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./index.html\" id=\"g-but\">\n" +
     "首页\n" +
     "</a>";
 var back =
@@ -34,7 +34,7 @@ var back =
     "</a>";
 var after =
     "\n" +
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/help.html#NotFound\">\n" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./help.html#NotFound\">\n" +
     "帮助\n" +
     "</a>";
 
@@ -260,7 +260,7 @@ function getWk() {
 // Action Functions
 
 function noLogin(source) {
-    window.location.replace("/login.html?ref=" + source);
+    window.location.replace("./login.html?ref=" + source);
 }
 
 function index() {
