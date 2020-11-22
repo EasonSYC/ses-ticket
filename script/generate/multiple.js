@@ -818,13 +818,7 @@ function showChoice(a) {
     if (on[a] === 0 || on[a] === undefined) {
         let ret = "";
         for (let i = 1; i <= 9; ++i) {
-            let j = 0;
-            let cook = getCookie("acc");
-            let nam2 = decodeURI(cook.split("@")[0]);
-            for (; j < num; ++j) {
-                if (nameArray[j] === sha1(nam2)) break;
-            }
-            if (allArray[typArray[j]].includes(i) === false) {
+            if (getUserInfo("name", getName(), "allow").includes(i) === false) {
                 ret += choicArray[i][2];
             } else {
                 if (i === choice[a]) {
