@@ -237,6 +237,16 @@ function max(a, b) {
     return a > b ? a : b;
 }
 
+function noZero(str) {
+    let i;
+    for (i = str.length - 1; i >= 0; --i) {
+        if (str[i] !== '0') break;
+    }
+    str = str.substr(0, i + 1);
+    str = str.replace(/undefined/g, "0");
+    return str;
+}
+
 // Date Functions
 
 function getTo() {
@@ -298,6 +308,12 @@ function index() {
 // Layout Strings
 
 
+
+// API Functions
+
+function encodeDate(year, month, date) {
+    return year * 416 + month * 32 + date;
+}
 
 // Account Strings
 
