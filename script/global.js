@@ -90,6 +90,29 @@ var allArray = [
 
 // User Functions
 
+function getUserInfo(reqContent, reqType, resType) {
+    let resGetId = 0;
+    if (reqType === "name") {
+        for (let i = 0; i < num; i++) {
+            if (nameArray[i] === sha1(reqContent)) {
+                resGetId = i;
+                break;
+            }
+        }
+        if (resGetId === -1) return -1;
+    }
+    if (reqType === "id") {
+        resGetId = reqContent;
+        if (resGetId < 0 || resGetId >= num) return -1;
+    }
+    if (resType === "name") return nameArray[resGetId];
+    if (resType === "pwd") return pwdArray[resGetId];
+    if (resType === "id") return resGetId;
+    if (resType === "level") return typArray[resGetId];
+    if (resType === "type") return tynArray[typArray[resGetId]];
+    if (resType === "allow") return allArray[typArray[resGetId]];
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split(';');
@@ -105,6 +128,15 @@ function getCookie(cname) {
     return "";
 }
 
+
+function getName() {
+    return (getCookie("acc") === "") ? "-1" : getCookie("acc").split("@")[0];
+}
+
+function getPwd() {
+    return getCookie("acc").split("@")[1];
+}
+
 function delCookie(cname) {
     let d = new Date();
     d.setTime(d.getTime() - 1);
@@ -113,30 +145,24 @@ function delCookie(cname) {
 }
 
 function exists() {
-    let cook = getCookie("acc");
-    if (cook === "") return 0;
-    let nam = decodeURI(cook.split("@")[0]);
-    let acc = sha1(nam);
-    let pwd = cook.split("@")[1];
-    for (let i = 0; i < num; ++i)
-        if (acc === nameArray[i] && pwd === pwdArray[i])
-            return 1;
+    let nam = getName();
+    if (nam === "-1") {
+        delCookie("acc");
+        return 0;
+    }
+    let pwd = getPwd();
+    let trupwd = getUserInfo("name", nam, "pwd");
+    if (trupwd === "-1") {
+        delCookie("acc");
+        return 0;
+    }
+    if (pwd === trupwd) return 1;
     delCookie("acc");
     return 0;
 }
 
 function allowance() {
-    let cook = getCookie("acc");
-    if (cook === "") return 0;
-    let nam = decodeURI(cook.split("@")[0]);
-    let acc = sha1(nam);
-    let i = 0;
-    for (; i < num; ++i) {
-        if (nameArray[i] === acc) break;
-    }
-    let tyn = tynArray[typArray[i]];
-    let all = allArray[typArray[i]];
-    gAlert("用户类别：" + tyn + "<br>生成餐区：" + all);
+    gAlert("用户类别：" + getUserInfo("name", getName(), "type") + "<br>生成餐区：" + getUserInfo("name", getName(), "allow"));
 }
 
 // sha1 Functions
