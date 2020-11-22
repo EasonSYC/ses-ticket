@@ -225,7 +225,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">1区 自助餐</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 1)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -287,7 +287,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">2区 套餐A</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 2)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -349,7 +349,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">3区 套餐A</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 3)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -411,7 +411,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">4区 套餐A</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 4)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -473,7 +473,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">5区 套餐B</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 5)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -536,7 +536,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">6区 盖浇饭</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 6)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -598,7 +598,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">7区 套餐C</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 7)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -660,7 +660,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">8区 面档</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 8)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
@@ -723,7 +723,7 @@ let choicArray = ["",
         "                                                    <div class=\"col-12\">\n" +
         "                                                        <div class=\"px-3\">\n" +
         "                                                            <b class=\"title\">9区 套餐C</b>\n" +
-        "                                                            <a class=\"btn btn-sm btn-outline-secondary disabled\"\n" +
+        "                                                            <a class=\"btn btn-sm btn-gray disabled\"\n" +
         "                                                               onclick=\"chooseType(Number, 9)\">暂无权限</a>\n" +
         "                                                            <br>\n" +
         "                                                            <small>\n" +
