@@ -85,7 +85,7 @@
     let urll = document.location.toString();
     let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
     if (!exists()) {
-        noLogin(window.location.pathname.replace("/sesticket/", "/") + "?" + urlParmmStr);
+        noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + urlParmmStr);
     }
 </script>
 <script src="../script/show/multiple.js"></script>
