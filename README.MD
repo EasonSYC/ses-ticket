@@ -10,4 +10,4 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### Website
 
-[Website Gitee](https://ses-1987.gitee.io/sesticket)
+[Website](https://ses-1987.gitee.io/sesticket)
