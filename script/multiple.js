@@ -883,6 +883,6 @@ gen.onclick = function () {
         let name = nam;
         let sdate = syear * 416 + smon * 32 + sday;
         let api = res;
-        window.open("/result/multiple.html?name=" + name + "&sdate=" + sdate + "&api=" + api);
+        window.open("../result/multiple.html?name=" + name + "&sdate=" + sdate + "&api=" + api);
     }
 }
