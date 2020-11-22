@@ -8,11 +8,15 @@ let mon = Math.floor(mod / 32);
 let day = mod % 32;
 let typ = api % 10;
 let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
-var truurlqr = url.replace("print", "scan");
-truurlqr = decodeURI(truurlqr);
+
 var trufood = foodArray[typ];
 
 var truname = getName();
+
+
+var truurlqr = url.replace("print", "scan");
+truurlqr = truurlqr.split("?")[0];
+truurlqr = truurlqr + "?" + truname + "&" + api.toString(16);
 
 var ok = 0;
 
