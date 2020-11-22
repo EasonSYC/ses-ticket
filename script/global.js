@@ -128,7 +128,6 @@ function getCookie(cname) {
     return "";
 }
 
-
 function getName() {
     return (getCookie("acc") === "") ? "-1" : decodeURI(getCookie("acc").split("@")[0]);
 }
@@ -183,7 +182,6 @@ function encodeUTF8(s) {
     return r;
 }
 
-// 字符串加密成 hex 字符串
 function sha1(s) {
     var data = new Uint8Array(encodeUTF8(s))
     var i, j, t;
@@ -258,7 +256,7 @@ function getTo() {
 
 function getWk() {
     let sday = getTo().al;
-    for (; sday.getDay() !== 1; sday.setDate(sday.getDate() + 1)) ;
+    while (sday.getDay() !== 1) sday.setDate(sday.getDate() + 1);
     let eday = new Date(sday);
     eday.setDate(eday.getDate() + 4);
     let syear = sday.getFullYear();
@@ -296,6 +294,10 @@ function index() {
         gAlert("用户名或密码错误！");
     }
 }
+
+// Layout Strings
+
+
 
 // Account Strings
 
