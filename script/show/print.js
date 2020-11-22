@@ -7,20 +7,10 @@ let mod = tim % 416;
 let mon = Math.floor(mod / 32);
 let day = mod % 32;
 let typ = api % 10;
-let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
-
-var trufood = foodArray[typ];
 
 var truname = getName();
 
-
-var truurlqr = url.replace("print", "scan");
-truurlqr = truurlqr.split("?")[0];
-truurlqr = truurlqr + "?" + truname + "&" + api.toString(16);
-
 var ok = 0;
-
-var trunum = numArray[typ];
 
 if (!getUserInfo("name", truname, "allow").includes(trunum)) {
     gAlert("权限不足以生成该餐票！");
@@ -28,7 +18,11 @@ if (!getUserInfo("name", truname, "allow").includes(trunum)) {
         window.history.back();
     }, 3000);
 } else {
+    let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
+    var trufood = foodArray[typ];
+    var trunum = numArray[typ];
     var truloc = "食堂" + locArray[typ] + "楼";
     var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
+    var truurlqr = url.replace("print", "scan").split("?")[0] + "?" + truname + "&" + api.toString(16);
     ok = 1;
 }
