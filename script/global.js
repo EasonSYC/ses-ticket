@@ -130,7 +130,7 @@ function getCookie(cname) {
 
 
 function getName() {
-    return (getCookie("acc") === "") ? "-1" : getCookie("acc").split("@")[0];
+    return (getCookie("acc") === "") ? "-1" : decodeURI(getCookie("acc").split("@")[0]);
 }
 
 function getPwd() {
@@ -145,7 +145,7 @@ function delCookie(cname) {
 }
 
 function exists() {
-    let nam = decodeURI(getName());
+    let nam = getName();
     if (nam === "-1") {
         delCookie("acc");
         return 0;
@@ -162,7 +162,7 @@ function exists() {
 }
 
 function allowance() {
-    gAlert("用户类别：" + getUserInfo("name", decodeURI(getName()), "type") + "<br>生成餐区：" + getUserInfo("name", decodeURI(getName()), "allow"));
+    gAlert("用户类别：" + getUserInfo("name", getName(), "type") + "<br>生成餐区：" + getUserInfo("name", getName(), "allow"));
 }
 
 // sha1 Functions
