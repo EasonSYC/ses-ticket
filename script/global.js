@@ -22,22 +22,21 @@ var eggs = [
 // 404 Strings
 
 var before =
-    "\n" +
-    "\t\t\t<p class=\"display-1 text-danger py-3\"> 404 </p>\n" +
-    "\t\t\t<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
+    "<p class=\"display-1 text-danger py-3\"> 404 </p>\n" +
+    "<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
 var home =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/\" id=\"g-but\">\n" +
-    "\t\t\t\t首页\n" +
-    "\t\t\t</a>";
+    "首页\n" +
+    "</a>";
 var back =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" id=\"g-but\" onclick=\"history.back();\">\n" +
-    "\t\t\t\t返回\n" +
-    "\t\t\t</a>";
+    "返回\n" +
+    "</a>";
 var after =
     "\n" +
-    "\t\t\t<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/help.html#NotFound\">\n" +
-    "\t\t\t\t帮助\n" +
-    "\t\t\t</a>";
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/help.html#NotFound\">\n" +
+    "帮助\n" +
+    "</a>";
 
 // Alert Functions
 
