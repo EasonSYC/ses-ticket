@@ -90,16 +90,16 @@ var allArray = [
 
 // User Functions
 
-function getUserInfo(reqContent, reqType, resType) {
+function getUserInfo(reqType, reqContent, resType) {
     let resGetId = -1;
     if (reqType === "name") {
-        for (let i = 0; i < num; i++) {
+        for (let i = 0; i < num; ++i) {
             if (nameArray[i] === sha1(reqContent)) {
                 resGetId = i;
                 break;
             }
         }
-        if (resGetId === -1) return -1;
+        if (resGetId === -1) return "-1";
     }
     if (reqType === "id") {
         resGetId = reqContent;
