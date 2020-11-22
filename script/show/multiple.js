@@ -43,7 +43,7 @@ for (let i = 0; i < min(api.length, 250); ++i) {
         let ncss = ncs * 10 + chc;
         let napi = ncss.toString(16);
         let wkday = new Date(dyr + "/" + dmo + "/" + ddy).getDay();
-        let purl = "\"" + ".\/..\/result\/print.html?" + nam + "&" + napi + "\"";
+        let purl = "\"" + ".\/..\/result\/print.html?" + napi + "\"";
         let surl = urlNew + "?" + nam + "&" + napi;
         let datestr = dmo + "/" + ddy + " 周" + weekArray[wkday];
 
