@@ -162,7 +162,7 @@ function exists() {
 }
 
 function allowance() {
-    gAlert("用户类别：" + getUserInfo("name", getName(), "type") + "<br>生成餐区：" + getUserInfo("name", getName(), "allow"));
+    gAlert("用户类别：" + getUserInfo("name", decodeURI(getName()), "type") + "<br>生成餐区：" + getUserInfo("name", decodeURI(getName()), "allow"));
 }
 
 // sha1 Functions
