@@ -843,10 +843,6 @@ function showChoice(a) {
     }
 }
 
-function min(a, b) {
-    return a < b ? a : b;
-}
-
 let gen = document.getElementById("gen");
 gen.onclick = function () {
     let res = "", res0 = 0;
