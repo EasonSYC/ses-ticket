@@ -145,7 +145,7 @@ function delCookie(cname) {
 }
 
 function exists() {
-    let nam = getName();
+    let nam = decodeURI(getName());
     if (nam === "-1") {
         delCookie("acc");
         return 0;
