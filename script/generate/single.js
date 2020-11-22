@@ -795,10 +795,7 @@ gen.onclick = function () {
     } else if (ntyp === 0) {
         gAlert("请在生成前选餐！");
     } else {
-        let tim = mon * 32 + day;
-        let cs = yr * 416 + tim;
-        let css = cs * 10 + ntyp;
-        let api = css.toString(16);
-        window.open("../result/print.html?" + nam + "&" + api);
+        let api = encodeDate(yr, mon, day) * 10 + ntyp;
+        window.open("../result/print.html?" + api.toString(16));
     }
 }
