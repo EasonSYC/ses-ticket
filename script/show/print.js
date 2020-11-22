@@ -9,6 +9,7 @@ let day = mod % 32;
 let typ = api % 10;
 
 var truname = getName();
+var trunum = numArray[typ];
 
 var ok = 0;
 
@@ -20,7 +21,6 @@ if (!getUserInfo("name", truname, "allow").includes(trunum)) {
 } else {
     let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
     var trufood = foodArray[typ];
-    var trunum = numArray[typ];
     var truloc = "食堂" + locArray[typ] + "楼";
     var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
     var truurlqr = url.replace("print", "scan").split("?")[0] + "?" + truname + "&" + api.toString(16);
