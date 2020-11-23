@@ -5,8 +5,7 @@ let arr = urlParmStr.split("&");
 let std = arr[0];
 let api = arr[1];
 
-let urlNew = url.replace("multiple", "scan");
-urlNew = urlNew.split("?")[0];
+let urlNew = url.replace("multiple", "scan").split("?")[0];
 
 let syr = Math.floor(std / 416);
 let sd = std % 416;
