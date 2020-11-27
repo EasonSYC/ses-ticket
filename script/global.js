@@ -2,6 +2,10 @@
 
 var numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var weekArray = ["日", "一", "二", "三", "四", "五", "六"];
+var levelArray = ["undefined", "green", "orange", "red"];
+var freqArray = ["undefined", "不常", "有时", "经常"];
+var butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
+var butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
 
 // 404 Arrays
 
@@ -313,6 +317,31 @@ function encodeDate(year, month, date) {
     return year * 416 + month * 32 + date;
 }
 
+// Show Values
+
+var singleChoiceModel =
+    "<li>\n" +
+    "<div class=\"row no-gutters\">\n" +
+    "<div class=\"col-12\">\n" +
+    "<div class=\"px-3\">\n" +
+    "<b class=\"title\">AREA区 FOOD</b>\n" +
+    "<a class=\"btn btn-sm BUTCLASS\"\n" +
+    "onclick=\"chooseType(AREA)\">BUTINFO</a>\n" +
+    "<br>\n" +
+    "<small>\n" +
+    "<span class=\"text-muted\">食堂FLOOR楼</span>\n" +
+    "</small>\n" +
+    "<div>\n" +
+    "<i class=\"fa fa-exclamation-triangle icon-LEVEL\"></i>\n" +
+    "<small class=\"mr-1\">\n" +
+    "FREQ扫描\n" +
+    "</small>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "</li>\n";
+
 // Account Strings
 
 var num = 16;
@@ -378,3 +407,4 @@ var typArray = [
 
 var foodArray = ["undefined", "套餐A", "套餐A", "套餐A", "套餐B", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
 var locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
+var alertArray = ["undefined", "3", "1", "1", "1", "1", "2", "1", "2", "1"];
