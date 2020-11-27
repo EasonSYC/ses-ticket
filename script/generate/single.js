@@ -178,7 +178,8 @@ function showChoice() {
     if (on === 0) {
         let ret = "";
         for (let i = 1; i <= 9; ++i) {
-            ret += singleChoiceModel;
+            ret += choiceModel;
+            ret = ret.replace(/INDEX/g, 0);
             ret = ret.replace(/AREA/g, numArray[i]);
             ret = ret.replace(/FOOD/g, foodArray[i]);
             ret = ret.replace(/FLOOR/g, locArray[i]);
@@ -209,7 +210,7 @@ function updateLook(v) {
     showChoice();
 }
 
-function chooseType(tp) {
+function chooseType(a, tp) {
     choice = tp;
     updateLook(tp);
 }

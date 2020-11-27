@@ -319,14 +319,14 @@ function encodeDate(year, month, date) {
 
 // Show Values
 
-var singleChoiceModel =
+var choiceModel =
     "<li>\n" +
     "<div class=\"row no-gutters\">\n" +
     "<div class=\"col-12\">\n" +
     "<div class=\"px-3\">\n" +
     "<b class=\"title\">AREA区 FOOD</b>\n" +
     "<a class=\"btn btn-sm BUTCLASS\"\n" +
-    "onclick=\"chooseType(AREA)\">BUTINFO</a>\n" +
+    "onclick=\"chooseType(INDEX, AREA)\">BUTINFO</a>\n" +
     "<br>\n" +
     "<small>\n" +
     "<span class=\"text-muted\">食堂FLOOR楼</span>\n" +
