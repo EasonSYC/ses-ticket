@@ -1,114 +1,59 @@
-let url = document.location.toString();
-let urlParmStr = url.slice(url.indexOf("?") + 1);
-let arr = urlParmStr.split("&");
+let arr = basicURLInfo().parmArr;
 
-let std = arr[0];
+let date = decodeDate(arr[0]);
+let syr = date.yr;
+let smo = date.mo;
+let sda = date.da;
+let sdate = new Date(syr + "/" + smo + "/" + sda);
+
 let api = arr[1];
 
-let urlNew = url.replace("multiple", "scan").split("?")[0];
+let name = getName();
 
-let syr = Math.floor(std / 416);
-let sd = std % 416;
-let smo = Math.floor(sd / 32);
-let sdt = sd % 32;
-
-let nam = getName();
+let urlNew = basicURLInfo().url.replace("multiple", "scan").split("?")[0];
 
 var ret = "";
 var ret2 = "";
 
-let sdate = new Date(syr + "/" + smo + "/" + sdt);
 let flg = 0;
+
 for (let i = 0; i < min(api.length, 250); ++i) {
     let chc = api[i];
-    if ((chc === "1") ||
-        (chc === "2") ||
-        (chc === "3") ||
-        (chc === "4") ||
-        (chc === "5") ||
-        (chc === "6") ||
-        (chc === "7") ||
-        (chc === "8") ||
-        (chc === "9")) {
+    if ("123456789".includes(chc)) {
         chc = parseInt(chc);
+
         let dyr = sdate.getFullYear();
         let dmo = sdate.getMonth() + 1;
         let ddy = sdate.getDate();
-        let are = numArray[chc];
-        let typ = foodArray[chc];
-        let loc = locArray[chc];
-        let ntim = dmo * 32 + ddy;
-        let ncs = dyr * 416 + ntim;
-        let ncss = ncs * 10 + chc;
-        let napi = ncss.toString(16);
-        let wkday = new Date(dyr + "/" + dmo + "/" + ddy).getDay();
-        let purl = "\"" + ".\/..\/result\/print.html?" + napi + "\"";
-        let surl = urlNew + "?" + nam + "&" + napi;
-        let datestr = dmo + "/" + ddy + " 周" + weekArray[wkday];
 
-        if (!getUserInfo("name", nam, "allow").includes(are)) {
+        let num = numArray[chc];
+        let dynum = sdate.getDay();
+        let purl = "\"" + ".\/..\/result\/print.html?" + encodeDate(dyr, dmo, ddy) + "&" + chc + "\"";
+        let surl = urlNew + "?" + name + "&" + encodeDate(dyr, dmo, ddy) + "&" + chc;
+        let wkday = dmo + "/" + ddy + " 周" + weekArray[dynum];
+
+        if (!getUserInfo("name", name, "allow").includes(num)) {
             flg = 1;
         } else {
-            ret +=
-                "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
-                "<div class=\"order-panel\"> " +
-                "<div class=\"d-flex justify-content-between\">" +
-                "<div>" +
-                "<div class=\"order-name\">" +
-                typ +
-                "</div>" +
-                "<a href=" +
-                purl +
-                ">" +
-                "<img class=\"img-qrcode border\" id=\"" +
-                "qrc" +
-                i +
-                "\"" +
-                ">" +
-                "</a>" +
-                "<div class=\"user-name text-center\">" +
-                "<span>" +
-                nam +
-                "</span>" +
-                "</div>" +
-                "</div>" +
-                "<div class=\"ticket-body\">" +
-                "<div class=\"order-area\">" +
-                are +
-                " " +
-                "<span class=\"order-area-tail\">" +
-                "区" +
-                "</span>" +
-                "</div>" +
-                "<div class=\"order-location\">" +
-                "<span>" +
-                "食堂" +
-                loc +
-                "楼" +
-                "<span>" +
-                "<br>" +
-                "<span>" +
-                datestr +
-                "</span>" +
-                "</span>" +
-                "</span>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "</div>"
-            ret2 +=
-                "QRCode.toDataURL(\"" +
-                surl +
-                "\", {errorCorrectionLevel: 'L'}, function (rtt, url) {" +
-                "document.getElementById(\"" +
-                "qrc" +
-                i +
-                "\").src=url;});";
+            ret += ticketModel;
+            ret = ret.replace(/FOOD/g, foodArray[chc]);
+            ret = ret.replace(/PURL/g, purl);
+            ret = ret.replace(/INDEX/g, i);
+            ret = ret.replace(/NAME/g, name);
+            ret = ret.replace(/AREA/g, numArray[chc]);
+            ret = ret.replace(/FLOOR/g, locArray[chc]);
+            ret = ret.replace(/DATE/g, wkday);
+
+
+            ret2 += codeModel;
+
+            ret2 = ret2.replace(/SURL/g, surl);
+            ret2 = ret2.replace(/INDEX/g, i);
         }
     }
     sdate.setDate(sdate.getDate() + 1);
 }
+
 if (flg) {
     gAlert("权限不足以生成某些餐票！");
 }

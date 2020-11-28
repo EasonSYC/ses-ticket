@@ -28,15 +28,7 @@ function changeDate() {
 function updateLook(a, v) {
     let shc = document.getElementById("shc0");
     let choose = choice[a];
-    if (choose !== 1 &&
-        choose !== 2 &&
-        choose !== 3 &&
-        choose !== 4 &&
-        choose !== 5 &&
-        choose !== 6 &&
-        choose !== 7 &&
-        choose !== 8 &&
-        choose !== 9) {
+    if (!"123456789".includes(choose)) {
         choose = choice[a] = 0;
     }
     let chs = "";
