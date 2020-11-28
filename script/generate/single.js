@@ -173,13 +173,13 @@ function changeDate() {
     date.innerHTML = mon + "/" + day + "<br>" + wkday;
 }
 
-function showChoice() {
+function showChoice(a) {
     let chc = document.getElementById("chc");
     if (on === 0) {
         let ret = "";
         for (let i = 1; i <= 9; ++i) {
             ret += choiceModel;
-            ret = ret.replace(/INDEX/g, 0);
+            ret = ret.replace(/INDEX/g, a);
             ret = ret.replace(/AREA/g, numArray[i]);
             ret = ret.replace(/FOOD/g, foodArray[i]);
             ret = ret.replace(/FLOOR/g, locArray[i]);
@@ -204,15 +204,15 @@ function showChoice() {
     }
 }
 
-function updateLook(v) {
+function updateLook(a, v) {
     let shc = document.getElementById("shc");
     shc.innerHTML = choiceArray[v];
-    showChoice();
+    showChoice(a);
 }
 
 function chooseType(a, tp) {
     choice = tp;
-    updateLook(tp);
+    updateLook(a, tp);
 }
 
 let gen = document.getElementById("gen");
