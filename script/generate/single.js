@@ -61,12 +61,13 @@ function chooseType(a, tp) {
 let gen = document.getElementById("gen");
 gen.onclick = function () {
     let agr = document.getElementById("agree");
-    let cook = getCookie("acc");
-    let nam = decodeURI(cook.split("@")[0]);
+
     let ntyp = choice[0];
+
     let yr = parseInt(document.getElementById("year").value);
     let mon = parseInt(document.getElementById("month").value);
     let day = parseInt(document.getElementById("day").value);
+
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");
     } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
@@ -74,7 +75,6 @@ gen.onclick = function () {
     } else if (ntyp === 0) {
         gAlert("请在生成前选餐！");
     } else {
-        let api = encodeDate(yr, mon, day) * 10 + ntyp;
-        window.open("../result/print.html?" + api.toString(16));
+        window.open("../result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);
     }
 }

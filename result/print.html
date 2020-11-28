@@ -86,10 +86,8 @@
 </div>
 <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
 <script>
-    let urll = document.location.toString();
-    let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
     if (!exists()) {
-        noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + api.toString(16));
+        noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + basicURLInfo().urlParmStr);
     }
 </script>
 <script src="../script/show/print.js"></script>
@@ -107,19 +105,19 @@
                     <div>
                         <div class="order-name">
                             <script>
-                                if (ok) document.write(trufood);
+                                if (ok) document.write(food);
                             </script>
                         </div>
                         <img class="img-qrcode border" id="qrc">
                         <script>
-                            QRCode.toDataURL(truurlqr, {errorCorrectionLevel: 'L'}, function (rtt, url) {
+                            QRCode.toDataURL(urlqr, {errorCorrectionLevel: 'L'}, function (rtt, url) {
                                 if (ok) document.getElementById("qrc").src = url;
                             })
                         </script>
                         <div class="user-name text-center">
                                 <span>
                                     <script>
-                                        if (ok) document.write(truname);
+                                        if (ok) document.write(name);
                                     </script>
                                 </span>
                         </div>
@@ -127,19 +125,19 @@
                     <div class="ticket-body">
                         <div class="order-area">
                             <script>
-                                if (ok) document.write(trunum);
+                                if (ok) document.write(num);
                             </script>
                             <span class="order-area-tail">区</span>
                         </div>
                         <div class="order-location">
                             <span id="loc">
                                 <script>
-                                    if (ok) document.getElementById("loc").innerHTML = ("<div>" + truloc + "</div>");
+                                    if (ok) document.getElementById("loc").innerHTML = ("<div>" + loc + "</div>");
                                 </script>
                                 <span>
                                     <span>
                                         <script>
-                                            if (ok) document.write(truwkd);
+                                            if (ok) document.write(wkd);
                                         </script>
                                     </span>
                                 </span>
@@ -157,9 +155,9 @@
 </script>
 <script>
     if (ok) {
-        if (trunum === "1") {
+        if (num === "1") {
             gAlert("1区机器正在适配中，<br>请勿使用此餐票！");
-        } else if (trunum === "6") {
+        } else if (num === "6") {
             gAlert("6区微信登录正在适配中，<br>请勿使用此餐票！");
         } else {
             gAlert("请警惕餐票扫描！");

@@ -1,28 +1,27 @@
-let url = document.location.toString();
-let api = parseInt(url.slice(url.indexOf("?") + 1), 16);
+let arr = basicURLInfo().parmArr;
 
-let tim = Math.floor(api / 10);
-let yr = Math.floor(tim / 416);
-let mod = tim % 416;
-let mon = Math.floor(mod / 32);
-let day = mod % 32;
-let typ = api % 10;
+let date = decodeDate(arr[0]);
+let yr = date.yr;
+let mo = date.mo;
+let da = date.da;
 
-var truname = getName();
-var trunum = numArray[typ];
+let typ = parseInt(arr[1]);
+
+var name = getName();
+var num = numArray[typ];
 
 var ok = 0;
 
-if (!getUserInfo("name", truname, "allow").includes(trunum)) {
+if (!getUserInfo("name", name, "allow").includes(num)) {
     gAlert("权限不足以生成该餐票！");
     setTimeout(function () {
         window.history.back();
     }, 3000);
 } else {
-    let dynum = new Date(yr + '/' + mon + '/' + day).getDay();
-    var trufood = foodArray[typ];
-    var truloc = "食堂" + locArray[typ] + "楼";
-    var truwkd = mon + "/" + day + " 周" + weekArray[dynum];
-    var truurlqr = url.replace("print", "scan").split("?")[0] + "?" + truname + "&" + api.toString(16);
+    let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
+    var food = foodArray[typ];
+    var loc = "食堂" + locArray[typ] + "楼";
+    var wkd = mo + "/" + da + " 周" + weekArray[dynum];
+    var urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr;
     ok = 1;
 }
