@@ -317,6 +317,26 @@ function encodeDate(year, month, date) {
     return year * 416 + month * 32 + date;
 }
 
+function decodeDate(api) {
+    let yr = Math.floor(api / 416);
+    let mod = api % 416;
+    let mo = Math.floor(mod / 32);
+    let da = mod % 32;
+    return {
+        "yr" : yr,
+        "mo" : mo,
+        "da" : da
+    };
+}
+
+function basicURLInfo() {
+    return {
+        "url" : document.location.toString(),
+        "urlParmStr" : document.location.toString().slice(document.location.toString().indexOf("?") + 1),
+        "parmArr" : document.location.toString().slice(document.location.toString().indexOf("?") + 1).split("&")
+    };
+}
+
 // Show Values
 
 var choiceModel =
