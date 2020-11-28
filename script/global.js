@@ -342,6 +342,26 @@ var choiceModel =
     "</div>\n" +
     "</li>\n";
 
+var noChoose = "<div class=\"text-muted text-center mt-4\">点击这里选餐</div>";
+
+var chosenModel =
+    "<b class=\"title\">AREA区 FOOD</b>\n" +
+    "<span class=\"float-right\">\n" +
+    "<span class=\"badge badge-orange\">\n" +
+    "已选餐\n" +
+    "</span>\n" +
+    "</span>\n" +
+    "<br>\n" +
+    "<small>\n" +
+    "<span class=\"text-muted\">食堂FLOOR楼</span>\n" +
+    "</small>\n" +
+    "<div>\n" +
+    "<i class=\"fa fa-exclamation-triangle icon-LEVEL\"></i>\n" +
+    "<small class=\"mr-1\">\n" +
+    "FREQ扫描\n" +
+    "</small>\n" +
+    "</div>";
+
 // Show Functions
 
 function showChoice(a) {

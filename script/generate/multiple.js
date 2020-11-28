@@ -1,154 +1,6 @@
 var choice = [];
 var on = [];
 
-let moc = [
-    "                                                            <div class=\"text-muted text-center mt-4\">点击这里选餐</div>",
-    "                                                            <b class=\"title\">1区 自助餐</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-red\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    经常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">2区 套餐A</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    不常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">3区 套餐A</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂一楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    不常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">4区 套餐A</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    不常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">5区 套餐B</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    不常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">6区 盖浇饭</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-orange\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    有时扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">7区 套餐C</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    不常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">8区 面档</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-orange\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    有时扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>",
-    "                                                            <b class=\"title\">9区 套餐B</b>\n" +
-    "                                                            <span class=\"float-right\">\n" +
-    "                                                                <span class=\"badge badge-orange\">\n" +
-    "                                                                    已选餐\n" +
-    "                                                                </span>\n" +
-    "                                                            </span>\n" +
-    "                                                            <br>\n" +
-    "                                                            <small>\n" +
-    "                                                                <span class=\"text-muted\">食堂二楼</span>\n" +
-    "                                                            </small>\n" +
-    "                                                            <div>\n" +
-    "                                                                <i class=\"fa fa-exclamation-triangle icon-green\"></i>\n" +
-    "                                                                <small class=\"mr-1\">\n" +
-    "                                                                    不常扫描\n" +
-    "                                                                </small>\n" +
-    "                                                            </div>"
-];
-
 let clook =
     "                               <ul class=\"supply-date-list px-3\">\n" +
     "                                    <li class=\"py-2\">\n" +
@@ -161,7 +13,7 @@ let clook =
     "                                            <div class=\"col-9\">\n" +
     "                                                <div class=\"row no-gutters\">\n" +
     "                                                    <div class=\"col-12\">\n" +
-    "                                                        <div class=\"px-3\" id=\"shc\">\n" +
+    "                                                        <div class=\"px-3\" id=\"shcNumber\">\n" +
     "                                                            ChoiceNow" +
     "                                                        </div>\n" +
     "                                                    </div>\n" +
@@ -191,10 +43,10 @@ function toDay() {
     emo.value = arr.emo;
     edt.value = arr.eda;
 
-    changeDate();
+    updateLook();
 }
 
-function changeDate() {
+function updateLook() {
     let res = "";
 
     let syear = parseInt(document.getElementById("syear").value);
@@ -225,23 +77,36 @@ function changeDate() {
             choose !== 7 &&
             choose !== 8 &&
             choose !== 9) {
-            choice[i] = choose = 0;
+            choose = choice[i] = 0;
         }
 
         res += clook;
 
         res = res.replace(/Number/g, i);
         res = res.replace("DateNow", dmo + "/" + ddy + "<br>" + "周" + weekArray[dda]);
-        res = res.replace("ChoiceNow", moc[choose]);
+
+        let chs = "";
+
+        if (choose === 0) chs = noChoose;
+        else {
+            chs = chosenModel;
+            chs = chs.replace(/AREA/g, numArray[choose]);
+            chs = chs.replace(/FOOD/g, foodArray[choose]);
+            chs = chs.replace(/FLOOR/g, locArray[choose]);
+            chs = chs.replace(/LEVEL/g, levelArray[alertArray[choose]]);
+            chs = chs.replace(/FREQ/g, freqArray[alertArray[choose]]);
+        }
+
+        res = res.replace("ChoiceNow", chs);
     }
 
 
-    document.getElementById("chs").innerHTML = res;
+    document.getElementById("LIST").innerHTML = res;
 }
 
 function chooseType(a, b) {
     choice[a] = b;
-    changeDate();
+    updateLook();
     showChoice(a);
 }
 
