@@ -25,7 +25,7 @@ function changeDate() {
     date.innerHTML = mon + "/" + day + "<br>" + wkday;
 }
 
-function updateLook(a, v) {
+function updateLook(a) {
     let shc = document.getElementById("shc0");
     let choose = choice[a];
     if (!"123456789".includes(choose)) {
@@ -42,12 +42,6 @@ function updateLook(a, v) {
         chs = chs.replace(/FREQ/g, freqArray[alertArray[choose]]);
     }
     shc.innerHTML = chs;
-    showChoice(a);
-}
-
-function chooseType(a, tp) {
-    choice[a] = tp;
-    updateLook(a, tp);
 }
 
 let gen = document.getElementById("gen");

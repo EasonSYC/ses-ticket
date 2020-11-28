@@ -307,10 +307,6 @@ function index() {
     }
 }
 
-// Layout Strings
-
-
-
 // API Functions
 
 function encodeDate(year, month, date) {
@@ -473,6 +469,12 @@ function showChoice(a) {
         chc.innerHTML = "";
         on[a] = 0;
     }
+}
+
+function chooseType(a, tp) {
+    choice[a] = tp;
+    updateLook(a);
+    showChoice(a);
 }
 
 // Account Strings
