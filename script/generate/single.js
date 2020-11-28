@@ -146,8 +146,8 @@ let choiceArray = [
     "                                                            </div>"
 ];
 
-var choice = 0;
-var on = 0;
+var choice = [];
+var on = [];
 
 function toDay() {
     let toD = getTo();
@@ -169,49 +169,18 @@ function changeDate() {
     if (d.getDay() === undefined) {
         return;
     }
-    let date = document.getElementById("1");
+    let date = document.getElementById("date");
     date.innerHTML = mon + "/" + day + "<br>" + wkday;
 }
 
-function showChoice(a) {
-    let chc = document.getElementById("chc");
-    if (on === 0) {
-        let ret = "";
-        for (let i = 1; i <= 9; ++i) {
-            ret += choiceModel;
-            ret = ret.replace(/INDEX/g, a);
-            ret = ret.replace(/AREA/g, numArray[i]);
-            ret = ret.replace(/FOOD/g, foodArray[i]);
-            ret = ret.replace(/FLOOR/g, locArray[i]);
-            ret = ret.replace(/LEVEL/g, levelArray[alertArray[i]]);
-            ret = ret.replace(/FREQ/g, freqArray[alertArray[i]]);
-            if (getUserInfo("name", getName(), "allow").includes(i) === false) {
-                ret = ret.replace(/BUTINFO/g, butinfoArray[3]);
-                ret = ret.replace(/BUTCLASS/g, butclassArray[3]);
-            } else if (i === choice) {
-                ret = ret.replace(/BUTINFO/g, butinfoArray[2]);
-                ret = ret.replace(/BUTCLASS/g, butclassArray[2]);
-            } else {
-                ret = ret.replace(/BUTINFO/g, butinfoArray[1]);
-                ret = ret.replace(/BUTCLASS/g, butclassArray[1]);
-            }
-        }
-        chc.innerHTML = ret;
-        on = 1;
-    } else {
-        chc.innerHTML = "";
-        on = 0;
-    }
-}
-
 function updateLook(a, v) {
-    let shc = document.getElementById("shc");
+    let shc = document.getElementById("shc0");
     shc.innerHTML = choiceArray[v];
     showChoice(a);
 }
 
 function chooseType(a, tp) {
-    choice = tp;
+    choice[a] = tp;
     updateLook(a, tp);
 }
 
@@ -220,7 +189,7 @@ gen.onclick = function () {
     let agr = document.getElementById("agree");
     let cook = getCookie("acc");
     let nam = decodeURI(cook.split("@")[0]);
-    let ntyp = choice;
+    let ntyp = choice[0];
     let yr = parseInt(document.getElementById("year").value);
     let mon = parseInt(document.getElementById("month").value);
     let day = parseInt(document.getElementById("day").value);
