@@ -362,6 +362,30 @@ var chosenModel =
     "</small>\n" +
     "</div>";
 
+let choicePanelModel =
+    "                               <ul class=\"supply-date-list px-3\">\n" +
+    "                                    <li class=\"py-2\">\n" +
+    "                                        <div class=\"row no-gutters\" onclick=\"showChoice(INDEX)\">\n" +
+    "                                            <div class=\"col-3\">\n" +
+    "                                                <div class=\"date-icon\">\n" +
+    "                                                   DATE" +
+    "                                                </div>\n" +
+    "                                            </div>\n" +
+    "                                            <div class=\"col-9\">\n" +
+    "                                                <div class=\"row no-gutters\">\n" +
+    "                                                    <div class=\"col-12\">\n" +
+    "                                                        <div class=\"px-3\" id=\"shcINDEX\">\n" +
+    "                                                            CHOICE" +
+    "                                                        </div>\n" +
+    "                                                    </div>\n" +
+    "                                                </div>\n" +
+    "                                            </div>\n" +
+    "                                        </div>\n" +
+    "                                        <ul class=\"supply-list shadow-sm\" id=\"chcINDEX\">\n" +
+    "                                        </ul>\n" +
+    "                                    </li>\n" +
+    "                                </ul>";
+
 // Show Functions
 
 function showChoice(a) {

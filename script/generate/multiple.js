@@ -1,30 +1,6 @@
 var choice = [];
 var on = [];
 
-let clook =
-    "                               <ul class=\"supply-date-list px-3\">\n" +
-    "                                    <li class=\"py-2\">\n" +
-    "                                        <div class=\"row no-gutters\" onclick=\"showChoice(INDEX)\">\n" +
-    "                                            <div class=\"col-3\">\n" +
-    "                                                <div class=\"date-icon\">\n" +
-    "                                                   DATE" +
-    "                                                </div>\n" +
-    "                                            </div>\n" +
-    "                                            <div class=\"col-9\">\n" +
-    "                                                <div class=\"row no-gutters\">\n" +
-    "                                                    <div class=\"col-12\">\n" +
-    "                                                        <div class=\"px-3\" id=\"shcINDEX\">\n" +
-    "                                                            CHOICE" +
-    "                                                        </div>\n" +
-    "                                                    </div>\n" +
-    "                                                </div>\n" +
-    "                                            </div>\n" +
-    "                                        </div>\n" +
-    "                                        <ul class=\"supply-list shadow-sm\" id=\"chcINDEX\">\n" +
-    "                                        </ul>\n" +
-    "                                    </li>\n" +
-    "                                </ul>";
-
 function toDay() {
     let syr = document.getElementById("syear");
     let smo = document.getElementById("smonth");
@@ -57,16 +33,15 @@ function updateLook() {
     let sdate = new Date(syear + "/" + smon + "/" + sday);
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
+
     for (let d = sdate, i = 0; i < min(len, 250); ++i, d.setDate(d.getDate() + 1)) {
 
         let dmo = d.getMonth() + 1;
         let ddy = d.getDate();
         let dda = d.getDay();
-
         if (dda === undefined) continue;
 
         let choose = choice[i];
-
         if (choose !== 1 &&
             choose !== 2 &&
             choose !== 3 &&
@@ -79,13 +54,12 @@ function updateLook() {
             choose = choice[i] = 0;
         }
 
-        res += clook;
+        res += choicePanelModel;
 
         res = res.replace(/INDEX/g, i);
         res = res.replace(/DATE/g, dmo + "/" + ddy + "<br>" + "周" + weekArray[dda]);
 
         let chs = "";
-
         if (choose === 0) chs = noChoose;
         else {
             chs = chosenModel;
@@ -113,13 +87,13 @@ let gen = document.getElementById("gen");
 gen.onclick = function () {
 
     let agr = document.getElementById("agree");
+
     let syear = parseInt(document.getElementById("syear").value);
     let smon = parseInt(document.getElementById("smonth").value);
     let sday = parseInt(document.getElementById("sday").value);
     let eyear = parseInt(document.getElementById("eyear").value);
     let emon = parseInt(document.getElementById("emonth").value);
     let eday = parseInt(document.getElementById("eday").value);
-
     let sdate = new Date(syear + "/" + smon + "/" + sday);
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
@@ -128,7 +102,6 @@ gen.onclick = function () {
     for (let i = 0; i < min(len, 250); ++i) {
         res += choice[i];
     }
-
     res = noZero(res);
 
     if (agr.checked === false) {
