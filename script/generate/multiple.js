@@ -18,10 +18,10 @@ function toDay() {
     emo.value = arr.emo;
     edt.value = arr.eda;
 
-    updateLook();
+    updateLook(0);
 }
 
-function updateLook() {
+function updateLook(a) {
     let res = "";
 
     let syear = parseInt(document.getElementById("syear").value);
@@ -71,7 +71,7 @@ function updateLook() {
 
 function chooseType(a, b) {
     choice[a] = b;
-    updateLook();
+    updateLook(a);
     showChoice(a);
 }
 
