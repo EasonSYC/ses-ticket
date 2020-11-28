@@ -342,6 +342,39 @@ var choiceModel =
     "</div>\n" +
     "</li>\n";
 
+// Show Functions
+
+function showChoice(a) {
+    let chc = document.getElementById("chc" + a);
+    if (on[a] === 0 || on[a] === undefined) {
+        let ret = "";
+        for (let i = 1; i <= 9; ++i) {
+            ret += choiceModel;
+            ret = ret.replace(/INDEX/g, a);
+            ret = ret.replace(/AREA/g, numArray[i]);
+            ret = ret.replace(/FOOD/g, foodArray[i]);
+            ret = ret.replace(/FLOOR/g, locArray[i]);
+            ret = ret.replace(/LEVEL/g, levelArray[alertArray[i]]);
+            ret = ret.replace(/FREQ/g, freqArray[alertArray[i]]);
+            if (getUserInfo("name", getName(), "allow").includes(i) === false) {
+                ret = ret.replace(/BUTINFO/g, butinfoArray[3]);
+                ret = ret.replace(/BUTCLASS/g, butclassArray[3]);
+            } else if (i === choice[a]) {
+                ret = ret.replace(/BUTINFO/g, butinfoArray[2]);
+                ret = ret.replace(/BUTCLASS/g, butclassArray[2]);
+            } else {
+                ret = ret.replace(/BUTINFO/g, butinfoArray[1]);
+                ret = ret.replace(/BUTCLASS/g, butclassArray[1]);
+            }
+        }
+        chc.innerHTML = ret;
+        on[a] = 1;
+    } else {
+        chc.innerHTML = "";
+        on[a] = 0;
+    }
+}
+
 // Account Strings
 
 var num = 16;
