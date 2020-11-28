@@ -4,24 +4,23 @@ var on = [];
 let clook =
     "                               <ul class=\"supply-date-list px-3\">\n" +
     "                                    <li class=\"py-2\">\n" +
-    "                                        <div class=\"row no-gutters\" onclick=\"showChoice(Number)\">\n" +
+    "                                        <div class=\"row no-gutters\" onclick=\"showChoice(INDEX)\">\n" +
     "                                            <div class=\"col-3\">\n" +
     "                                                <div class=\"date-icon\">\n" +
-    "                                                   DateNow" +
+    "                                                   DATE" +
     "                                                </div>\n" +
     "                                            </div>\n" +
     "                                            <div class=\"col-9\">\n" +
     "                                                <div class=\"row no-gutters\">\n" +
     "                                                    <div class=\"col-12\">\n" +
-    "                                                        <div class=\"px-3\" id=\"shcNumber\">\n" +
-    "                                                            ChoiceNow" +
+    "                                                        <div class=\"px-3\" id=\"shcINDEX\">\n" +
+    "                                                            CHOICE" +
     "                                                        </div>\n" +
     "                                                    </div>\n" +
     "                                                </div>\n" +
     "                                            </div>\n" +
     "                                        </div>\n" +
-    "                                        <ul class=\"supply-list shadow-sm\" id=\"chcNumber\">\n" +
-    "                                             \n" +
+    "                                        <ul class=\"supply-list shadow-sm\" id=\"chcINDEX\">\n" +
     "                                        </ul>\n" +
     "                                    </li>\n" +
     "                                </ul>";
@@ -82,8 +81,8 @@ function updateLook() {
 
         res += clook;
 
-        res = res.replace(/Number/g, i);
-        res = res.replace("DateNow", dmo + "/" + ddy + "<br>" + "周" + weekArray[dda]);
+        res = res.replace(/INDEX/g, i);
+        res = res.replace(/DATE/g, dmo + "/" + ddy + "<br>" + "周" + weekArray[dda]);
 
         let chs = "";
 
@@ -97,7 +96,7 @@ function updateLook() {
             chs = chs.replace(/FREQ/g, freqArray[alertArray[choose]]);
         }
 
-        res = res.replace("ChoiceNow", chs);
+        res = res.replace(/CHOICE/g, chs);
     }
 
 
