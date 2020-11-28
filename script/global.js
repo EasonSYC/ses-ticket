@@ -24,20 +24,20 @@ var eggs = [
 // 404 Strings
 
 var before =
-    "<p class=\"display-1 text-danger py-3\"> 404 </p>\n" +
+    "<p class=\"display-1 text-danger py-3\"> 404 </p>" +
     "<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
 var home =
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./index.html\" id=\"g-but\">\n" +
-    "首页\n" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./index.html\" id=\"g-but\">" +
+    "首页" +
     "</a>";
 var back =
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" id=\"g-but\" onclick=\"history.back();\">\n" +
-    "返回\n" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" id=\"g-but\" onclick=\"history.back();\">" +
+    "返回" +
     "</a>";
 var after =
-    "\n" +
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./help.html#NotFound\">\n" +
-    "帮助\n" +
+    "" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./help.html#NotFound\">" +
+    "帮助" +
     "</a>";
 
 // Alert Functions
@@ -95,7 +95,7 @@ var allArray = [
 function getUserInfo(reqType, reqContent, resType) {
     let resGetId = -1;
     if (reqType === "name") {
-        for (let i = 0; i < num; ++i) {
+        for (let i = 0; i < usrnum; ++i) {
             if (nameArray[i] === sha1(reqContent)) {
                 resGetId = i;
                 break;
@@ -105,7 +105,7 @@ function getUserInfo(reqType, reqContent, resType) {
     }
     if (reqType === "id") {
         resGetId = reqContent;
-        if (resGetId < 0 || resGetId >= num) return -1;
+        if (resGetId < 0 || resGetId >= usrnum) return -1;
     }
     if (resType === "name") return nameArray[resGetId];
     if (resType === "pwd") return pwdArray[resGetId];
@@ -340,71 +340,107 @@ function basicURLInfo() {
 // Show Values
 
 var choiceModel =
-    "<li>\n" +
-    "<div class=\"row no-gutters\">\n" +
-    "<div class=\"col-12\">\n" +
-    "<div class=\"px-3\">\n" +
-    "<b class=\"title\">AREA区 FOOD</b>\n" +
-    "<a class=\"btn btn-sm BUTCLASS\"\n" +
-    "onclick=\"chooseType(INDEX, AREA)\">BUTINFO</a>\n" +
-    "<br>\n" +
-    "<small>\n" +
-    "<span class=\"text-muted\">食堂FLOOR楼</span>\n" +
-    "</small>\n" +
-    "<div>\n" +
-    "<i class=\"fa fa-exclamation-triangle icon-LEVEL\"></i>\n" +
-    "<small class=\"mr-1\">\n" +
-    "FREQ扫描\n" +
-    "</small>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "</li>\n";
+    "<li>" +
+    "<div class=\"row no-gutters\">" +
+    "<div class=\"col-12\">" +
+    "<div class=\"px-3\">" +
+    "<b class=\"title\">AREA区 FOOD</b>" +
+    "<a class=\"btn btn-sm BUTCLASS\"" +
+    "onclick=\"chooseType(INDEX, AREA)\">BUTINFO</a>" +
+    "<br>" +
+    "<small>" +
+    "<span class=\"text-muted\">食堂FLOOR楼</span>" +
+    "</small>" +
+    "<div>" +
+    "<i class=\"fa fa-exclamation-triangle icon-LEVEL\"></i>" +
+    "<small class=\"mr-1\">" +
+    "FREQ扫描" +
+    "</small>" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</li>";
 
 var noChoose = "<div class=\"text-muted text-center mt-4\">点击这里选餐</div>";
 
 var chosenModel =
-    "<b class=\"title\">AREA区 FOOD</b>\n" +
-    "<span class=\"float-right\">\n" +
-    "<span class=\"badge badge-orange\">\n" +
-    "已选餐\n" +
-    "</span>\n" +
-    "</span>\n" +
-    "<br>\n" +
-    "<small>\n" +
-    "<span class=\"text-muted\">食堂FLOOR楼</span>\n" +
-    "</small>\n" +
-    "<div>\n" +
-    "<i class=\"fa fa-exclamation-triangle icon-LEVEL\"></i>\n" +
-    "<small class=\"mr-1\">\n" +
-    "FREQ扫描\n" +
-    "</small>\n" +
+    "<b class=\"title\">AREA区 FOOD</b>" +
+    "<span class=\"float-right\">" +
+    "<span class=\"badge badge-orange\">" +
+    "已选餐" +
+    "</span>" +
+    "</span>" +
+    "<br>" +
+    "<small>" +
+    "<span class=\"text-muted\">食堂FLOOR楼</span>" +
+    "</small>" +
+    "<div>" +
+    "<i class=\"fa fa-exclamation-triangle icon-LEVEL\"></i>" +
+    "<small class=\"mr-1\">" +
+    "FREQ扫描" +
+    "</small>" +
     "</div>";
 
-let choicePanelModel =
-    "<ul class=\"supply-date-list px-3\">\n" +
-    "<li class=\"py-2\">\n" +
-    "<div class=\"row no-gutters\" onclick=\"showChoice(INDEX)\">\n" +
-    "<div class=\"col-3\">\n" +
-    "<div class=\"date-icon\">\n" +
+var choicePanelModel =
+    "<ul class=\"supply-date-list px-3\">" +
+    "<li class=\"py-2\">" +
+    "<div class=\"row no-gutters\" onclick=\"showChoice(INDEX)\">" +
+    "<div class=\"col-3\">" +
+    "<div class=\"date-icon\">" +
     "DATE" +
-    "</div>\n" +
-    "</div>\n" +
-    "<div class=\"col-9\">\n" +
-    "<div class=\"row no-gutters\">\n" +
-    "<div class=\"col-12\">\n" +
-    "<div class=\"px-3\" id=\"shcINDEX\">\n" +
+    "</div>" +
+    "</div>" +
+    "<div class=\"col-9\">" +
+    "<div class=\"row no-gutters\">" +
+    "<div class=\"col-12\">" +
+    "<div class=\"px-3\" id=\"shcINDEX\">" +
     "CHOICE" +
-    "</div>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "</div>\n" +
-    "<ul class=\"supply-list shadow-sm\" id=\"chcINDEX\">\n" +
-    "</ul>\n" +
-    "</li>\n" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "<ul class=\"supply-list shadow-sm\" id=\"chcINDEX\">" +
+    "</ul>" +
+    "</li>" +
     "</ul>";
+
+var ticketModel =
+    "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
+    "<div class=\"order-panel\"> " +
+    "<div class=\"d-flex justify-content-between\">" +
+    "<div>" +
+    "<div class=\"order-name\">FOOD" +
+    "</div>" +
+    "<a href=PURL>" +
+    "<img class=\"img-qrcode border\" id=\"qrcINDEX\">" +
+    "</a>" +
+    "<div class=\"user-name text-center\">" +
+    "<span>NAME</span>" +
+    "</div>" +
+    "</div>" +
+    "<div class=\"ticket-body\">" +
+    "<div class=\"order-area\">AREA " +
+    "<span class=\"order-area-tail\">" +
+    "区" +
+    "</span>" +
+    "</div>" +
+    "<div class=\"order-location\">" +
+    "<span>" +
+    "食堂FLOOR楼" +
+    "<span>" +
+    "<br>" +
+    "<span>DATE</span>" +
+    "</span>" +
+    "</span>" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    "</div>";
+
+var codeModel = "QRCode.toDataURL(\"SURL\", {errorCorrectionLevel: 'L'}, function (rtt, url) {document.getElementById(\"qrcINDEX\").src=url;});";
 
 // Show Functions
 
@@ -441,7 +477,7 @@ function showChoice(a) {
 
 // Account Strings
 
-var num = 16;
+var usrnum = 16;
 
 var nameArray = [
     "d033e22ae348aeb5660fc2140aec35850c4da997",
