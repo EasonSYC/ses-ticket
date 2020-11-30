@@ -1,4 +1,4 @@
-var bannedIp = [];
+var bannedIp = ["116.227.23.27"];
 
 for (let i = 0; i < bannedIp.length; ++i){
     if(returnCitySN["cip"] === bannedIp[i]) window.location.replace("http://www.ses.sh.edu.cn");
