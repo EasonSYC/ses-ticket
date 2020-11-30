@@ -42,7 +42,7 @@ function updateLook(a) {
         if (dda === undefined) continue;
 
         let choose = choice[i];
-        if (!"123456789".includes(choose)) {
+        if (choose === undefined) {
             choose = choice[i] = 0;
         }
 
