@@ -86,7 +86,7 @@ gen.onclick = function () {
 
     let res = "";
     for (let i = 0; i < min(len, 250); ++i) {
-        res += choice[i] + 'a';
+        res += alpha[choice[i]];
     }
     res = noA(res);
 

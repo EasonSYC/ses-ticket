@@ -20,7 +20,7 @@ let flg = 0;
 for (let i = 0; i < min(api.length, 250); ++i) {
     let chc = api[i];
     if ("bcdefghijkl".includes(chc)) {
-        chc -= 'a';
+        chc = numb[chc];
 
         let dyr = sdate.getFullYear();
         let dmo = sdate.getMonth() + 1;
