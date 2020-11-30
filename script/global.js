@@ -82,12 +82,12 @@ var tynArray = [
     "VIP",
     "普通用户"];
 var allArray = [
-    "123456789",
-    "123456789",
-    "123456789",
-    "123456789",
-    "23456789",
-    "234579"];
+    "自助餐盖浇饭面档套餐A套餐B套餐C",
+    "自助餐盖浇饭面档套餐A套餐B套餐C",
+    "自助餐盖浇饭面档套餐A套餐B套餐C",
+    "自助餐盖浇饭面档套餐A套餐B套餐C",
+    "盖浇饭面档套餐A套餐B套餐C",
+    "套餐A套餐B套餐C"];
 
 // User Functions
 
@@ -452,7 +452,7 @@ function showChoice(a) {
             ret = ret.replace(/FLOOR/g, locArray[i]);
             ret = ret.replace(/LEVEL/g, levelArray[alertArray[i]]);
             ret = ret.replace(/FREQ/g, freqArray[alertArray[i]]);
-            if (getUserInfo("name", getName(), "allow").includes(numArray[i]) === false) {
+            if (getUserInfo("name", getName(), "allow").includes(foodArray[i]) === false) {
                 ret = ret.replace(/BUTINFO/g, butinfoArray[3]);
                 ret = ret.replace(/BUTCLASS/g, butclassArray[3]);
             } else if (i === choice[a]) {
