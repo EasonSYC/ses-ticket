@@ -28,7 +28,7 @@ function changeDate() {
 function updateLook(a) {
     let shc = document.getElementById("shc0");
     let choose = choice[a];
-    if (!"123456789".includes(choose)) {
+    if (choose === undefined) {
         choose = choice[a] = 0;
     }
     let chs = "";
@@ -58,7 +58,7 @@ gen.onclick = function () {
         gAlert("请先勾选复选框！");
     } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
         gAlert("请输入正确日期！");
-    } else if (ntyp === 0) {
+    } else if (ntyp === 0 || ntyp === undefined) {
         gAlert("请在生成前选餐！");
     } else {
         window.open("../result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);

@@ -472,7 +472,7 @@ function showChoice(a) {
 }
 
 function chooseType(a, tp) {
-    choice[a] = tp;
+    choice[a] = parseInt(tp);
     updateLook(a);
     showChoice(a);
 }
