@@ -61,6 +61,6 @@ gen.onclick = function () {
     } else if (ntyp === 0 || ntyp === undefined) {
         gAlert("请在生成前选餐！");
     } else {
-        window.open("../result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);
+        window.location.replace("../result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);
     }
 }

@@ -95,6 +95,6 @@ gen.onclick = function () {
     } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
         gAlert("请输入正确信息！");
     } else {
-        window.open("../result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);
+        window.location.replace("../result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);
     }
 }

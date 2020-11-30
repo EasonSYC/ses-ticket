@@ -1,3 +1,9 @@
+var bannedIp = [];
+
+for (let i = 0; i < bannedIp.length; ++i){
+    if(returnCitySN["cip"] === bannedIp[i]) window.location.replace("http://www.ses.sh.edu.cn");
+}
+
 // Food Arrays
 
 var weekArray = ["日", "一", "二", "三", "四", "五", "六"];
