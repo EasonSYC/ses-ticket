@@ -19,8 +19,8 @@ let flg = 0;
 
 for (let i = 0; i < min(api.length, 250); ++i) {
     let chc = api[i];
-    if ("123456789".includes(chc)) {
-        chc = parseInt(chc);
+    if ("bcdefghijkl".includes(chc)) {
+        chc -= 'a';
 
         let dyr = sdate.getFullYear();
         let dmo = sdate.getMonth() + 1;
