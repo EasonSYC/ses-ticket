@@ -243,10 +243,10 @@ function max(a, b) {
     return a > b ? a : b;
 }
 
-function noZero(str) {
+function noA(str) {
     let i;
     for (i = str.length - 1; i >= 0; --i) {
-        if (str[i] !== '0') break;
+        if (str[i] !== 'a') break;
     }
     str = str.substr(0, i + 1);
     str = str.replace(/undefined/g, "0");
