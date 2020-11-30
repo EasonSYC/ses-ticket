@@ -6,6 +6,39 @@ var freqArray = ["未知", "不常", "有时", "经常"];
 var butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
 var butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
 
+// Basic Arrays
+
+var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+var numb = {
+    "a" : 0,
+    "b" : 1,
+    "c" : 2,
+    "d" : 3,
+    "e" : 4,
+    "f" : 5,
+    "g" : 6,
+    "h" : 7,
+    "i" : 8,
+    "j" : 9,
+    "k" : 10,
+    "l" : 11,
+    "m" : 12,
+    "n" : 13,
+    "o" : 14,
+    "p" : 15,
+    "q" : 16,
+    "r" : 17,
+    "s" : 18,
+    "t" : 19,
+    "u" : 20,
+    "v" : 21,
+    "w" : 22,
+    "x" : 23,
+    "y" : 24,
+    "z" : 25
+    }
+
 // 404 Arrays
 
 var eggs = [
@@ -249,7 +282,7 @@ function noA(str) {
         if (str[i] !== 'a') break;
     }
     str = str.substr(0, i + 1);
-    str = str.replace(/undefined/g, "0");
+    str = str.replace(/undefined/g, "a");
     return str;
 }
 
