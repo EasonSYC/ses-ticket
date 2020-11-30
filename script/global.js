@@ -81,12 +81,17 @@ var tynArray = [
     "VIP",
     "普通用户"];
 var allArray = [
-    "自助餐盖浇饭面档套餐A套餐B套餐C",
-    "自助餐盖浇饭面档套餐A套餐B套餐C",
+    "undefined",
     "自助餐盖浇饭面档套餐A套餐B套餐C",
     "自助餐盖浇饭面档套餐A套餐B套餐C",
     "盖浇饭面档套餐A套餐B套餐C",
     "套餐A套餐B套餐C"];
+var usrallArray = [
+    "undefined",
+    "所有餐类",
+    "所有餐类",
+    "除自助餐外餐类",
+    "套餐"];
 
 // User Functions
 
@@ -111,6 +116,7 @@ function getUserInfo(reqType, reqContent, resType) {
     if (resType === "level") return typArray[resGetId];
     if (resType === "type") return tynArray[typArray[resGetId]];
     if (resType === "allow") return allArray[typArray[resGetId]];
+    if (resType === "allowusr") return usrallArray[typArray[resGetId]];
 }
 
 function getCookie(cname) {
