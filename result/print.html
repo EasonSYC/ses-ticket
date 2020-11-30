@@ -155,13 +155,7 @@
 </script>
 <script>
     if (ok) {
-        if (num === "1") {
-            gAlert("1区机器正在适配中，<br>请勿使用此餐票！");
-        } else if (num === "6") {
-            gAlert("6区微信登录正在适配中，<br>请勿使用此餐票！");
-        } else {
-            gAlert("请警惕餐票扫描！");
-        }
+        gAlert("近日餐区大量变化，<br>请警惕餐票扫描！");
     }
     document.getElementById("gAlertButton").onclick = gAlertClose;
     document.getElementById("gAlertModal").onclick = gAlertClose;

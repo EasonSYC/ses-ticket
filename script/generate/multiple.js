@@ -69,12 +69,6 @@ function updateLook(a) {
     document.getElementById("LIST").innerHTML = res;
 }
 
-function chooseType(a, b) {
-    choice[a] = b;
-    updateLook(a);
-    showChoice(a);
-}
-
 let gen = document.getElementById("gen");
 gen.onclick = function () {
 

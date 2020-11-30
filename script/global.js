@@ -1,9 +1,8 @@
 // Food Arrays
 
-var numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-var levelArray = ["undefined", "green", "orange", "red"];
-var freqArray = ["undefined", "不常", "有时", "经常"];
+var levelArray = ["grey", "green", "orange", "red"];
+var freqArray = ["未知", "不常", "有时", "经常"];
 var butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
 var butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
 
@@ -342,7 +341,7 @@ var choiceModel =
     "<div class=\"px-3\">" +
     "<b class=\"title\">AREA区 FOOD</b>" +
     "<a class=\"btn btn-sm BUTCLASS\"" +
-    "onclick=\"chooseType(INDEX, AREA)\">BUTINFO</a>" +
+    "onclick=\"chooseType(INDEX, ID)\">BUTINFO</a>" +
     "<br>" +
     "<small>" +
     "<span class=\"text-muted\">食堂FLOOR楼</span>" +
@@ -444,15 +443,16 @@ function showChoice(a) {
     let chc = document.getElementById("chc" + a);
     if (on[a] === 0 || on[a] === undefined) {
         let ret = "";
-        for (let i = 1; i <= 9; ++i) {
+        for (let i = 1; i <= foodNumb; ++i) {
             ret += choiceModel;
             ret = ret.replace(/INDEX/g, a);
             ret = ret.replace(/AREA/g, numArray[i]);
+            ret = ret.replace(/ID/g, i);
             ret = ret.replace(/FOOD/g, foodArray[i]);
             ret = ret.replace(/FLOOR/g, locArray[i]);
             ret = ret.replace(/LEVEL/g, levelArray[alertArray[i]]);
             ret = ret.replace(/FREQ/g, freqArray[alertArray[i]]);
-            if (getUserInfo("name", getName(), "allow").includes(i) === false) {
+            if (getUserInfo("name", getName(), "allow").includes(numArray[i]) === false) {
                 ret = ret.replace(/BUTINFO/g, butinfoArray[3]);
                 ret = ret.replace(/BUTCLASS/g, butclassArray[3]);
             } else if (i === choice[a]) {
@@ -540,6 +540,8 @@ var typArray = [
 
 // Food Arrays
 
-var foodArray = ["undefined", "套餐A", "套餐A", "套餐A", "套餐B", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
-var locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
-var alertArray = ["undefined", "3", "1", "1", "1", "1", "2", "1", "2", "1"];
+var foodNumb = 11;
+var foodArray = ["undefined", "套餐A", "面档", "套餐A", "套餐A", "套餐B", "套餐B", "盖浇饭", "盖浇饭", "套餐C", "面档", "套餐B"];
+var locArray = ["undefined", "一", "一", "一", "一", "二", "二", "二", "二", "二", "二", "二"];
+var alertArray = ["undefined", "0", "0", "1", "1", "1", "1", "3", "3", "1", "2", "1"];
+var numArray = ["undefined", "1", "1", "2", "3", "4", "5", "5", "6", "7", "8", "9"];
