@@ -86,9 +86,9 @@ gen.onclick = function () {
 
     let res = "";
     for (let i = 0; i < min(len, 250); ++i) {
-        res += choice[i];
+        res += choice[i] + 'a';
     }
-    res = noZero(res);
+    res = noA(res);
 
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");
