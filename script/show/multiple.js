@@ -26,13 +26,13 @@ for (let i = 0; i < min(api.length, 250); ++i) {
         let dmo = sdate.getMonth() + 1;
         let ddy = sdate.getDate();
 
-        let num = numArray[chc];
+        let food = foodArray[chc];
         let dynum = sdate.getDay();
         let purl = "\"" + ".\/..\/result\/print.html?" + encodeDate(dyr, dmo, ddy) + "&" + chc + "\"";
         let surl = urlNew + "?" + name + "&" + encodeDate(dyr, dmo, ddy) + "&" + chc;
         let wkday = dmo + "/" + ddy + " 周" + weekArray[dynum];
 
-        if (!getUserInfo("name", name, "allow").includes(num)) {
+        if (!getUserInfo("name", name, "allow").includes(food)) {
             flg = 1;
         } else {
             ret += ticketModel;
