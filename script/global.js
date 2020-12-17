@@ -7,7 +7,6 @@ for (let i = 0; i < bannedIpLength; ++i){
 
 // Food Arrays
 
-let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 let levelArray = ["grey", "green", "orange", "red"];
 let freqArray = ["未知", "不常", "有时", "经常"];
 let butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
@@ -16,6 +15,7 @@ let butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gr
 
 // Basic Arrays
 
+let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 let numb = {
