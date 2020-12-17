@@ -33,6 +33,7 @@ if (!getUserInfo("name", name, "allow").includes(food)) {
 function changeType() {
     ++tkp;
     tkp %= 3;
+    var urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
     QRCode.toDataURL(urlqr, {errorCorrectionLevel: errL[tkp]}, function (rtt, url) {
         document.getElementById("qrc").src = url;
     })
