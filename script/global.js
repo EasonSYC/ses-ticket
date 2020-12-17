@@ -47,6 +47,24 @@ let numb = {
     "z" : 25
     }
 
+function min(a, b) {
+    return a < b ? a : b;
+}
+
+function max(a, b) {
+    return a > b ? a : b;
+}
+
+function noA(str) {
+    let i;
+    for (i = str.length - 1; i >= 0; --i) {
+        if (str[i] !== 'a') break;
+    }
+    str = str.substr(0, i + 1);
+    str = str.replace(/undefined/g, "a");
+    return str;
+}
+
 // 404 Arrays
 
 let eggs = [
@@ -272,26 +290,6 @@ function sha1(s) {
         return (e < 16 ? "0" : "") + e.toString(16);
     }).join("");
     return hex;
-}
-
-// Logic Functions
-
-function min(a, b) {
-    return a < b ? a : b;
-}
-
-function max(a, b) {
-    return a > b ? a : b;
-}
-
-function noA(str) {
-    let i;
-    for (i = str.length - 1; i >= 0; --i) {
-        if (str[i] !== 'a') break;
-    }
-    str = str.substr(0, i + 1);
-    str = str.replace(/undefined/g, "a");
-    return str;
 }
 
 // Date Functions
