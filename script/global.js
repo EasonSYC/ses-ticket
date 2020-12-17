@@ -12,6 +12,7 @@ var freqArray = ["未知", "不常", "有时", "经常"];
 var butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
 var butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
 
+
 // Basic Arrays
 
 var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -593,8 +594,8 @@ var typArray = [
 
 // Food Arrays
 
-var foodNumb = 11;
-var foodArray = ["undefined", "套餐A", "面档", "套餐A", "套餐A", "套餐B", "套餐B", "盖浇饭", "盖浇饭", "套餐C", "面档", "套餐B"];
-var locArray = ["undefined", "一", "一", "一", "一", "二", "二", "二", "二", "二", "二", "二"];
-var alertArray = ["undefined", "0", "0", "1", "1", "1", "1", "3", "3", "1", "2", "1"];
-var numArray = ["undefined", "1", "1", "2", "3", "4", "5", "5", "6", "7", "8", "9"];
+var foodNumb = 9;
+var foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
+var locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
+var alertArray = ["undefined", "3", "1", "1", "1", "1", "3", "1", "2", "1"];
+var numArray = ["undefined", "1",  "2", "3", "4", "5", "6", "7", "8", "9"];
