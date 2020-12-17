@@ -7,10 +7,10 @@ let da = date.da;
 
 let typ = parseInt(arr[1]);
 
-var name = getName();
-var food = foodArray[typ];
+let name = getName();
+let food = foodArray[typ];
 
-var ok = 0;
+let ok = 0;
 
 let tkp = 1;
 
@@ -21,10 +21,10 @@ if (!getUserInfo("name", name, "allow").includes(food)) {
     }, 3000);
 } else {
     let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
-    var num = numArray[typ];
-    var loc = "食堂" + locArray[typ] + "楼";
-    var wkd = mo + "/" + da + " 周" + weekArray[dynum];
-    var urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
+    let num = numArray[typ];
+    let loc = "食堂" + locArray[typ] + "楼";
+    let wkd = mo + "/" + da + " 周" + weekArray[dynum];
+    let urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
     ok = 1;
 }
 

@@ -96,7 +96,7 @@
 </head>
 <body>
 <script src="../script/show/scan.js"></script>
-<script src="../script/qrcode.min.js"></script>
+<script src="../qrcode.min.js"></script>
 <div id="gApp">
     <div class="body-wrapper">
         <div class="container px-0">
@@ -157,6 +157,7 @@
         document.getElementById("qrc").src = url;
     })
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+    alert(getTo().yr)
     if (getTo().yr !== yr || getTo().mo !== mo || getTo().da !== da) {
         document.getElementsByClassName("verify-msg").innerHTML = info[3];
     } else {

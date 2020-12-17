@@ -6,18 +6,18 @@ for (let i = 0; i < bannedIp.length; ++i){
 
 // Food Arrays
 
-var weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-var levelArray = ["grey", "green", "orange", "red"];
-var freqArray = ["未知", "不常", "有时", "经常"];
-var butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
-var butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
+let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
+let levelArray = ["grey", "green", "orange", "red"];
+let freqArray = ["未知", "不常", "有时", "经常"];
+let butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
+let butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
 
 
 // Basic Arrays
 
-var alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-var numb = {
+let numb = {
     "a" : 0,
     "b" : 1,
     "c" : 2,
@@ -48,7 +48,7 @@ var numb = {
 
 // 404 Arrays
 
-var eggs = [
+let eggs = [
     "随机数的范围不包括这串字符，你是怎么让它显示出来的？",
     "别让食堂阿姨用扫票机扫你的餐票……",
     "知道吗，这个项目最早从九月底就开始编写了……",
@@ -62,18 +62,18 @@ var eggs = [
 
 // 404 Strings
 
-var before =
+let before =
     "<p class=\"display-1 text-danger py-3\"> 404 </p>" +
     "<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
-var home =
+let home =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./index.html\" id=\"g-but\">" +
     "首页" +
     "</a>";
-var back =
+let back =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" id=\"g-but\" onclick=\"history.back();\">" +
     "返回" +
     "</a>";
-var after =
+let after =
     "" +
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./help.html#NotFound\">" +
     "帮助" +
@@ -114,19 +114,19 @@ function gAlertClose() {
 
 // User Strings
 
-var tynArray = [
+let tynArray = [
     "undefined",
     "开发者",
     "SVIP",
     "VIP",
     "普通用户"];
-var allArray = [
+let allArray = [
     "undefined",
     "自助餐盖浇饭面档套餐A套餐B套餐C",
     "自助餐盖浇饭面档套餐A套餐B套餐C",
     "盖浇饭面档套餐A套餐B套餐C",
     "套餐A套餐B套餐C"];
-var usrallArray = [
+let usrallArray = [
     "undefined",
     "所有餐类",
     "所有餐类",
@@ -379,7 +379,7 @@ function basicURLInfo() {
 
 // Show Values
 
-var choiceModel =
+let choiceModel =
     "<li>" +
     "<div class=\"row no-gutters\">" +
     "<div class=\"col-12\">" +
@@ -402,9 +402,9 @@ var choiceModel =
     "</div>" +
     "</li>";
 
-var noChoose = "<div class=\"text-muted text-center mt-4\">点击这里选餐</div>";
+let noChoose = "<div class=\"text-muted text-center mt-4\">点击这里选餐</div>";
 
-var chosenModel =
+let chosenModel =
     "<b class=\"title\">AREA区 FOOD</b>" +
     "<span class=\"float-right\">" +
     "<span class=\"badge badge-orange\">" +
@@ -422,7 +422,7 @@ var chosenModel =
     "</small>" +
     "</div>";
 
-var choicePanelModel =
+let choicePanelModel =
     "<ul class=\"supply-date-list px-3\">" +
     "<li class=\"py-2\">" +
     "<div class=\"row no-gutters\" onclick=\"showChoice(INDEX)\">" +
@@ -446,7 +446,7 @@ var choicePanelModel =
     "</li>" +
     "</ul>";
 
-var ticketModel =
+let ticketModel =
     "<div class=\"col-6 mt-2 d-flex justify-content-center\">" +
     "<div class=\"order-panel\"> " +
     "<div class=\"d-flex justify-content-between\">" +
@@ -480,7 +480,7 @@ var ticketModel =
     "</div>" +
     "</div>";
 
-var codeModel = "QRCode.toDataURL(\"SURL\", {errorCorrectionLevel: 'M'}, function (rtt, url) {document.getElementById(\"qrcINDEX\").src=url;});";
+let codeModel = "QRCode.toDataURL(\"SURL\", {errorCorrectionLevel: 'M'}, function (rtt, url) {document.getElementById(\"qrcINDEX\").src=url;});";
 
 // Show Functions
 
@@ -524,13 +524,13 @@ function chooseType(a, tp) {
 
 // Print Look Arrays
 
-var errL = ["L", "M", "H"];
+let errL = ["L", "M", "H"];
 
 // Account Strings
 
-var usrnum = 16;
+let usrnum = 16;
 
-var nameArray = [
+let nameArray = [
     "3dacbce532ccd48f27fa62e993067b3c35f094f7",
     "7b45cc4c64b0ba1dc8f4c9f331a068a783ef2cbc",
     "dc7d96d4125e819d53e0efe8001afa6a64b35728",
@@ -552,7 +552,7 @@ var nameArray = [
     "9fde18f0f2b7f00ad12bf359f1e7ca34333c88a0",
     "1cd46927d1b76a822ee0eb18d107c76d78c7f7c9"];
 
-var pwdArray = [
+let pwdArray = [
     "1a9f35e469dd557845ba707710e89b8da52205d0",
     "89ecddf086cc2982e7f846c0480b8fb023b7fdc6",
     "a1d7124b3c6aa915695ef5d034bfb0d0f18c406f",
@@ -574,7 +574,7 @@ var pwdArray = [
     "06ef37d7effafc2d7e309a1dcc8438b4e535cf03",
     "4424cbe9617c0d145bf30d65047241fcf26a8e5e"];
 
-var typArray = [
+let typArray = [
     1,
     2,
     3,
@@ -598,8 +598,8 @@ var typArray = [
 
 // Food Arrays
 
-var foodNumb = 9;
-var foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
-var locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
-var alertArray = ["undefined", "3", "1", "1", "1", "1", "3", "1", "2", "1"];
-var numArray = ["undefined", "1",  "2", "3", "4", "5", "6", "7", "8", "9"];
+let foodNumb = 9;
+let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
+let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
+let alertArray = ["undefined", "3", "1", "1", "1", "1", "3", "1", "2", "1"];
+let numArray = ["undefined", "1",  "2", "3", "4", "5", "6", "7", "8", "9"];
