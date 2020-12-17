@@ -35,6 +35,12 @@ let typ = parseInt(arr[2]);
 
 let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
 
+let tkp = arr[3];
+if (tkp === undefined) {
+    tkp = 1;
+}
+tkp = parseInt(tkp);
+
 var name = decodeURI(arr[0]);
 var num = numArray[typ];
 var food = foodArray[typ];

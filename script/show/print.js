@@ -12,6 +12,8 @@ var food = foodArray[typ];
 
 var ok = 0;
 
+let tkp = 1;
+
 if (!getUserInfo("name", name, "allow").includes(food)) {
     gAlert("权限不足以生成该餐票！");
     setTimeout(function () {
@@ -22,6 +24,16 @@ if (!getUserInfo("name", name, "allow").includes(food)) {
     var num = numArray[typ];
     var loc = "食堂" + locArray[typ] + "楼";
     var wkd = mo + "/" + da + " 周" + weekArray[dynum];
-    var urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr;
+    var urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
     ok = 1;
+}
+
+
+
+function changeType() {
+    ++tkp;
+    tkp %= 3;
+    QRCode.toDataURL(urlqr, {errorCorrectionLevel: errL[tkp]}, function (rtt, url) {
+        document.getElementById("qrc").src = url;
+    })
 }

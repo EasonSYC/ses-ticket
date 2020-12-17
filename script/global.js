@@ -480,7 +480,7 @@ var ticketModel =
     "</div>" +
     "</div>";
 
-var codeModel = "QRCode.toDataURL(\"SURL\", {errorCorrectionLevel: 'L'}, function (rtt, url) {document.getElementById(\"qrcINDEX\").src=url;});";
+var codeModel = "QRCode.toDataURL(\"SURL\", {errorCorrectionLevel: 'M'}, function (rtt, url) {document.getElementById(\"qrcINDEX\").src=url;});";
 
 // Show Functions
 
@@ -521,6 +521,10 @@ function chooseType(a, tp) {
     updateLook(a);
     showChoice(a);
 }
+
+// Print Look Arrays
+
+var errL = ["L", "M", "H"]
 
 // Account Strings
 
