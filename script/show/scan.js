@@ -18,6 +18,21 @@ function decodeDate(api) {
     };
 }
 
+function getTo() {
+    let today = new Date();
+    let toyear = today.getFullYear();
+    let tomonth = today.getMonth() + 1;
+    let todate = today.getDate();
+    let tod = today.getDay();
+    return {
+        "yr": toyear,
+        "mo": tomonth,
+        "da": todate,
+        "wk": weekArray[tod],
+        "al": today
+    };
+}
+
 var numArray = ["undefined", "1", "1", "2", "3", "4", "5", "5", "6", "7", "8", "9"];
 var weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 
@@ -25,6 +40,8 @@ var foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套
 var locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 
 var errL = ["L", "M", "H"];
+
+var info = ["", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
 
 let arr = basicURLInfo().parmArr;
 

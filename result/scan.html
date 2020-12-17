@@ -142,7 +142,7 @@
                                 </div>
                             </div>
                             <h2 class="verify-msg">
-                                <span class="text-green">订单扫描成功!</span>
+
                             </h2>
                         </div>
                     </div>
@@ -157,6 +157,11 @@
         document.getElementById("qrc").src = url;
     })
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+    if (getTo().yr !== yr || getTo().mo !== mo || getTo().da !== da) {
+        document.getElementsByClassName("verify-msg").innerHTML = info[3];
+    } else {
+        document.getElementsByClassName("verify-msg").innerHTML = info[1];
+    }
 </script>
 </body>
 </html>
