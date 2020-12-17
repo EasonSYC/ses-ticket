@@ -141,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="verify-msg">
+                            <h2 class="verify-msg" id="msg">
 
                             </h2>
                         </div>
@@ -157,11 +157,11 @@
         document.getElementById("qrc").src = url;
     })
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
-    alert(getTo().yr)
     if (getTo().yr !== yr || getTo().mo !== mo || getTo().da !== da) {
-        document.getElementsByClassName("verify-msg").innerHTML = info[3];
+        document.getElementById("msg").innerHTML = info[2];
     } else {
-        document.getElementsByClassName("verify-msg").innerHTML = info[1];
+        if (tkp !== 0)
+            document.getElementById("msg").innerHTML = info[1];
     }
 </script>
 </body>
