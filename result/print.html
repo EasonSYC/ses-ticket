@@ -151,10 +151,7 @@
 </script>
 <script>
     if (ok) {
-        gAlert("切换不同种类的二维码<br>像素低—无<br>像素中—绿字（默认）<br>像素高—绿字+半屏登陆<br><br>观察扫描人员，<br>警惕餐票扫描！");
-        QRCode.toDataURL(urlqr, {errorCorrectionLevel: 'M'}, function (rtt, url) {
-            document.getElementById("qrc").src = url;
-        })
+        changeType();
     }
     document.getElementById("gAlertButton").onclick = gAlertClose;
     document.getElementById("gAlertModal").onclick = gAlertClose;

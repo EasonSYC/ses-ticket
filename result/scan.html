@@ -153,7 +153,7 @@
 </div>
 <script type="text/javascript">
     var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
-    QRCode.toDataURL(url, {errorCorrectionLevel: errL[tkp]}, function (rtt, url) {
+    QRCode.toDataURL(url, {errorCorrectionLevel: "M"}, function (rtt, url) {
         document.getElementById("qrc").src = url;
     })
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
