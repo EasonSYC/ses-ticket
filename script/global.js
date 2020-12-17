@@ -544,7 +544,6 @@ let nameArray = [
     "032b83ec07d20c839f43b18b85ee2a71906cc524",
     "ca13078b652648bbb734212811a238bf6b835b0f",
     "a67a98a27ce25528db145277dde1a9eee29e9a46",
-
     "ebf91f6760eef10753bed9bf00b46945f253a2e1",
     "9bb63820ef3c5518cd3b7572778a05e8f3d0fd51",
     "87bcfe46af9de8e5d1cd0c17d5fcd0304a9df0ed",
@@ -566,7 +565,6 @@ let pwdArray = [
     "c02e02219ecaef0bcdc95d447a6aa44b2d206e32",
     "b60964940dd43924f6b17ebad061f41caa117b32",
     "01c88f65f014d24283c2794a3de117cebe267d19",
-
     "2f42c22ec0cc1e08f446a46c9fd2ea1bf204e8e1",
     "c11c41262e19826e0edac6846a84ea654a05a0f7",
     "eb820fc7799df7d8130225a3052a3e9d36a237fc",
@@ -588,13 +586,12 @@ let typArray = [
     2,
     2,
     2,
+    2,
+    2,
+    2,
 
     3,
-    3,
-    3,
-
-    4,
-    4];
+    3];
 
 // Food Arrays
 
