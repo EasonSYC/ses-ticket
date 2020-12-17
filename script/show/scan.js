@@ -41,7 +41,7 @@ let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "�
 
 let errL = ["L", "M", "H"];
 
-let info = ["", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
+let info = ["undefined", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
 
 let arr = basicURLInfo().parmArr;
 
