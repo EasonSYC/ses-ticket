@@ -524,7 +524,7 @@ function chooseType(a, tp) {
 
 // Print Look Arrays
 
-var errL = ["L", "M", "H"]
+var errL = ["L", "M", "H"];
 
 // Account Strings
 
