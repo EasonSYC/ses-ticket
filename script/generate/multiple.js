@@ -1,5 +1,5 @@
-var choice = [];
-var on = [];
+let choice = [];
+let on = [];
 
 function toDay() {
     let syr = document.getElementById("syear");

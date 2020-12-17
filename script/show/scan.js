@@ -33,15 +33,15 @@ function getTo() {
     };
 }
 
-var numArray = ["undefined", "1", "1", "2", "3", "4", "5", "5", "6", "7", "8", "9"];
-var weekArray = ["日", "一", "二", "三", "四", "五", "六"];
+let numArray = ["undefined", "1", "1", "2", "3", "4", "5", "5", "6", "7", "8", "9"];
+let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 
-var foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
-var locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
+let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
+let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 
-var errL = ["L", "M", "H"];
+let errL = ["L", "M", "H"];
 
-var info = ["", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
+let info = ["", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
 
 let arr = basicURLInfo().parmArr;
 
@@ -60,9 +60,9 @@ if (tkp === undefined) {
 }
 tkp = parseInt(tkp);
 
-var name = decodeURI(arr[0]);
-var num = numArray[typ];
-var food = foodArray[typ];
-var loc = "食堂" + locArray[typ] + "楼";
-var wkd = mo + "/" + da + " 周" + weekArray[dynum];
-var url = decodeURI(basicURLInfo().url);
+let name = decodeURI(arr[0]);
+let num = numArray[typ];
+let food = foodArray[typ];
+let loc = "食堂" + locArray[typ] + "楼";
+let wkd = mo + "/" + da + " 周" + weekArray[dynum];
+let url = decodeURI(basicURLInfo().url);

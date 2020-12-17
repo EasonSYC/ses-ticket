@@ -12,8 +12,8 @@ let name = getName();
 
 let urlNew = basicURLInfo().url.replace("multiple", "scan").split("?")[0];
 
-var ret = "";
-var ret2 = "";
+let ret = "";
+let ret2 = "";
 
 let flg = 0;
 
