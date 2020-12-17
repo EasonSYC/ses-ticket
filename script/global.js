@@ -522,9 +522,9 @@ function chooseType(a, tp) {
     showChoice(a);
 }
 
-// Print Look Arrays
+// Print Strings
 
-let errL = ["L", "M", "H"];
+let nowA = ["无", "绿字", "绿字+登陆弹窗（研发中）"];
 
 // Account Strings
 
