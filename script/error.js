@@ -8,7 +8,7 @@ if (document.referrer === '') {
 
 let errorIdGet = document.location.href.split("#")[1];
 let i;
-for(i = 0; i < errorId.length(); ++i){
+for(i = 0; i < errorId.length; ++i){
     if(errorId[i] === errorIdGet) break;
 }
 document.getElementById("error-prompt").innerHTML = errorPrompt[i];
