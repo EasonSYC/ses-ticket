@@ -5,4 +5,5 @@ if (document.referrer === '') {
 } else {
     but.innerHTML = before + back + after;
 }
-document.getElementById("egg").innerHTML = eggs[Math.floor(Math.random() * eggs.length + 1)];
+
+document.getElementById("error-prompt").innerHTML = eggs[Math.floor(Math.random() * eggs.length + 1)];
