@@ -83,7 +83,7 @@ let eggs = [
     "(0,0)",
     "页面建设中……"];
 
-// 404 Strings
+// error Strings
 
 let before =
     "<p class=\"display-1 text-danger py-3\" id=\"error-typ\"> 404 </p>" +
@@ -101,6 +101,12 @@ let after =
     "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"//ses-1987.gitee.io/sesticket/help.html#NotFound\">" +
     "帮助" +
     "</a>";
+
+// error functions
+
+function jumpError(a){
+    window.location.replace("http://ses-1987.gitee.io/sesticket/error.html#"+a);
+}
 
 // Alert Functions
 
