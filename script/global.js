@@ -94,7 +94,7 @@ let back =
     "</a>";
 let after =
     "" +
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./help.html#NotFound\">" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"//ses-1987.gitee.io/sesticket/help.html#NotFound\">" +
     "帮助" +
     "</a>";
 
