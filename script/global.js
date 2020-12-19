@@ -65,7 +65,11 @@ function noA(str) {
     return str;
 }
 
-// 404 Arrays
+// error Arrays
+
+let errorId = ["40300", "40301", "40302", "40303"];
+
+let errorPrompt = ["当前ip或ip段被封禁！","当前帐号被封禁！","没有足够权限！","该功能维护中！"];
 
 let eggs = [
     "随机数的范围不包括这串字符，你是怎么让它显示出来的？",
@@ -82,10 +86,10 @@ let eggs = [
 // 404 Strings
 
 let before =
-    "<p class=\"display-1 text-danger py-3\"> 404 </p>" +
-    "<p class=\"text-muted\" id=\"egg\" style=\"font-size: 25px\">页面建设中...</p>";
+    "<p class=\"display-1 text-danger py-3\" id=\"error-typ\"> 404 </p>" +
+    "<p class=\"text-muted\" id=\"error-prompt\" style=\"font-size: 25px\">页面建设中...</p>";
 let home =
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"./index.html\" id=\"g-but\">" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"//ses-1987.gitee.io/sesticket/index.html\" id=\"g-but\">" +
     "首页" +
     "</a>";
 let back =
