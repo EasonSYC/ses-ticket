@@ -33,12 +33,10 @@ function getTo() {
     };
 }
 
-let numArray = ["undefined", "1", "1", "2", "3", "4", "5", "5", "6", "7", "8", "9"];
-let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-
 let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
-
+let numArray = ["undefined", "1",  "2", "3", "4", "5", "6", "7", "8", "9"];
+let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 let info = ["undefined", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
 
 let arr = basicURLInfo().parmArr;
