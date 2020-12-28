@@ -95,7 +95,9 @@
     }</style>
 </head>
 <body>
-<script src="../script/show/scan.js"></script>
+ <script>
+        document.write("<script type='text/javascript' src='/sesticket/script/show/scan.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
+    </script>
 <script src="../script/qrcode.min.js"></script>
 <div id="gApp">
     <div class="body-wrapper">
