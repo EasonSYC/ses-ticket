@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script src="../script/global.js"></script>
+     <script>
+        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
+    </script>
     <title>我的预订</title>
     <link href="../favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
     <link href="../layout/common.min.css" rel="stylesheet">
@@ -91,7 +93,9 @@
         noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + basicURLInfo().urlParmStr);
     }
 </script>
-<script src="../script/show/print.js"></script>
+ <script>
+        document.write("<script type='text/javascript' src='/sesticket/script/show/print.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
+    </script>
 <script src="../script/qrcode.min.js"></script>
 <div id="gApp">
     <div>
