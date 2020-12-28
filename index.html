@@ -148,6 +148,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="countdown">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -191,6 +194,43 @@
 <script>
     document.getElementById("gAlertButton").onclick = gAlertClose;
     document.getElementById("gAlertModal").onclick = gAlertClose;
+</script>
+<script id="countdowncode">
+</script>
+<script src="./script/countdown.js"></script>
+<script>
+    function showTime0(){let countdownAll = 1609430400 - Date.now() / 1000;if (countdownAll < 0) location.reload();let countdownDay = Math.floor(countdownAll / 86400);
+        let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);
+        let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);
+        let countdownSec = Math.floor(countdownAll - countdownDay * 86400 - countdownHor * 3600 - countdownMin * 60);
+        document.getElementById("day0").innerHTML = " " + countdownDay + " ";
+        document.getElementById("hor0").innerHTML = " " + ("0" + countdownHor).substr(-2) + " ";
+        document.getElementById("min0").innerHTML = " " + ("0" + countdownMin).substr(-2) + " ";
+        document.getElementById("sec0").innerHTML = " " + ("0" + countdownSec).substr(-2) + " ";
+    }
+    setInterval(function(){showTime0()}, 1);
+    function showTime1(){let countdownAll = 1609689600 - Date.now() / 1000;if (countdownAll < 0) location.reload();let countdownDay = Math.floor(countdownAll / 86400);
+        let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);
+        let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);
+        let countdownSec = Math.floor(countdownAll - countdownDay * 86400 - countdownHor * 3600 - countdownMin * 60);
+        document.getElementById("day1").innerHTML = " " + countdownDay + " ";
+    }
+    setInterval(function(){showTime1()}, 1);
+    function showTime2(){let countdownAll = 1609862400 - Date.now() / 1000;if (countdownAll < 0) location.reload();let countdownDay = Math.floor(countdownAll / 86400);
+        let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);
+        let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);
+        let countdownSec = Math.floor(countdownAll - countdownDay * 86400 - countdownHor * 3600 - countdownMin * 60);
+        document.getElementById("day2").innerHTML = " " + countdownDay + " ";
+    }
+    setInterval(function(){showTime2()}, 1);
+    function showTime3(){let countdownAll = 1610380800 - Date.now() / 1000;if (countdownAll < 0) location.reload();let countdownDay = Math.floor(countdownAll / 86400);
+        let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);
+        let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);
+        let countdownSec = Math.floor(countdownAll - countdownDay * 86400 - countdownHor * 3600 - countdownMin * 60);
+        document.getElementById("day3").innerHTML = " " + countdownDay + " ";
+    }
+    setInterval(function(){showTime3()}, 1);
+
 </script>
 </body>
 </html>
