@@ -197,7 +197,9 @@
 </script>
 <script id="countdowncode">
 </script>
-<script src="./script/countdown.js"></script>
+<script>
+        document.write("<script type='text/javascript' src='/sesticket/script/countdown.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
+</script>
 <script>
     function showTime0(){let countdownAll = 1609430400 - Date.now() / 1000;if (countdownAll < 0) location.reload();let countdownDay = Math.floor(countdownAll / 86400);
         let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);
