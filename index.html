@@ -210,7 +210,7 @@
         document.getElementById("min0").innerHTML = " " + ("0" + countdownMin).substr(-2) + " ";
         document.getElementById("sec0").innerHTML = " " + ("0" + countdownSec).substr(-2) + " ";
     }
-    setInterval(function(){showTime0()}, 1);
+    /*setInterval(function(){showTime0()}, 1);*/
     function showTime1(){let countdownAll = 1609689600 - Date.now() / 1000;let countdownDay = Math.floor(countdownAll / 86400);
         let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);
         let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);
