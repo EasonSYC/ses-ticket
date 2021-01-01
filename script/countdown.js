@@ -26,7 +26,6 @@ let upTo = [
 let codModelFront =
     "function showTimeINDEX(){" +
     "let countdownAll = TIME - Date.now() / 1000;" +
-    "if (countdownAll < 0) location.reload();" +
     "let countdownDay = Math.floor(countdownAll / 86400);\n" +
     "let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);\n" +
     "let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);\n" +
