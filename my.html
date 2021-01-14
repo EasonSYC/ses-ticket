@@ -127,13 +127,18 @@
                                     </div>
                                     <div class="col-9">
                                         <div class="p-3">
-                                            <h3>
+                                            <font style="font-size: 1.75rem">
                                                 <script>
                                                     let cook = getCookie("acc");
                                                     let name = decodeURI(cook.split("@")[0]);
                                                     document.write(name);
                                                 </script>
-                                            </h3>
+                                            </font>
+                                            <a style="font-size: 1.35rem; background-color: #40CC9E; color: white; border-radius: 8px; white-space: pre">
+                                                <script>
+                                                    document.write(tydArray[getUserInfo("name", name, id)]);
+                                                </script>
+                                            </a>
                                             <div class="text-muted">
                                                 上次登录:
                                                 <script>
