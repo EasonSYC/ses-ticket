@@ -149,6 +149,12 @@ let tynArray = [
     "SVIP",
     "VIP",
     "普通用户"];
+let tydArray = [
+    "undefined",
+    " DEV ",
+    " SVIP ",
+    " VIP ",
+    " USER "];
 let allArray = [
     "undefined",
     "自助餐盖浇饭面档套餐A套餐B套餐C",
