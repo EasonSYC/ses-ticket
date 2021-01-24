@@ -69,5 +69,12 @@ for (let i = 0, cnt = 0; i < len && cnt < 4; ++i) {
     res += "<br>";
 }
 
-document.getElementById("countdown").innerHTML = res;
-document.getElementById("countdowncode").innerHTML = cod;
+let oRes = document.createElement("div");
+oRes.id = "countdown";
+oRes.innerHTML = res;
+document.getElementsByClassName("p-2")[0].appendChild(oRes);
+
+let oCod = document.createElement("div");
+oCod.id = "countdowncode";
+oCod.innerHTML = cod;
+document.body.insertBefore(oCod, document.getElementById("countdowncodecode"));
