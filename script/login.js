@@ -15,7 +15,7 @@ log.onclick = function () {
     let timeline = d.getTime();
     d.setTime(d.getTime() + (expdate * 24 * 60 * 60 * 1000));
     let expires = d.toUTCString();
-    let cookie = "acc=" + username + "@" + password + "@" + timeline + ";expires=" + expires + ";path=/";
+    let cookie = "acc=" + username + "@" + password + "@" + timeline + ";expires=" + expires + ";path=/;cache=3";
     document.cookie = cookie;
     index();
 }
