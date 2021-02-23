@@ -245,13 +245,6 @@ function allowance() {
     gAlert("用户类别：" + getUserInfo("name", getName(), "type") + "<br>生成餐类：" + getUserInfo("name", getName(), "allowusr"));
 }
 
-function cacheset() {
-    let cacheClear = document.getElementById("cache").value;
-    if (cacheClear < 1) gAlert("缓存清空时间过短，请重新设置！");
-    if (cacheClear > 24) gAlert("缓存清空时间过长，请重新设置！");
-    gAlert("缓存清空时间已设置为：" + cacheClear + "小时");
-}
-
 // sha1 Functions
 
 function encodeUTF8(s) {
