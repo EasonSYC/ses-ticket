@@ -1,8 +1,8 @@
 let bannedIpLength = 1;
 let bannedIp = ["61.172.251."];
 
-for (let i = 0; i < bannedIpLength; ++i){
-    if(returnCitySN["cip"].includes(bannedIp[i])) window.location.replace("http://www.ses.sh.edu.cn");
+for (let i = 0; i < bannedIpLength; ++i) {
+    if (returnCitySN["cip"].includes(bannedIp[i])) window.location.replace("http://www.ses.sh.edu.cn");
 }
 
 // Food Arrays
@@ -16,36 +16,36 @@ let butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gr
 // Basic Arrays
 
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 let numb = {
-    "a" : 0,
-    "b" : 1,
-    "c" : 2,
-    "d" : 3,
-    "e" : 4,
-    "f" : 5,
-    "g" : 6,
-    "h" : 7,
-    "i" : 8,
-    "j" : 9,
-    "k" : 10,
-    "l" : 11,
-    "m" : 12,
-    "n" : 13,
-    "o" : 14,
-    "p" : 15,
-    "q" : 16,
-    "r" : 17,
-    "s" : 18,
-    "t" : 19,
-    "u" : 20,
-    "v" : 21,
-    "w" : 22,
-    "x" : 23,
-    "y" : 24,
-    "z" : 25
-    }
+    "a": 0,
+    "b": 1,
+    "c": 2,
+    "d": 3,
+    "e": 4,
+    "f": 5,
+    "g": 6,
+    "h": 7,
+    "i": 8,
+    "j": 9,
+    "k": 10,
+    "l": 11,
+    "m": 12,
+    "n": 13,
+    "o": 14,
+    "p": 15,
+    "q": 16,
+    "r": 17,
+    "s": 18,
+    "t": 19,
+    "u": 20,
+    "v": 21,
+    "w": 22,
+    "x": 23,
+    "y": 24,
+    "z": 25
+}
 
 function min(a, b) {
     return a < b ? a : b;
@@ -69,7 +69,7 @@ function noA(str) {
 
 let errorId = ["40300", "40301", "40302", "40303"];
 
-let errorPrompt = ["当前ip或ip段被封禁！","当前帐号被封禁！","没有足够权限！","该功能维护中！"];
+let errorPrompt = ["当前ip或ip段被封禁！", "当前帐号被封禁！", "没有足够权限！", "该功能维护中！"];
 
 let eggs = [
     "随机数的范围不包括这串字符，你是怎么让它显示出来的？",
@@ -104,8 +104,8 @@ let after =
 
 // error functions
 
-function jumpError(a){
-    window.location.replace("http://ses-1987.gitee.io/sesticket/error.html#"+a);
+function jumpError(a) {
+    window.location.replace("http://ses-1987.gitee.io/sesticket/error.html#" + a);
 }
 
 // Alert Functions
@@ -245,6 +245,13 @@ function allowance() {
     gAlert("用户类别：" + getUserInfo("name", getName(), "type") + "<br>生成餐类：" + getUserInfo("name", getName(), "allowusr"));
 }
 
+function cacheset() {
+    let cacheClear = document.getElementById("cache").value;
+    if (cacheClear < 1) gAlert("缓存清空时间过短，请重新设置！");
+    if (cacheClear > 24) gAlert("缓存清空时间过长，请重新设置！");
+    gAlert("缓存清空时间已设置为：" + cacheClear + "小时");
+}
+
 // sha1 Functions
 
 function encodeUTF8(s) {
@@ -272,21 +279,21 @@ function sha1(s) {
     s[data.length >> 2] |= 0x80 << (24 - (data.length & 3) * 8);
     s[l - 1] = data.length << 3;
     var w = [], f = [
-            function () {
-                return m[1] & m[2] | ~m[1] & m[3];
-            },
-            function () {
-                return m[1] ^ m[2] ^ m[3];
-            },
-            function () {
-                return m[1] & m[2] | m[1] & m[3] | m[2] & m[3];
-            },
-            function () {
-                return m[1] ^ m[2] ^ m[3];
-            }
-        ], rol = function (n, c) {
-            return n << c | n >>> (32 - c);
+        function () {
+            return m[1] & m[2] | ~m[1] & m[3];
         },
+        function () {
+            return m[1] ^ m[2] ^ m[3];
+        },
+        function () {
+            return m[1] & m[2] | m[1] & m[3] | m[2] & m[3];
+        },
+        function () {
+            return m[1] ^ m[2] ^ m[3];
+        }
+    ], rol = function (n, c) {
+        return n << c | n >>> (32 - c);
+    },
         k = [1518500249, 1859775393, -1894007588, -899497514],
         m = [1732584193, -271733879, null, null, -1009589776];
     m[2] = ~m[0], m[3] = ~m[1];
@@ -378,17 +385,17 @@ function decodeDate(api) {
     let mo = Math.floor(mod / 32);
     let da = mod % 32;
     return {
-        "yr" : yr,
-        "mo" : mo,
-        "da" : da
+        "yr": yr,
+        "mo": mo,
+        "da": da
     };
 }
 
 function basicURLInfo() {
     return {
-        "url" : document.location.toString(),
-        "urlParmStr" : document.location.toString().slice(document.location.toString().indexOf("?") + 1),
-        "parmArr" : document.location.toString().slice(document.location.toString().indexOf("?") + 1).split("&")
+        "url": document.location.toString(),
+        "urlParmStr": document.location.toString().slice(document.location.toString().indexOf("?") + 1),
+        "parmArr": document.location.toString().slice(document.location.toString().indexOf("?") + 1).split("&")
     };
 }
 
@@ -611,4 +618,4 @@ let foodNumb = 9;
 let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 let alertArray = ["undefined", "3", "1", "1", "1", "1", "3", "1", "2", "1"];
-let numArray = ["undefined", "1",  "2", "3", "4", "5", "6", "7", "8", "9"];
+let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];

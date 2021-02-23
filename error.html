@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<script src="https://pv.sohu.com/cityjson"></script>
 	<script>
-        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
+        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / cacheClear * 3600000) + "'><\/script>");
     </script>
 	<title>餐票 - 错误</title>
 	<link href="/sesticket/favicon.png" rel="shortcut icon">
@@ -33,7 +33,7 @@
 	</div>
 </div>
 <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/error.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
+        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / cacheClear * 3600000) + "'><\/script>");
 </script>
 <script>
 	document.getElementById("gAlertButton").onclick = gAlertClose;
