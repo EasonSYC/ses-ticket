@@ -5,7 +5,7 @@
     <script src="https://pv.sohu.com/cityjson"></script>
     <script src="/sesticket/script/cache-support.js"></script>
     <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / getCache() * 3600000) + "'><\/script>");
+        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / getCache() / 3600000) + "'><\/script>");
     </script>
     <title>餐票 - 首页</title>
     <link href="./favicon.png" rel="shortcut icon">
@@ -194,7 +194,7 @@
     document.getElementById("gAlertModal").onclick = gAlertClose;
 </script>
 <script id="countdowncodecode">
-        document.write("<script type='text/javascript' src='/sesticket/script/countdown.js?v=" + Math.round(Date.now() / getCache() * 3600000) + "'><\/script>");
+        document.write("<script type='text/javascript' src='/sesticket/script/countdown.js?v=" + Math.round(Date.now() / getCache() / 3600000) + "'><\/script>");
 </script>
 </body>
 </html>

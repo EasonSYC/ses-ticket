@@ -6,7 +6,7 @@
     <script src="https://pv.sohu.com/cityjson"></script>
     <script src="/sesticket/script/cache-support.js"></script>
     <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / getCache() * 3600000) + "'><\/script>");
+        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / getCache() / 3600000) + "'><\/script>");
     </script>
     <title>餐票 - 我的</title>
     <link href="./favicon.png" rel="shortcut icon">
@@ -164,7 +164,7 @@
                                     <div class="list-group mt-3">
                                         <a class="list-group-item" onclick="cacheset()">
                                             <i class="fa fa-credit-card"></i>
-                                            我的权限
+                                            缓存清除
                                             <div style="float: right;">
                                                 <input id="cache" value="3">
                                                 小时
