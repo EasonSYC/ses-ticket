@@ -1,5 +1,7 @@
 # SES Ticket
 
+Developed by students from SES.
+
 #### Introduction
 
 This is a system of generating or pulling tickets for SES canteen.
