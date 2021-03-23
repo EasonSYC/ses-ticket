@@ -19,3 +19,5 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 - Store Tickets Locally
 
 - GPS Automatic
+
+- Ticket Pull
