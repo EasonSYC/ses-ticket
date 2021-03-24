@@ -1,5 +1,7 @@
 # SES Ticket
 
+Developed by students from SES.
+
 #### Introduction
 
 This is a system of generating or pulling tickets for SES canteen.
@@ -11,3 +13,13 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 #### Website
 
 [Website](https://ses-1987.gitee.io/sesticket)
+
+#### TODO:
+
+- Cache Time Change Support
+
+- Store Tickets Locally
+
+- GPS Automatic
+
+- Ticket Pull

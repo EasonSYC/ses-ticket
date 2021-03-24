@@ -563,11 +563,11 @@ function chooseType(a, tp) {
 
 // Print Strings
 
-let nowA = ["无", "绿字", "绿字+登陆弹窗（研发中）"];
+let nowA = ["无", "绿字", "绿字+登陆弹窗（研发中）", "扫描机器（研发中）"];
 
 // Account Strings
 
-let usrnum = 16;
+let usrnum = 18;
 
 let nameArray = [
     "3dacbce532ccd48f27fa62e993067b3c35f094f7",
@@ -587,7 +587,9 @@ let nameArray = [
     "9bb63820ef3c5518cd3b7572778a05e8f3d0fd51",
     "87bcfe46af9de8e5d1cd0c17d5fcd0304a9df0ed",
     "9fde18f0f2b7f00ad12bf359f1e7ca34333c88a0",
-    "1cd46927d1b76a822ee0eb18d107c76d78c7f7c9"];
+    "1cd46927d1b76a822ee0eb18d107c76d78c7f7c9",
+    "30f5f93cb7a270ae2f7c0b8bb25b7fe02bc32037",
+    "19957464c8c428c3faf9d871f3f54a7e40c88dd8"];
 
 let pwdArray = [
     "1a9f35e469dd557845ba707710e89b8da52205d0",
@@ -607,7 +609,9 @@ let pwdArray = [
     "c11c41262e19826e0edac6846a84ea654a05a0f7",
     "eb820fc7799df7d8130225a3052a3e9d36a237fc",
     "06ef37d7effafc2d7e309a1dcc8438b4e535cf03",
-    "4424cbe9617c0d145bf30d65047241fcf26a8e5e"];
+    "4424cbe9617c0d145bf30d65047241fcf26a8e5e",
+    "c20956a2b3f07c9aa5bee3cc3b289eb8884a2cf3",
+    "92c6e6914c916aa364704c2afbd1aa5cb563c20c"];
 
 let typArray = [
     1,
@@ -619,6 +623,8 @@ let typArray = [
     1,
     1,
 
+    2,
+    2,
     2,
     2,
     2,
