@@ -85,7 +85,7 @@ gen.onclick = function () {
     let len = (edate - sdate) / 86400000 + 1;
 
     let res = "";
-    for (let i = 0; i < min(len, 250); ++i) {
+    for (let i = 0; i < min(len, mulmaxArray[getUserInfo("name", getName(), "level")]); ++i) {
         res += alpha[choice[i]];
     }
     res = noA(res);

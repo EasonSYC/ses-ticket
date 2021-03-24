@@ -155,6 +155,12 @@ let tydArray = [
     "SVIP",
     "VIP",
     "USER"];
+let mulmaxArray = [
+    undefined,
+    114514,
+    30,
+    14,
+    5];
 let allArray = [
     "undefined",
     "自助餐盖浇饭面档套餐A套餐B套餐C",
