@@ -157,7 +157,7 @@ let tydArray = [
     "USER"];
 let mulmaxArray = [
     undefined,
-    114514,
+    10000,
     30,
     14,
     5];
