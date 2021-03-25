@@ -377,7 +377,8 @@ function getWk() {
 }
 
 function checkDt(date) {
-    return (new Date(date).getDate() == date.substring(date.length - 2));
+    if (date[date.length - 3] === '/') return (new Date(date).getDate() == date.substring(date.length - 2));
+    return (new Date(date).getDate() == date.substring(date.length - 1));
 }
 
 // Action Functions
