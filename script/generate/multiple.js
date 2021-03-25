@@ -34,6 +34,10 @@ function updateLook(a) {
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
 
+    if (checkDt(syear + "/" + smon + "/" + sday) === false || checkDt(eyear + "/" + emon + "/" + eday) === false) {
+        return;
+    }
+
     for (let d = sdate, i = 0; i < min(len, min(len, mulmaxArray[getUserInfo("name", getName(), "level")])); ++i, d.setDate(d.getDate() + 1)) {
 
         let dmo = d.getMonth() + 1;
