@@ -92,8 +92,9 @@ gen.onclick = function () {
 
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");
-    } else if (smon < 1 || smon > 12 || sday < 1 || sday > 31 || emon < 1 || emon > 12 || eday < 1 || eday > 31) {
-        gAlert("请输入正确信息！");
+    }
+    else if (checkDt(syear + "/" + smon + "/" + sday) === false || checkDt(eyear + "/" + emon + "/" + eday) === false) {
+        gAlert("请输入正确日期！");
     } else {
         window.location.replace("../result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);
     }
