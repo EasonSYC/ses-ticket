@@ -34,7 +34,7 @@ function updateLook(a) {
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
 
-    for (let d = sdate, i = 0; i < min(len, 250); ++i, d.setDate(d.getDate() + 1)) {
+    for (let d = sdate, i = 0; i < min(len, min(len, mulmaxArray[getUserInfo("name", getName(), "level")])); ++i, d.setDate(d.getDate() + 1)) {
 
         let dmo = d.getMonth() + 1;
         let ddy = d.getDate();
