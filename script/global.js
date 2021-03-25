@@ -376,6 +376,10 @@ function getWk() {
     };
 }
 
+function checkDt(date) {
+    return (new Date(date).getDate() == date.substring(date.length - 2));
+}
+
 // Action Functions
 
 function noLogin(source) {

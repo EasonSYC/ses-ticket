@@ -18,7 +18,7 @@ function changeDate() {
     let day = parseInt(document.getElementById("day").value);
     let d = new Date(yr + "/" + mon + "/" + day);
     let wkday = "周" + weekArray[d.getDay()];
-    if (d.getDay() === undefined) {
+    if (checkDt(yr + "/" + mon + "/" + day) === false) {
         return;
     }
     let date = document.getElementById("date");
