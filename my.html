@@ -155,7 +155,7 @@
                                                         let time = decodeURI(cook.split("@")[2]);
                                                         let d = new Date();
                                                         d.setTime(time);
-                                                        document.write(d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes());
+                                                        document.write(d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() + " " + d.getHours() + ":" + ("0" + d.getMinutes()).substr(-2));
                                                     </script>
                                                 </div>
                                             </div>
