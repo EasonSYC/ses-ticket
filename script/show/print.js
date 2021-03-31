@@ -29,7 +29,7 @@ if (!getUserInfo("name", name, "allow").includes(food)) {
 
 function changeType() {
     ++tkp;
-    tkp %= 4;
+    tkp %= 3;
     var urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
     gAlert("点击二维码以切换扫描反馈<br>目前状态：" + nowA[tkp] + "<br><br>观察扫描人员，<br>警惕餐票扫描！");
     QRCode.toDataURL(urlqr, {errorCorrectionLevel: "M"}, function (rtt, url) {
