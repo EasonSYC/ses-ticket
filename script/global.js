@@ -568,7 +568,8 @@ function chooseType(a, tp) {
 
 // Print Strings
 
-let nowA = ["无", "绿字", "扫描机器（研发中）"];
+let nowChoice = ["无", "绿字", "扫描机（研发中）"];
+let nowPeople = ["学生", "食堂工作人员", "扫描机（研发中）"];
 
 // Account Strings
 
@@ -647,4 +648,4 @@ let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 let alertArray = ["undefined", "3", "1", "1", "1", "1", "2", "1", "2", "1"];
 let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-let alertTextArray = ["undefined", "<br>请不要用扫描机扫描餐票！", "", "", "", "", "", "", "", ""];
+let alertTextArray = ["undefined", "<br><br>请不要用扫描机扫描餐票！", "", "", "", "", "", "", "", ""];
