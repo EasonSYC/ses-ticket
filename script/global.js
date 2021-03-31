@@ -645,5 +645,5 @@ let typArray = [
 let foodNumb = 9;
 let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
-let alertArray = ["undefined", "3", "1", "1", "1", "1", "3", "1", "2", "1"];
+let alertArray = ["undefined", "3", "1", "1", "1", "1", "2", "1", "2", "1"];
 let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
