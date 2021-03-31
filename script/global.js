@@ -568,7 +568,7 @@ function chooseType(a, tp) {
 
 // Print Strings
 
-let nowA = ["无", "绿字", "绿字+登陆弹窗（研发中）", "扫描机器（研发中）"];
+let nowA = ["无", "绿字", "扫描机器（研发中）"];
 
 // Account Strings
 
