@@ -16,9 +16,9 @@ DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
 
 #### TODO:
 
-- Cache Time Change Support
-
 - Store Tickets Locally
+
+- Message System
 
 - GPS Automatic
 
