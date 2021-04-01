@@ -576,7 +576,7 @@ let nowPeople = ["学生", "食堂工作人员", "扫描机（研发中）"];
 
 // Account Strings
 
-let usrnum = 18;
+let usrnum = 20;
 
 let nameArray = [
     "3dacbce532ccd48f27fa62e993067b3c35f094f7",
@@ -598,7 +598,9 @@ let nameArray = [
     "9fde18f0f2b7f00ad12bf359f1e7ca34333c88a0",
     "1cd46927d1b76a822ee0eb18d107c76d78c7f7c9",
     "30f5f93cb7a270ae2f7c0b8bb25b7fe02bc32037",
-    "19957464c8c428c3faf9d871f3f54a7e40c88dd8"];
+    "19957464c8c428c3faf9d871f3f54a7e40c88dd8",
+    "6a2945fd79274a1f336706874edd22ef8a568061",
+    "369c81a98dcdc81919c8dc7b7867948b2c990629"];
 
 let pwdArray = [
     "1a9f35e469dd557845ba707710e89b8da52205d0",
@@ -620,7 +622,9 @@ let pwdArray = [
     "06ef37d7effafc2d7e309a1dcc8438b4e535cf03",
     "4424cbe9617c0d145bf30d65047241fcf26a8e5e",
     "c20956a2b3f07c9aa5bee3cc3b289eb8884a2cf3",
-    "92c6e6914c916aa364704c2afbd1aa5cb563c20c"];
+    "92c6e6914c916aa364704c2afbd1aa5cb563c20c",
+    "4c2217fd86938471a81493b486fd42466f1484f0",
+    "a8500aee900fcaf4bdf909b0a6de2c3fe29daabb"];
 
 let typArray = [
     1,
@@ -631,6 +635,8 @@ let typArray = [
     1,
     1,
 
+    2,
+    2,
     2,
     2,
     2,
