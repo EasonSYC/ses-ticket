@@ -18,7 +18,7 @@ function changeDate() {
     let day = parseInt(document.getElementById("day").value);
     let d = new Date(yr + "/" + mon + "/" + day);
     let wkday = "周" + weekArray[d.getDay()];
-    if (checkDt(yr + "/" + mon + "/" + day) === false) {
+    if (checkDt(yr, mon, day) === false) {
         return;
     }
     let date = document.getElementById("date");
@@ -56,7 +56,7 @@ gen.onclick = function () {
 
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");
-    } else if (mon < 1 || mon > 12 || day < 1 || day > 31) {
+    } else if (checkDt(yr, mon, day) === false) {
         gAlert("请输入正确日期！");
     } else if (ntyp === 0 || ntyp === undefined) {
         gAlert("请在生成前选餐！");
