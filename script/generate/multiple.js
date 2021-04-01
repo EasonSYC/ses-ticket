@@ -34,7 +34,7 @@ function updateLook(a) {
     let edate = new Date(eyear + "/" + emon + "/" + eday);
     let len = (edate - sdate) / 86400000 + 1;
 
-    if (checkDt(syear + "/" + smon + "/" + sday) === false || checkDt(eyear + "/" + emon + "/" + eday) === false) {
+    if (checkDt(syear, smon, sday) === false || checkDt(eyear, emon, eday) === false) {
         return;
     }
 
@@ -95,7 +95,7 @@ gen.onclick = function () {
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");
     }
-    else if (checkDt(syear + "/" + smon + "/" + sday) === false || checkDt(eyear + "/" + emon + "/" + eday) === false) {
+    else if (checkDt(syear, smon, sday) === false || checkDt(eyear, emon, eday) === false) {
         gAlert("请输入正确日期！");
     } else {
         window.location.replace("../result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);

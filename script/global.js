@@ -376,10 +376,12 @@ function getWk() {
     };
 }
 
-function checkDt(date) {
-    if (new Date(date).getTime() < new Date().getTime() - 86400000) return false;
-    if (date[date.length - 3] === '/') return (new Date(date).getDate() == date.substring(date.length - 2));
-    return (new Date(date).getDate() == date.substring(date.length - 1));
+function checkDt(y, m, d) {
+    askD = new Date(y + "/" + m + "/" + d);
+    if (askD.getTime() < new Date().getTime() - 86400000) return false;
+    if (askD.getDate() !== d) return false;
+    if (askD.getMonth() + 1 !== m) return false;
+    if (askD.getFullYear() !== y) return false;
 }
 
 // Action Functions
