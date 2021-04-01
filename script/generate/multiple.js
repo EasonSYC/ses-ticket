@@ -68,7 +68,6 @@ function updateLook(a) {
 
         res = res.replace(/CHOICE/g, chs);
     }
-
     document.getElementById("LIST").innerHTML = res;
 }
 
