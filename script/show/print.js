@@ -38,10 +38,12 @@ function changeType() {
     if (tkp !== 2) {
         urlqr = basicURLInfo().url.replace("print", "scan").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
     } else {
-        urlqr = basicURLInfo().url.replace("print", "personal").split("?")[0];
+        urlqr = basicURLInfo().url.replace("print", "personal").split("?")[0] + "?" + name + "&" + basicURLInfo().urlParmStr + "&" + tkp;
     }
     gAlert("点击二维码以切换扫描反馈" + "<br>目前状态：" + nowChoice[tkp] + "<br>适用人群：" + nowPeople[tkp] + alertTextArray[typ] + "<br><br>观察扫描人员，<br>警惕餐票扫描！");
+
     QRCode.toDataURL(urlqr, {errorCorrectionLevel: "M"}, function (rtt, url) {
         document.getElementById("qrc").src = url;
-    })
+    });
+
 }
