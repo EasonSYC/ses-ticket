@@ -569,6 +569,17 @@ function chooseType(a, tp) {
     showChoice(a);
 }
 
+// Cache Functions
+
+function setCache(onChange, value) {
+    if (onChange === 1) localStorage.cache = value;
+    if (!localStorage.cache) localStorage.cache = 2;
+}
+
+function getCache() {
+    return localStorage.cache;
+}
+
 // Print Strings
 
 let nowChoice = ["无", "绿字", "个人设置界面", "扫描机（研发中）"];
