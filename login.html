@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script src="/sesticket/script/cache-support.js"></script>
-    <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / getCache() / 3600000) + "'><\/script>");
-    </script>
+    <script type='text/javascript' src='/sesticket/script/global.js'></script>
     <title>餐票 - 登录</title>
     <link href="./favicon.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
@@ -86,12 +82,6 @@
                                 <label class="sr-only">密码</label>
                                 <input class="form-control" id="password" placeholder="密码" required="required"
                                     type="password">
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" id="remember" type="checkbox" value="true">
-                                    <label class="form-check-label" for="remember">记住我</label>
-                                </div>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-lg btn-green btn-block" id="submit" type="submit">登录</button>

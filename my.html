@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script src="/sesticket/script/cache-support.js"></script>
-    <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/global.js?v=" + Math.round(Date.now() / getCache() / 3600000) + "'><\/script>");
-    </script>
+    <script type='text/javascript' src='/sesticket/script/global.js'></script>
     <title>餐票 - 我的</title>
     <link href="./favicon.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
@@ -162,13 +159,14 @@
                                         </div>
                                     </div>
                                     <div class="list-group mt-3">
-                                        <a class="list-group-item" onclick="cacheset()">
+                                        <a class="list-group-item">
                                             <i class="fa fa-credit-card"></i>
                                             缓存清除
                                             <div style="float: right;">
-                                                <input id="cache" value="3">
-                                                小时
+                                                <input id="cache" type="text" value="">
+                                                天
                                             </div>
+                                            <button id="cacheCheck">确认</button>
                                         </a>
                                     </div>
                                     <div class="list-group mt-3">
@@ -228,6 +226,15 @@
     <script>
         document.getElementById("gAlertButton").onclick = gAlertClose;
         document.getElementById("gAlertModal").onclick = gAlertClose;
+        setCache(0, 0);
+        document.getElementById("cache").value = getCache();
+        document.getElementById("cacheCheck").onclick = function(){
+            if (document.getElementById("cache").value < 1 || document.getElementById("cache").value > 10) gAlert("请输入1～10天的时长！");
+            else {
+                setCache(1, document.getElementById("cache").value);
+                gAlert("缓存设置成功！");
+            }
+        }
     </script>
 </body>
 

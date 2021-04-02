@@ -4,18 +4,12 @@ log.onclick = function () {
     username = encodeURI(username);
     let password = document.getElementById("password").value;
     password = sha1(password);
-    let long = document.getElementById("remember");
-    let expdate;
-    if (long.checked) {
-        expdate = 2;
-    } else {
-        expdate = 0.5;
-    }
+    setCache(0, 0);
+    let expdate = getCache();
     let d = new Date();
-    let timeline = d.getTime();
     d.setTime(d.getTime() + (expdate * 24 * 60 * 60 * 1000));
     let expires = d.toUTCString();
-    let cookie = "acc=" + username + "@" + password + "@" + timeline + ";expires=" + expires + ";path=/;cache=3";
+    let cookie = "acc=" + username + "@" + password + ";expires=" + expires + ";path=/";
     document.cookie = cookie;
     index();
 }
