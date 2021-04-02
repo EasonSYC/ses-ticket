@@ -571,8 +571,30 @@ function chooseType(a, tp) {
 
 // Print Strings
 
-let nowChoice = ["无", "绿字", "扫描机（研发中）"];
-let nowPeople = ["学生", "食堂工作人员", "扫描机（研发中）"];
+let nowChoice = ["无", "绿字", "个人设置界面", "扫描机（研发中）"];
+let nowPeople = ["学生", "食堂工作人员", "6区食堂阿姨（注意观察）", "扫描机（研发中）"];
+
+// Print Functions
+
+function showTypeOption(type, option) {
+    if (type === 1) {
+        if (option === 0) return false;
+        if (option === 2) return false;
+        return true;
+    }
+    if (type === 6) {
+        if (option === 0) return false;
+        if (option === 3) return false;
+        return true;
+    }
+    if (type === 8) {
+        if (option !== 1) return false;
+        return true;
+    }
+    if (option === 2) return false;
+    if (option === 3) return false;
+    return true;
+}
 
 // Account Strings
 
@@ -657,4 +679,4 @@ let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 let alertArray = ["undefined", "3", "1", "1", "1", "1", "2", "1", "2", "1"];
 let numArray = ["undefined", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-let alertTextArray = ["undefined", "<br><br>请不要用扫描机扫描餐票！", "", "", "", "", "", "", "", ""];
+let alertTextArray = ["undefined", "<br><br>请不要用扫描机扫描餐票！", "", "", "", "", "<br><br>注意真餐票扫描结果并切换！<br>6区较多出现的阿姨为个人设置界面！", "", "", ""];
