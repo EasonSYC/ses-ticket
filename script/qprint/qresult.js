@@ -6,7 +6,7 @@ let da = getTo().da;
 
 let typ = parseInt(arr[0]);
 
-let name = getName();
+let name = getQprintName();
 let food = foodArray[typ];
 
 let ok = 0;
