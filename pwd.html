@@ -1,0 +1,23 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>临时密码更换页面</title>
+	<script type="text/javascript" src="https://ses-1987.gitee.io/sesticket/script/global.js"></script>
+</head>
+
+<body>
+	<p>有用的页面不需要好看的前端。————鲁迅</p>
+	<p>请输入您的密码，然后将生成的结果qq私信发送到@Jason_Ying。</p>
+	<p>4月中旬后仍未更改密码的账号将会被暂时冻结。</p>
+	<input id="pwd"><button id="cfm">确定</button>
+	<p>该页面不会存储您输入的任何数据。</p>
+
+	<script>
+		document.getElementById("cfm").onclick = function(){
+        document.write(sha1(document.getElementById("pwd").value));
+    }
+	</script>
+</body>
+
+</html>
