@@ -251,24 +251,6 @@ function exists() {
     return 0;
 }
 
-function allowance() {
-    gAlert("用户类别：" + getUserInfo("name", getName(), "type") + "<br>生成餐类：" + getUserInfo("name", getName(), "allowusr"));
-}
-
-function cacheset() {
-    if (document.activeElement.id != "cache") {
-        var cacheClear = document.getElementById("cache").value;
-        if (parseInt(cacheClear) < 1) {
-            gAlert("缓存清空时间过短，请重新设置！");
-        }
-        if (parseInt(cacheClear) > 24) {
-            gAlert("缓存清空时间过长，请重新设置！");
-        }
-        gAlert("缓存清空时间已设置为：" + cacheClear + " 小时");
-        setCookie(cacheClear);
-    }
-}
-
 // sha1 Functions
 
 function encodeUTF8(s) {
