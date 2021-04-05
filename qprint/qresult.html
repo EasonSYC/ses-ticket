@@ -97,7 +97,7 @@
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">
-            <a onclick="history.back(-1);">
+            <a id="exit">
                 <i class="fa fa-times fa-2x"></i>
             </a>
         </div>
@@ -151,6 +151,11 @@
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
 </script>
 <script>
+    let exit = document.getElementById("exit");
+    exit.onclick = function () {
+        delQprintCookie("qprint");
+        window.location.replace("/sesticket/qprint/qprint.html");
+    }
     if (ok) {
         changeType();
     }
