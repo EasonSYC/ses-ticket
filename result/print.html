@@ -91,9 +91,6 @@
         noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + basicURLInfo().urlParmStr);
     }
 </script>
- <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/show/print.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
-    </script>
 <script src="../script/qrcode.min.js"></script>
 <div id="gApp">
     <div>
@@ -151,6 +148,7 @@
     var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
 </script>
+<script type='text/javascript' src='/sesticket/script/result/print.js'></script>
 <script>
     if (ok) {
         changeType();
