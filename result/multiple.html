@@ -82,6 +82,7 @@
     </div>
 </div>
 <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+<script type='text/javascript' src='/sesticket/script/result/multiple.js'></script>
 <script>
     let urll = document.location.toString();
     let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
@@ -89,9 +90,6 @@
         noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + urlParmmStr);
     }
 </script>
- <script>
-        document.write("<script type='text/javascript' src='/sesticket/script/show/multiple.js?v=" + Math.round(Date.now()/1080000) + "'><\/script>");
-    </script>
 <script src="../script/qrcode.min.js"></script>
 <div id="gApp">
     <div class="row no-gutters" id="res">
