@@ -96,6 +96,7 @@
 </head>
 <body>
 <script src="../script/qrcode.min.js"></script>
+<script type='text/javascript' src='/sesticket/script/show/scan.js'></script>
 <div id="gApp">
     <div class="body-wrapper">
         <div class="container px-0">
@@ -150,7 +151,6 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='/sesticket/script/result/scan.js'></script>
 <script type="text/javascript">
     var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
     QRCode.toDataURL(url, {errorCorrectionLevel: "M"}, function (rtt, url) {
