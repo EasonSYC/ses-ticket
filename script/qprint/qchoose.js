@@ -12,7 +12,7 @@ function showChoice(a) {
         ret = ret.replace(/FLOOR/g, locArray[i]);
         ret = ret.replace(/LEVEL/g, levelArray[alertArray[i]]);
         ret = ret.replace(/FREQ/g, freqArray[alertArray[i]]);
-        if (getUserInfo("name", getName(), "allow").includes(foodArray[i]) === false) {
+        if (getUserInfo("name", getQprintName(), "allow").includes(foodArray[i]) === false) {
             ret = ret.replace(/BUTINFO/g, butinfoArray[3]);
             ret = ret.replace(/BUTCLASS/g, butclassArray[3]);
         } else if (i === choice[a]) {
