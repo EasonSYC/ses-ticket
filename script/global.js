@@ -230,10 +230,6 @@ function delCookie(cname) {
     document.cookie = cname + "=" + c + ";expires=" + d.toUTCString() + ";path=/";
 }
 
-function setCookie(cacheTime) {
-    document.cookie = "cache=" + cacheTime;
-}
-
 function exists() {
     let nam = getName();
     if (nam === "-1") {
