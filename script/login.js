@@ -4,8 +4,13 @@ log.onclick = function () {
     username = encodeURI(username);
     let password = document.getElementById("password").value;
     password = sha1(password);
-    setCache(0, 0);
-    let expdate = getCache();
+    let long = document.getElementById("remember");
+    let expdate;
+    if (long.checked) {
+        expdate = 2;
+    } else {
+        expdate = 0.5;
+    }
     let d = new Date();
     let timeline = d.getTime();
     d.setTime(d.getTime() + (expdate * 24 * 60 * 60 * 1000));
