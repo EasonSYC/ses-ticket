@@ -561,7 +561,7 @@ function getCache() {
 // Print Strings
 
 let nowChoice = ["无", "绿字", "个人设置界面", "扫描机（研发中）"];
-let nowPeople = ["学生", "食堂工作人员", "6区食堂阿姨（注意观察）", "扫描机（研发中）"];
+let nowPeople = ["学生", "食堂工作人员", "特定食堂阿姨（注意观察）", "扫描机（研发中）"];
 
 // Print Functions
 
@@ -571,13 +571,9 @@ function showTypeOption(type, option) {
         if (option === 2) return false;
         return true;
     }
-    if (type === 6) {
+    if (type === 6 || type === 8) {
         if (option === 0) return false;
         if (option === 3) return false;
-        return true;
-    }
-    if (type === 8) {
-        if (option !== 1) return false;
         return true;
     }
     if (option === 2) return false;
