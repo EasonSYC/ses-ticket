@@ -40,11 +40,11 @@ let codModelBack =
     "}\n" +
     "setInterval(function(){showTimeINDEX()}, 1);\n";
 
-let len = 5;
-let eventName = ["2021年", "中三部分班级地理期末考试", "中三部分班级道法期末考试", "中三期末考试","开学"];
-let eventTime = ["1609430400", "1609689600", "1609862400", "1610380800","1614037500"];
-let eventDescription = ["新的一年，让我们携手并进，再创辉煌！", "综合案例分析，认真分析！", "画书！熟记知识点位置！", "好好学习，天天向上！","我只是个卑微的打工人，不会写说明a~"];
-let eventUpto = ["4", "1", "1", "1","4"];
+let len = 0;
+let eventName = [];
+let eventTime = [];
+let eventDescription = [];
+let eventUpto = [];
 let res = "";
 let cod = "";
 
