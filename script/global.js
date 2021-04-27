@@ -583,7 +583,7 @@ function showTypeOption(type, option) {
 
 // Account Strings
 
-let usrnum = 21;
+let usrnum = 20;
 
 let nameArray = [
     "3dacbce532ccd48f27fa62e993067b3c35f094f7",
@@ -598,7 +598,6 @@ let nameArray = [
     "fccfac5ea6317fb43541816f476a0b614a1efa5f",
     "fab60904d36306295b5d27dc1745a645482b2201",
     "032b83ec07d20c839f43b18b85ee2a71906cc524",
-    "ca13078b652648bbb734212811a238bf6b835b0f",
     "a67a98a27ce25528db145277dde1a9eee29e9a46",
     "ebf91f6760eef10753bed9bf00b46945f253a2e1",
     "9bb63820ef3c5518cd3b7572778a05e8f3d0fd51",
@@ -623,7 +622,6 @@ let pwdArray = [
     "49760f017daccda000140283ecdcdcdbdfa55579",
     "7e226f1ff2de32b0e5b998c7b462110c1a21ea4b",
     "89f3470b295b2e8cec7c3d44c6424d541c3a3151",
-    "b60964940dd43924f6b17ebad061f41caa117b32",
     "72363c4a438ead591cbd436f69e4da0dd5c6d95f",
     "2f42c22ec0cc1e08f446a46c9fd2ea1bf204e8e1",
     "c11c41262e19826e0edac6846a84ea654a05a0f7",
@@ -645,7 +643,6 @@ let typArray = [
     1,
     1,
 
-    2,
     2,
     2,
     2,
