@@ -25,11 +25,12 @@ let upTo = [
 
 let codModelFront =
     "function showTimeINDEX(){" +
-    "let countdownAll = TIME - Date.now() / 1000;" +
+    "let countdownAll = TIME - Date.now() / 1000;\n" +
     "let countdownDay = Math.floor(countdownAll / 86400);\n" +
     "let countdownHor = Math.floor(countdownAll / 3600 - countdownDay * 24);\n" +
     "let countdownMin = Math.floor(countdownAll / 60 - countdownDay * 1440 - countdownHor * 60);\n" +
-    "let countdownSec = Math.floor(countdownAll - countdownDay * 86400 - countdownHor * 3600 - countdownMin * 60);\n";
+    "let countdownSec = Math.floor(countdownAll - countdownDay * 86400 - countdownHor * 3600 - countdownMin * 60);\n" +
+    "if (countdownDay === 0 && countdownHor === 0 && countdownMin === 0 && countdownSec === 0) window.location.reload();\n";
 
 let codUpto = [
     "document.getElementById(\"dayINDEX\").innerHTML = \" \" + countdownDay + \" \";\n",
@@ -40,11 +41,11 @@ let codModelBack =
     "}\n" +
     "setInterval(function(){showTimeINDEX()}, 1);\n";
 
-let len = 0;
-let eventName = [];
-let eventTime = [];
-let eventDescription = [];
-let eventUpto = [];
+let len = 1;
+let eventName = ["暑假"];
+let eventTime = [1625068800];
+let eventDescription = ["放松！玩游戏！看大电影！（划掉）看书！做作业！上课外班！"];
+let eventUpto = [1];
 let res = "";
 let cod = "";
 
