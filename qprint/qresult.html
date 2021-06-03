@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script type='text/javascript' src='/sesticket/script/global.js'></script>
-    <script type='text/javascript' src='/sesticket/script/qprint/qprintglobal.js'></script>
+    <script type='text/javascript' src='../script/global.js'></script>
+    <script type='text/javascript' src='../script/qprint/qprintglobal.js'></script>
     <title>我的预订</title>
     <link href="../favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
     <link href="../layout/common.min.css" rel="stylesheet">
@@ -93,7 +93,7 @@
     }
 </script>
 <script src="../script/qrcode.min.js"></script>
-<script type='text/javascript' src='/sesticket/script/qprint/qresult.js'></script>
+<script type='text/javascript' src='../script/qprint/qresult.js'></script>
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">
@@ -154,7 +154,7 @@
     let exit = document.getElementById("exit");
     exit.onclick = function () {
         delQprintCookie("qprint");
-        window.location.replace("/sesticket/qprint/qprint.html");
+        window.location.replace("./qprint.html");
     }
     if (ok) {
         changeType();
