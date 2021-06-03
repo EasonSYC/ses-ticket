@@ -1,5 +1,5 @@
 function qprintNoLogin() {
-    window.location.replace("/sesticket/qprint/qprint.html");
+    window.location.replace("./qprint.html");
 }
 
 function delQprintCookie() {
