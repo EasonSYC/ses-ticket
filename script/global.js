@@ -67,9 +67,9 @@ function noA(str) {
 
 // error Arrays
 
-let errorId = ["40300", "40301", "40302", "40303"];
+let errorId = ["400", "401", "403", "404", "405", "500", "502", "900", "901", "902"];
 
-let errorPrompt = ["当前ip或ip段被封禁！", "当前帐号被封禁！", "没有足够权限！", "该功能维护中！"];
+let errorPrompt = ["请求无效！", "授权失败！", "暂时无法访问所请求的资源！", "所请求的资源不存在！", "所请求的资源被禁止访问！", "服务器错误，请稍后刷新重试！", "网关错误，请稍后刷新重试！", "当前ip或ip段被封禁！", "当前帐号被封禁！", "该功能维护中！"];
 
 let eggs = [
     "随机数的范围不包括这串字符，你是怎么让它显示出来的？",
@@ -89,7 +89,7 @@ let before =
     "<p class=\"display-1 text-danger py-3\" id=\"error-typ\"> 404 </p>" +
     "<p class=\"text-muted\" id=\"error-prompt\" style=\"font-size: 25px\">页面建设中...</p>";
 let home =
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"//ses-1987.gitee.io/sesticket/index.html\" id=\"g-but\">" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/sesticket/index.html\" id=\"g-but\">" +
     "首页" +
     "</a>";
 let back =
@@ -98,14 +98,14 @@ let back =
     "</a>";
 let after =
     "" +
-    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"//ses-1987.gitee.io/sesticket/help.html#NotFound\">" +
+    "<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/sesticket/help.html#NotFound\">" +
     "帮助" +
     "</a>";
 
 // error functions
 
 function jumpError(a) {
-    window.location.replace("http://ses-1987.gitee.io/sesticket/error.html#" + a);
+    window.location.replace("/sesticket/error.html#" + a);
 }
 
 // Alert Functions
