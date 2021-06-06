@@ -41,11 +41,11 @@ let codModelBack =
     "}\n" +
     "setInterval(function(){showTimeINDEX()}, 1);\n";
 
-let len = 1;
-let eventName = ["暑假"];
-let eventTime = [1625068800];
-let eventDescription = ["放松！玩游戏！看大电影！（划掉）看书！做作业！上课外班！"];
-let eventUpto = [1];
+let len = 2;
+let eventName = ["暑假", "高考"];
+let eventTime = [1625068800, 1717171200];
+let eventDescription = ["放松！玩游戏！看大电影！（划掉）看书！做作业！上课外班！", "冲刺高考，从今天开始！"];
+let eventUpto = [1, 1];
 let res = "";
 let cod = "";
 
