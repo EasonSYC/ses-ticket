@@ -3,13 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="https://pv.sohu.com/cityjson"></script>
+	<script type='text/javascript' src='/sesticket/script/global.js'></script>
+	<title>餐票 - 404</title>
+	<link href="/sesticket/favicon.png" rel="shortcut icon">
 	<meta content="text/html;charset=UTF-8" http-equiv="Content-type">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
 	<meta content="" name="keywords">
 	<meta content="" name="description">
+	<link href="/sesticket/layout/common.min.css" rel="stylesheet">
+	<link href="/sesticket/layout/all.min.css" rel="stylesheet">
 </head>
 <body>
-<script>window.location.replace("/sesticket/error.html#404")</script>
+<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<button class="close float-right" id="gAlertButton" type="button">
+				<span aria-hidden="true">×</span>
+			</button>
+			<div class="text-center font-weight-bold" id="gAlertMsg"></div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+<div class="container">
+	<div class="text-center py-5" id="but">
+	</div>
+</div>
+<script type='text/javascript' src='/sesticket/script/404.js'></script>
+<script>
+	document.getElementById("gAlertButton").onclick = gAlertClose;
+	document.getElementById("gAlertModal").onclick = gAlertClose;
+</script>
 </body>
+
 </html>
