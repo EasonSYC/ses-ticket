@@ -163,8 +163,8 @@ let mulmaxArray = [
     5];
 let allArray = [
     "undefined",
-    "自助餐盖浇饭面档套餐A套餐B套餐C",//去除
-    "盖浇饭面档套餐A套餐B套餐C",//自助餐去除
+    "自助餐盖浇饭面档套餐A套餐B套餐C", // 去除
+    "盖浇饭面档套餐A套餐B套餐C", // 自助餐去除
     "盖浇饭面档套餐A套餐B套餐C",
     "套餐A套餐B套餐C"];
 let usrallArray = [
