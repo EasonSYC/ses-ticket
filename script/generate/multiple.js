@@ -92,11 +92,21 @@ gen.onclick = function () {
     }
     res = noA(res);
 
+    let chargeStat = verifyCharge(getUserInfo("name", getCookie("acc"), "id"));
+    if (chargeStat == 1) gAlert("充值已到期！");
+    if (chargeStat == 2) gAlert("充值已过期！");
+    if (chargeStat == 3) gAlert("充值时间未到！");
+    if (chargeStat == 4) gAlert("使用前请先充值！")
+    setTimeout(function(){window.location.replace("./charge.html")}, 800)
+
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");
     }
     else if (checkDt(syear, smon, sday) === false || checkDt(eyear, emon, eday) === false) {
         gAlert("请输入正确日期！");
+    }
+    else if (chargeStat) {
+        gAlert("充值状态错误！");
     } else {
         window.location.replace("../result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);
     }

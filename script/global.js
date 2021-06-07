@@ -657,6 +657,38 @@ let typArray = [
     2,
     2];
 
+// Charge Strings & Functions
+
+let chargeID = [4, 5];
+let chargeStartDate = ["2021/06/07", "2021/06/07"];
+let chargeEndDate = ["9999/12/31", "9999/12/31"];
+
+let chargeModel =
+    "<div>" +
+    "<ul class=\"px-3 charge-list\">" +
+    "<li class=\"py-2\" style=\"border-bottom: solid 1px #ccc\">" +
+    "<div class=\"row no-gutters\">" +
+    "<div class=\"col-3\">ID</div>" +
+    "<div class=\"col-3\">START</div>" +
+    "<div class=\"col-3\">END</div>" +
+    "<div class=\"col-3\">STAT</div>" +
+    "</li>" +
+    "</ul>" +
+    "</div>";
+
+function verifyCharge(userID) {
+    for (let i = 0; i < chargeID.length(); ++i) {
+        if (chargeID[i] == userID) {
+            let csdate = new Date(chargeStartDate[i]), cedate = new Date(chargeEndDate[i]), date = new Date();
+            if (date >= csdate && date <= cedate) return 0; // 正常
+            if (date >= csdate && date >= cedate) return 1; // 充值已过期
+            if (date <= csdate && date <= cedate) return 2; // 充值时间未到
+            if (date <= csdate && date >= cedate) return 3; // 充值数据出错
+        }
+    }
+    return 4;
+}
+
 // Food Arrays
 
 let foodNumb = 9;
