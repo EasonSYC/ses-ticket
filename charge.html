@@ -1,0 +1,283 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://pv.sohu.com/cityjson"></script>
+    <script type="text/javascript" src="../script/global.js"></script>
+    <title>餐票生成 - 单张</title>
+    <link href="../favicon.png" rel="shortcut icon">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link href="../layout/common.min.css" rel="stylesheet">
+    <link href="../layout/all.min.css" rel="stylesheet">
+    <link href="../layout/h5.css" rel="stylesheet">
+    <style>
+        .supply-date-list {
+            width: 100%;
+        }
+
+        .supply-date-list>li {
+            padding-bottom: .5em;
+            border-bottom: solid 1px #ccc
+        }
+
+        .supply-date-list .date-icon {
+            width: 100%;
+            height: 5em;
+            padding-top: .8em;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 700
+        }
+
+        .supply-list {
+            border-radius: 5px;
+            background-color: #fffcee
+        }
+
+        .supply-list li {
+            padding: 10px;
+            border-bottom: solid 1px #eee
+        }
+
+        .supply-list .title {
+            font-size: 16px;
+            font-weight: 700
+        }
+
+        .supply-list .btn {
+            float: right;
+            width: 80px;
+            border-radius: 3px
+        }
+
+        .media img {
+            width: 4em !important
+        }
+    </style>
+
+    <style>
+        .header-wrapper {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1000
+        }
+
+        .header {
+            height: 3.8em;
+            border-bottom: solid 1px #ccc;
+            background-color: #fff;
+            color: #666
+        }
+    </style>
+
+    <style>
+        .body-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0;
+            z-index: 500
+        }
+
+        .content-bg {
+            background-color: #fff;
+            padding-bottom: 10em;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden
+        }
+
+        .body-container {
+            padding-top: 3.8em
+        }
+    </style>
+
+    <style>
+        .footer-wrapper {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: auto;
+            z-index: 1000
+        }
+
+        .footer {
+            height: 56px;
+            background: #fff;
+            border-top: solid 1px #ccc;
+            padding-top: 6px;
+            font-size: .8em
+        }
+
+        .footer a {
+            position: relative
+        }
+
+        .footer-badge {
+            position: absolute;
+            top: 0;
+            right: -1.5em;
+            display: block;
+            min-width: 1.6em;
+            height: 1.6em;
+            border-radius: .8em;
+            padding: 0 .5em;
+            background-color: #d00;
+            text-align: center;
+            color: #fff;
+            font-weight: 700
+        }
+
+        .footer a.focus {
+            color: #40cc9d
+        }
+
+        .footer .footer-icon {
+            margin: 2px;
+            font-size: 24px
+        }
+    </style>
+    <style>
+        .global-alert {
+            z-index: 2000
+        }
+
+        #gAlertModal .modal-content {
+            padding: 8px
+        }
+
+        #gAlertModal #gAlertMsg {
+            padding: 20px 8px
+        }
+
+        .charge-title {
+            text-align: center;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: 700
+        }
+
+        .charge-list {
+            text-align: center;
+            width: 100%;
+            font-size: 1.05rem;
+            font-weight: 400
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <button class="close float-right" id="gAlertButton" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <div class="text-center font-weight-bold" id="gAlertMsg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+    <script>
+        if (!exists()) {
+            noLogin("./generate/single.html");
+        }
+    </script>
+    <div id="gApp">
+        <div class="header-wrapper">
+            <div class="container px-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="viewport">
+                            <div
+                                class="header shadow-sm px-3 d-flex d-flex justify-content-between align-items-center text-center">
+                                <h5>充值</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <div class="container px-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="viewport">
+                            <div class="content-bg body-container" id="charge-list">
+                                <div>
+                                    <ul class="px-3 charge-title">
+                                        <li class="py-2" style="border-bottom: solid 1px #ccc">
+                                            <div class="row no-gutters">
+                                                <div class="col-3">充值ID</div>
+                                                <div class="col-3">开始日期</div>
+                                                <div class="col-3">结束日期</div>
+                                                <div class="col-3">充值状态</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper no-print">
+            <div class="container px-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="viewport">
+                            <div class="bg-light border-top">
+                                <div class="p-2 border-top">
+                                    <span class="btn btn-block btn-green" id="charge">充值</span>
+                                </div>
+                            </div>
+                            <div class="footer shadow-sm d-flex justify-content-around text-center">
+                                <a href="../index.html">
+                                    <i class="fa fa-cubes footer-icon"></i>
+                                    <br>
+                                    服务
+                                </a>
+                                <a class="focus" href="./single.html">
+                                    <i class="fa fa-utensils footer-icon"></i>
+                                    <br>
+                                    单张
+                                </a>
+                                <a href="./multiple.html">
+                                    <i class="fa fa-calendar-alt footer-icon"></i>
+                                    <br>
+                                    批量
+                                </a>
+                                <a href="../my.html">
+                                    <i class="fa fa-user footer-icon"></i>
+                                    <br>
+                                    我的
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../script/generate/charge.js"></script>
+    <script>
+        toDay();
+        document.getElementById("gAlertButton").onclick = gAlertClose;
+        document.getElementById("gAlertModal").onclick = gAlertClose;
+    </script>
+
+</body>
+
+</html>
