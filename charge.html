@@ -244,22 +244,22 @@
                                 </div>
                             </div>
                             <div class="footer shadow-sm d-flex justify-content-around text-center">
-                                <a href="./index.html">
+                                <a data-nav="gen" href="./index.html">
                                     <i class="fa fa-cubes footer-icon"></i>
                                     <br>
                                     服务
                                 </a>
-                                <a href="./generate/single.html">
-                                    <i class="fa fa-utensils footer-icon"></i>
+                                <a data-nav="pol" href="./policy.html">
+                                    <i class="fa fa-comments footer-icon"></i>
                                     <br>
-                                    单张
+                                    协议
                                 </a>
-                                <a href="./generate/multiple.html">
-                                    <i class="fa fa-calendar-alt footer-icon"></i>
+                                <a data-nav="help" href="./help.html">
+                                    <i class="fa fa-question-circle footer-icon"></i>
                                     <br>
-                                    批量
+                                    帮助
                                 </a>
-                                <a class="focus" href="./my.html">
+                                <a class="focus" data-nav="mine" href="./my.html">
                                     <i class="fa fa-user footer-icon"></i>
                                     <br>
                                     我的
@@ -271,9 +271,8 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="./script/generate/charge.js"></script>
+    <script type="text/javascript" src="./script/charge.js"></script>
     <script>
-        toDay();
         document.getElementById("gAlertButton").onclick = gAlertClose;
         document.getElementById("gAlertModal").onclick = gAlertClose;
     </script>
