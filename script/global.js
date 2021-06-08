@@ -659,14 +659,14 @@ let typArray = [
 
 // Charge Strings & Functions
 
-let chargeID = [4, 5];
-let chargeStartDate = ["2021/06/07", "2021/06/07"];
-let chargeEndDate = ["9999/12/31", "9999/12/31"];
+let chargeUserID = [4, 5, 10, 16, 6, 18]
+let chargeStartDate = ["2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07"];
+let chargeEndDate = ["9999/12/31", "9999/12/31", "2021/07/07", "2021/07/07", "2021/07/07", "2021/07/07"];
 
 let chargeModel =
     "<div>" +
     "<ul class=\"px-3 charge-list\">" +
-    "<li class=\"py-2\" style=\"border-bottom: solid 1px #ccc\">" +
+    "<li class=\"py-2\" style=\"#ccc\">" +
     "<div class=\"row no-gutters\">" +
     "<div class=\"col-3\">ID</div>" +
     "<div class=\"col-3\">START</div>" +
@@ -676,9 +676,11 @@ let chargeModel =
     "</ul>" +
     "</div>";
 
+let chargeStatList = ["正常", "到期", "未开始", "数据异常"]
+
 function verifyCharge(userID) {
-    for (let i = 0; i < chargeID.length(); ++i) {
-        if (chargeID[i] == userID) {
+    for (let i = 0; i < chargeUserID.length; ++i) {
+        if (chargeUserID[i] === userID) {
             let csdate = new Date(chargeStartDate[i]), cedate = new Date(chargeEndDate[i]), date = new Date();
             if (date >= csdate && date <= cedate) return 0; // 正常
             if (date >= csdate && date >= cedate) return 1; // 充值已过期
