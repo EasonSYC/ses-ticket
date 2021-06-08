@@ -1,5 +1,5 @@
 let cgm = chargeModel;
-for (let i = 0; i < chargeID.length(); i++) {
+for (let i = 0; i < chargeID.length; i++) {
     if (chargeID[i] === getUserInfo("acc", getCookie("acc"), "id")) {
         let chargeStat, csdate = new Date(chargeStartDate[i]), cedate = new Date(chargeEndDate[i]), date = new Date();
         if (date >= csdate && date <= cedate) chargeStat = "正常";
