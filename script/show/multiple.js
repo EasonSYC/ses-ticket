@@ -54,6 +54,13 @@ for (let i = 0; i < min(api.length, 250); ++i) {
     sdate.setDate(sdate.getDate() + 1);
 }
 
-if (flg) {
+let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
+if (chargeStat === 1) gAlert("充值已到期！");
+if (chargeStat === 2) gAlert("充值已过期！");
+if (chargeStat === 3) gAlert("充值时间未到！");
+if (chargeStat === 4) gAlert("使用前请先充值！")
+if (chargeStat !== 0) setTimeout(function () { window.location.replace("../charge.html") }, 800)
+
+if (flg && !chargeStat) {
     gAlert("权限不足以生成某些餐票！");
 }

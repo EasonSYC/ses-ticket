@@ -92,12 +92,12 @@ gen.onclick = function () {
     }
     res = noA(res);
 
-    let chargeStat = verifyCharge(getUserInfo("name", getCookie("acc"), "id"));
-    if (chargeStat == 1) gAlert("充值已到期！");
-    if (chargeStat == 2) gAlert("充值已过期！");
-    if (chargeStat == 3) gAlert("充值时间未到！");
-    if (chargeStat == 4) gAlert("使用前请先充值！")
-    setTimeout(function () { window.location.replace("./charge.html") }, 800)
+    let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
+    if (chargeStat === 1) gAlert("充值已到期！");
+    if (chargeStat === 2) gAlert("充值时间未到！");
+    if (chargeStat === 3) gAlert("充值状态错误！");
+    if (chargeStat === 4) gAlert("使用前请先充值！");
+    if (chargeStat !== 0) setTimeout(function () { window.location.replace("../charge.html") }, 800)
 
     if (agr.checked === false) {
         gAlert("请先勾选复选框！");

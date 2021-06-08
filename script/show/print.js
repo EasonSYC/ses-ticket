@@ -20,11 +20,19 @@ if (!getUserInfo("name", name, "allow").includes(food)) {
         window.history.back();
     }, 3000);
 } else {
-    let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
-    var num = numArray[typ];
-    var loc = "食堂" + locArray[typ] + "楼";
-    var wkd = mo + "/" + da + " 周" + weekArray[dynum];
-    ok = 1;
+    let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
+    if (chargeStat === 1) gAlert("充值已到期！");
+    if (chargeStat === 2) gAlert("充值已过期！");
+    if (chargeStat === 3) gAlert("充值时间未到！");
+    if (chargeStat === 4) gAlert("使用前请先充值！")
+    if (chargeStat !== 0) setTimeout(function () { window.location.replace("../charge.html") }, 800)
+    if (chargeStat === 0) {
+        let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
+        var num = numArray[typ];
+        var loc = "食堂" + locArray[typ] + "楼";
+        var wkd = mo + "/" + da + " 周" + weekArray[dynum];
+        ok = 1;
+    }
 }
 
 function changeType() {
