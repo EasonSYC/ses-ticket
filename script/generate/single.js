@@ -55,23 +55,19 @@ gen.onclick = function () {
     let day = parseInt(document.getElementById("day").value);
 
     let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
-    if (getUserInfo("name", getName(), "type") !== 1) {
+
+    if (getUserInfo("name", getName(), "level") !== 1 && chargeStat !== 0) {
         if (chargeStat === 1) gAlert("充值已到期！");
         if (chargeStat === 2) gAlert("充值已过期！");
         if (chargeStat === 3) gAlert("充值时间未到！");
         if (chargeStat === 4) gAlert("使用前请先充值！")
-        if (chargeStat !== 0) setTimeout(function () { window.location.replace("../charge.html") }, 800)
-    }
-
-    if (agr.checked === false) {
+        setTimeout(function () { window.location.replace("../charge.html") }, 800)
+    } else if (agr.checked === false) {
         gAlert("请先勾选复选框！");
     } else if (checkDt(yr, mon, day) === false) {
         gAlert("请输入正确日期！");
     } else if (ntyp === 0 || ntyp === undefined) {
         gAlert("请在生成前选餐！");
-    }
-    else if (chargeStat && getUserInfo("name", getName(), "type") !== 1) {
-        gAlert("充值状态错误！");
     } else {
         window.location.replace("../result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);
     }
