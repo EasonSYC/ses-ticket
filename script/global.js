@@ -13,7 +13,7 @@ let butinfoArray = ["undefined", "选餐", "已选餐", "暂无权限"];
 let butclassArray = ["undefined", "btn-outline-secondary", "btn-orange", "btn-gray disabled"];
 
 
-// Basic Arrays
+// Basic Array
 
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
 let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -659,9 +659,10 @@ let typArray = [
 
 // Charge Strings & Functions
 
-let chargeUserID = [4, 5, 10, 16, 6, 18]
-let chargeStartDate = ["2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07"];
-let chargeEndDate = ["9999/12/31", "9999/12/31", "2021/07/07", "2021/07/07", "2021/07/07", "2021/07/07"];
+let chargeUserID = [10, 16, 6, 18]
+let chargeStartDate = ["2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07"];
+let chargeEndDate = ["2021/07/07", "2021/07/07", "2021/07/07", "2021/07/07"];
+let chargeStatus = ["0", "0", "0", "0"]; // 0: 自动, 1: 已取消, 2: 已退款, 3: 赠送
 
 let chargeModel =
     "<div>" +
@@ -676,7 +677,7 @@ let chargeModel =
     "</ul>" +
     "</div>";
 
-let chargeStatList = ["正常", "到期", "未开始", "数据异常"]
+let chargeStatList = ["使用中", "已到期", "已付款", "数据异常"];
 
 function verifyCharge(userID) {
     for (let i = 0; i < chargeUserID.length; ++i) {
