@@ -92,6 +92,7 @@ gen.onclick = function () {
     }
     res = noA(res);
 
+    let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
     if (getUserInfo("name", getName(), "level") !== 1 && chargeStat !== 0) {
         if (chargeStat === 1) gAlert("充值已过期！");
         if (chargeStat === 2) gAlert("充值时间未到！");
