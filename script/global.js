@@ -593,8 +593,8 @@ let nameArray = [
 
     "a28079aa9ed5861504d0fde60544f715df764110",
     "a7a12ba71f7ab5331cfffe1a0c1e12baa2661069",
-    "1774e2c4e2b80256dd9795e15e3582d3fd2e4b4b",
 
+    "1774e2c4e2b80256dd9795e15e3582d3fd2e4b4b",
     "fccfac5ea6317fb43541816f476a0b614a1efa5f",
     "fab60904d36306295b5d27dc1745a645482b2201",
     "032b83ec07d20c839f43b18b85ee2a71906cc524",
@@ -617,8 +617,8 @@ let pwdArray = [
 
     "ff056ca3395f42bbe070030796c23d8e1c1bdd13",
     "26fbe9076e5ff62ccdf3e638822455a0c27df2ce",
-    "83df01d6c37cd73b9e3e21fc41843dbe32e41ffc",
 
+    "83df01d6c37cd73b9e3e21fc41843dbe32e41ffc",
     "49760f017daccda000140283ecdcdcdbdfa55579",
     "7e226f1ff2de32b0e5b998c7b462110c1a21ea4b",
     "89f3470b295b2e8cec7c3d44c6424d541c3a3151",
@@ -641,8 +641,8 @@ let typArray = [
 
     1,
     1,
-    1,
 
+    2,
     2,
     2,
     2,
