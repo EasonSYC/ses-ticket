@@ -1,38 +1,32 @@
 let arr = basicURLInfo().parmArr;
-
 let date = decodeDate(arr[0]);
 let yr = date.yr;
 let mo = date.mo;
 let da = date.da;
-
 let typ = parseInt(arr[1]);
-
 let name = getName();
 let food = foodArray[typ];
-
-let ok = 0;
+let num = numArray[typ] + " ";
+let loc = "食堂" + locArray[typ] + "楼";
+let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
+let wkd = mo + "/" + da + " 周" + weekArray[dynum];
+let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
 
 let tkp = 0;
 
-if (!getUserInfo("name", name, "allow").includes(food)) {
+if (chargeStat === 1) {
+    gAlert("未找到有效充值！");
+    setTimeout(function () { window.location.replace("../charge.html") }, 800)
+} else if (!getUserInfo("name", name, "allow").includes(food)) {
     gAlert("权限不足以生成该餐票！");
-    setTimeout(function () {
-        window.history.back();
-    }, 3000);
+    setTimeout(function () { window.history.back() }, 800);
 } else {
-    let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
-    if (chargeStat === 1) gAlert("充值已到期！");
-    if (chargeStat === 2) gAlert("充值已过期！");
-    if (chargeStat === 3) gAlert("充值时间未到！");
-    if (chargeStat === 4) gAlert("使用前请先充值！")
-    if (chargeStat !== 0) setTimeout(function () { window.location.replace("../charge.html") }, 800)
-    if (chargeStat === 0) {
-        let dynum = new Date(yr + '/' + mo + '/' + da).getDay();
-        var num = numArray[typ];
-        var loc = "食堂" + locArray[typ] + "楼";
-        var wkd = mo + "/" + da + " 周" + weekArray[dynum];
-        ok = 1;
-    }
+    document.getElementById("food").innerHTML = food;
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("num").innerHTML = num + "<span class=\"order-area-tail\">区</span>";
+    document.getElementById("loc").innerHTML = loc;
+    document.getElementById("wkd").innerHTML = wkd;
+    changeType();
 }
 
 function changeType() {

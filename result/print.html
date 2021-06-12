@@ -92,11 +92,10 @@
     }
 </script>
 <script src="../script/qrcode.min.js"></script>
-<script type='text/javascript' src='../script/show/print.js'></script>
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">
-            <a onclick="history.back(-1);">
+            <a onclick="window.history.back()">
                 <i class="fa fa-times fa-2x"></i>
             </a>
         </div>
@@ -104,38 +103,20 @@
             <div class="order-panel">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <div class="order-name">
-                            <script>
-                                if (ok) document.write(food);
-                            </script>
-                        </div>
+                        <div class="order-name" id="food"> </div>
                         <img class="img-qrcode border" id="qrc" onclick="changeType()">
                         <div class="user-name text-center">
-                                <span>
-                                    <script>
-                                        if (ok) document.write(name);
-                                    </script>
-                                </span>
+                                <span id="name"></span>
                         </div>
                     </div>
                     <div class="ticket-body">
-                        <div class="order-area">
-                            <script>
-                                if (ok) document.write(num);
-                            </script>
-                            <span class="order-area-tail">区</span>
+                        <div class="order-area" id="num">
                         </div>
                         <div class="order-location">
-                            <span id="loc">
-                                <script>
-                                    if (ok) document.getElementById("loc").innerHTML = ("<div>" + loc + "</div>");
-                                </script>
+                            <span>
+                                <div id="loc"></div>
                                 <span>
-                                    <span>
-                                        <script>
-                                            if (ok) document.write(wkd);
-                                        </script>
-                                    </span>
+                                    <span id="wkd"></span>
                                 </span>
                             </span>
                         </div>
@@ -145,14 +126,12 @@
         </div>
     </div>
 </div>
+<script type='text/javascript' src='../script/show/print.js'></script>
 <script type="text/javascript">
     var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
 </script>
 <script>
-    if (ok) {
-        changeType();
-    }
     document.getElementById("gAlertButton").onclick = gAlertClose;
     document.getElementById("gAlertModal").onclick = gAlertClose;
 </script>

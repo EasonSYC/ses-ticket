@@ -94,11 +94,8 @@ gen.onclick = function () {
 
     let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
 
-    if (getUserInfo("name", getName(), "level") !== 1 && chargeStat !== 0) {
-        if (chargeStat === 1) gAlert("充值已过期！");
-        if (chargeStat === 2) gAlert("充值时间未到！");
-        if (chargeStat === 3) gAlert("充值数据出错！");
-        if (chargeStat === 4) gAlert("使用前请先充值！");
+    if (chargeStat === 1) {
+        gAlert("未找到有效充值！");
         setTimeout(function () { window.location.replace("../charge.html") }, 800)
     } else if (agr.checked === false) {
         gAlert("请先勾选复选框！");
