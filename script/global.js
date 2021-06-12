@@ -662,7 +662,7 @@ let typArray = [
 let chargeUserID = [10, 16, 6, 18]
 let chargeStartDate = ["2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07"];
 let chargeEndDate = ["2021/07/07", "2021/07/07", "2021/07/07", "2021/07/07"];
-let chargeStatus = ["0", "0", "0", "0"]; // 0: 自动, 1: 已取消, 2: 已退款, 3: 赠送
+let chargeStatus = [2, 2, 2, 2]; // 0: 已取消, 1: 已退款, 2: 正常充值, 3: 赠送
 
 let chargeModel =
     "<div>" +
@@ -677,19 +677,34 @@ let chargeModel =
     "</ul>" +
     "</div>";
 
-let chargeStatList = ["使用中", "已到期", "已付款", "数据异常"];
+let chargeStatList = ["充值已取消", "充值已退款", "充值数据出错", "充值已过期", "充值时间未到", "充值使用中", "赠送数据出错", "赠送已过期", "赠送已到账", "赠送使用中"]
 
 function verifyCharge(userID) {
+    if(getUserInfo("name", getName(), "level") === 1) return 0; // 开发者跳过判断
     for (let i = 0; i < chargeUserID.length; ++i) {
-        if (chargeUserID[i] === userID) {
-            let csdate = new Date(chargeStartDate[i]), cedate = new Date(chargeEndDate[i]), date = new Date();
-            if (date >= csdate && date <= cedate) return 0; // 正常
-            if (date >= csdate && date >= cedate) return 1; // 充值已过期
-            if (date <= csdate && date <= cedate) return 2; // 充值时间未到
-            if (date <= csdate && date >= cedate) return 3; // 充值数据出错
+        if (chargeUserID[i] === userID && (queryCharge(i) === 5 || queryCharge(i) === 8)) {
+            return 0; // 有效
         }
     }
-    return 4;
+    return 1; // 无效
+}
+
+function queryCharge(i) {
+    if (chargeStatus[i] === 0) return 0; // 充值已取消
+    if (chargeStatus[i] === 1) return 1; // 充值已退款
+    let csdate = new Date(chargeStartDate[i]), cedate = new Date(chargeEndDate[i]), date = new Date();
+    if (chargeStatus[i] === 2) {
+        if (cedate < csdate) return 2;// 充值数据出错
+        if (date > cedate) return 3; // 充值已过期
+        if (date < csdate) return 4; // 充值时间未到
+        return 5; // 充值使用中
+    }
+    if (chargeStatus[i] === 3) {
+        if (cedate < csdate) return 5;// 赠送数据出错
+        if (date > cedate) return 6; // 赠送已过期
+        if (date < csdate) return 7; // 赠送已到账
+        return 8; // 赠送使用中
+    }
 }
 
 // Food Arrays
