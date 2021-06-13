@@ -659,10 +659,10 @@ let typArray = [
 
 // Charge Strings & Functions
 
-let chargeUserID = [10, 16, 6, 18]
-let chargeStartDate = ["2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07"];
-let chargeEndDate = ["2021/07/07", "2021/07/07", "2021/07/07", "2021/07/07"];
-let chargeStatus = [2, 2, 2, 2]; // 0: 已取消, 1: 已退款, 2: 正常充值, 3: 赠送
+let chargeUserID = [10, 16, 6, 18, 17]
+let chargeStartDate = ["2021/06/07", "2021/06/07", "2021/06/07", "2021/06/07", "2021/06/11"];
+let chargeEndDate = ["2021/07/07", "2021/07/07", "2021/07/07", "2021/07/07", "2021/07/11"];
+let chargeStatus = [2, 2, 2, 2, 2]; // 0: 已取消, 1: 已退款, 2: 正常充值, 3: 赠送
 
 let chargeModel =
     "<div>" +
