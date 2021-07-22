@@ -95,8 +95,12 @@
     }</style>
 </head>
 <body>
-<script src="../script/qrcode.min.js"></script>
-<script type='text/javascript' src='../script/show/scan.js'></script>
+<script>
+    document.write("<script type='text/javascript' src='../script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
+<script>
+    document.write("<script type='text/javascript' src='../script/show/scan.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
 <div id="gApp">
     <div class="body-wrapper">
         <div class="container px-0">

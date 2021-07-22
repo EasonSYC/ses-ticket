@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script type='text/javascript' src='../script/global.js'></script>
+    <script>
+        document.write("<script type='text/javascript' src='../script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
     <title>我的预订</title>
     <link href="../favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
     <link href="../layout/common.min.css" rel="stylesheet">
@@ -91,7 +93,9 @@
         noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + basicURLInfo().urlParmStr);
     }
 </script>
-<script src="../script/qrcode.min.js"></script>
+<script>
+    document.write("<script type='text/javascript' src='../script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">
@@ -126,7 +130,9 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='../script/show/print.js'></script>
+<script>
+    document.write("<script type='text/javascript' src='../script/show/print.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
 <script type="text/javascript">
     var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
     document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
