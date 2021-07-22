@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script type='text/javascript' src='../script/global.js'></script>
-    <script type='text/javascript' src='../script/qprint/qprintglobal.js'></script>
+    <script>
+        document.write("<script type='text/javascript' src='../script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
+    <script>
+        document.write("<script type='text/javascript' src='../script/qprint/qprintglobal.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
     <title>我的预订</title>
     <link href="../favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
     <link href="../layout/common.min.css" rel="stylesheet">
@@ -92,8 +96,12 @@
         qprintNoLogin();
     }
 </script>
-<script src="../script/qrcode.min.js"></script>
-<script type='text/javascript' src='../script/qprint/qresult.js'></script>
+<script>
+    document.write("<script type='text/javascript' src='../script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
+<script>
+    document.write("<script type='text/javascript' src='../script/qprint/qresult.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
 <div id="gApp">
     <div>
         <div class="text-right p-3 no-print">

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://pv.sohu.com/cityjson"></script>
-    <script type='text/javascript' src='../script/global.js'></script>
-    <script type='text/javascript' src='../script/qprint/qprintglobal.js'></script>
+    <script>
+        document.write("<script type='text/javascript' src='../script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
+    <script>
+    document.write("<script type='text/javascript' src='../script/qprint/qprintglobal.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
     <title>快速打印 - 选择</title>
     <link href="../favicon.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
@@ -230,7 +234,9 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='../script/qprint/qchoose.js'></script>
+<script>
+    document.write("<script type='text/javascript' src='../script/qprint/qchoose.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
 <script>
     showChoice(0);
     document.getElementById("gAlertButton").onclick = gAlertClose;
