@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="https://pv.sohu.com/cityjson"></script>
-	<script type='text/javascript' src='./script/global.js'></script>
+	<script>
+        document.write("<script type='text/javascript' src='./script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
 	<title>餐票 - 错误</title>
 	<link href="./favicon.png" rel="shortcut icon">
 	<meta content="text/html;charset=UTF-8" http-equiv="Content-type">
@@ -30,7 +32,9 @@
 	<div class="text-center py-5" id="but">
 	</div>
 </div>
-<script type='text/javascript' src='./script/error.js'></script>
+<script>
+	document.write("<script type='text/javascript' src='./script/error.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+</script>
 <script>
 	document.getElementById("gAlertButton").onclick = gAlertClose;
 	document.getElementById("gAlertModal").onclick = gAlertClose;
