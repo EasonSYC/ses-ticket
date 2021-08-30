@@ -680,6 +680,7 @@ let chargeModel =
 let chargeStatList = ["充值已取消", "充值已退款", "充值数据出错", "充值已过期", "充值时间未到", "充值使用中", "赠送数据出错", "赠送已过期", "赠送已到账", "赠送使用中"]
 
 function verifyCharge(userID) {
+    return 0; // 跳过判定
     if(getUserInfo("name", getName(), "level") === 1) return 0; // 开发者跳过判断
     for (let i = 0; i < chargeUserID.length; ++i) {
         if (chargeUserID[i] === userID && (queryCharge(i) === 5 || queryCharge(i) === 8)) {
