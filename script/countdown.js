@@ -42,9 +42,9 @@ let codModelBack =
     "setInterval(function(){showTimeINDEX()}, 1);\n";
 
 let len = 2;
-let eventName = ["暑假", "高考"];
-let eventTime = [1625068800, 1717171200];
-let eventDescription = ["放松！玩游戏！看大电影！（划掉）看书！做作业！上课外班！", "冲刺高考，从今天开始！"];
+let eventName = ["寒假", "高考"];
+let eventTime = [1642867200, 1717689600];
+let eventDescription = ["放松！玩游戏！看大电影！（划掉）看书！做作业！上课外班！（我不反对国家双减等各项政策，这是另一个人写在这的）", "冲刺高考，从今天开始！"];
 let eventUpto = [1, 1];
 let res = "";
 let cod = "";
