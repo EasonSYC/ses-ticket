@@ -1,9 +1,9 @@
-let bannedIpLength = 2;
+/*let bannedIpLength = 2;
 let bannedIp = ["61.172.251.", "203.156.232.66"];
 
 for (let i = 0; i < bannedIpLength; ++i) {
     if (returnCitySN["cip"].includes(bannedIp[i])) window.location.replace("http://www.ses.sh.edu.cn");
-}
+}*/
 
 // Food Arrays
 
