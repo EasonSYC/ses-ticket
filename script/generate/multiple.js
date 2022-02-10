@@ -18,10 +18,10 @@ function toDay() {
     emo.value = arr.emo;
     edt.value = arr.eda;
 
-    updateLook(0);
+    updateLook();
 }
 
-function updateLook(a) {
+function updateLook() {
     let res = "";
 
     let syear = parseInt(document.getElementById("syear").value);
@@ -45,14 +45,15 @@ function updateLook(a) {
         let dda = d.getDay();
         if (dda === undefined) continue;
 
-        let choose = choice[i];
+        let index = encodeDate(d.getFullYear(), d.getMonth() + 1, d.getDate());
+        let choose = choice[index];
         if (choose === undefined) {
-            choose = choice[i] = 0;
+            choose = choice[index] = 0;
         }
 
         res += choicePanelModel;
 
-        res = res.replace(/INDEX/g, i);
+        res = res.replace(/INDEX/g, index);
         res = res.replace(/DATE/g, dmo + "/" + ddy + "<br>" + "周" + weekArray[dda]);
 
         let chs = "";
@@ -87,8 +88,9 @@ gen.onclick = function () {
     let len = (edate - sdate) / 86400000 + 1;
 
     let res = "";
-    for (let i = 0; i < min(len, mulmaxArray[getUserInfo("name", getName(), "level")]); ++i) {
-        res += alpha[choice[i]];
+    for (let d = sdate, i = 0; i < min(len, min(len, mulmaxArray[getUserInfo("name", getName(), "level")])); ++i, d.setDate(d.getDate() + 1)) {
+        let index = encodeDate(d.getFullYear(), d.getMonth() + 1, d.getDate())
+        res += alpha[choice[index]];
     }
     res = noA(res);
 
