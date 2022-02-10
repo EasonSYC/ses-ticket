@@ -164,8 +164,14 @@
     if (getTo().yr !== yr || getTo().mo !== mo || getTo().da !== da) {
         document.getElementById("msg").innerHTML = info[2];
     } else {
-        if (tkp !== 0)
-            document.getElementById("msg").innerHTML = info[1];
+        if (tkp !== 0) {
+            if (checkScan()) {
+                document.getElementById("msg").innerHTML = info[3];
+            } else {
+                document.getElementById("msg").innerHTML = info[1];
+                writeScan();
+            }
+        }
     }
 </script>
 </body>
