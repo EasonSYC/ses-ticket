@@ -33,11 +33,22 @@ function getTo() {
     };
 }
 
+function writeScan() {
+    localStorage.setItem(arr[0] + arr[1] + arr[2], "1");
+}
+
+function checkScan() {
+    if (localStorage.getItem(arr[0] + arr[1] + arr[2]) === "1") {
+        return 1;
+    }
+    return 0;
+}
+
 let foodArray = ["undefined", "自助餐", "套餐A", "套餐A", "套餐A", "套餐B", "盖浇饭", "套餐C", "面档", "套餐B"];
 let locArray = ["undefined", "一", "一", "一", "二", "二", "二", "二", "二", "二"];
 let numArray = ["undefined", "1",  "2", "3", "4", "5", "6", "7", "8", "9"];
 let weekArray = ["日", "一", "二", "三", "四", "五", "六"];
-let info = ["undefined", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>"];
+let info = ["undefined", "<span class=\"text-green\">订单扫描成功!</span>", "<span class=\"text-red\">不是今日订单!</span>", "<span class=\"text-red\">订单已被扫描!</span>"];
 
 let arr = basicURLInfo().parmArr;
 
@@ -62,3 +73,4 @@ let food = foodArray[typ];
 let loc = "食堂" + locArray[typ] + "楼";
 let wkd = mo + "/" + da + " 周" + weekArray[dynum];
 let url = decodeURI(basicURLInfo().url);
+
