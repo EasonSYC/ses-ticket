@@ -108,6 +108,29 @@ function jumpError(a) {
     window.location.replace("/sesticket/error.html#" + a);
 }
 
+// Warning Arrays
+
+let warningTitles = ["2021-02-10更新"];
+let warningInfo = [" - 更新\"餐票已被扫描\"信息\n - 更新多张餐票界面生成逻辑\n - 更新消息推送系统"];
+let warningLength = 1;
+
+// Warning Functions
+
+function showWarning(s) {
+    let newElement = document.createElement("div");
+    newElement.className = "alert alert-warning";
+    newElement.style = "margin-bottom: 0.3rem";
+    newElement.innerText = s;
+    document.getElementsByClassName("content-bg")[0].firstElementChild.insertBefore(newElement, document.getElementsByClassName("content-bg")[0].firstElementChild.firstElementChild);
+}
+
+function showWarnings() {
+    for (let i = 0; i < warningLength; ++i) {
+        let warning = warningTitles[i] + ":\n" + warningInfo[i];
+        showWarning(warning);
+    }
+}
+
 // Alert Functions
 
 function gAlert(txt) {
