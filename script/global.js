@@ -543,7 +543,7 @@ function showChoice(a) {
 
 function chooseType(a, tp) {
     choice[a] = parseInt(tp);
-    updateLook(a);
+    updateLook();
     showChoice(a);
 }
 
