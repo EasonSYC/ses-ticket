@@ -110,8 +110,8 @@ function jumpError(a) {
 
 // Warning Arrays
 
-let warningTitles = ["2021-02-10更新"];
-let warningInfo = [" - 更新\"餐票已被扫描\"信息\n - 更新多张餐票界面生成逻辑\n - 更新消息推送系统"];
+let warningTitles = ["2021-02-11更新"];
+let warningInfo = [" - 优化消息推送系统前端显示\n - 修复生成bug"];
 let warningLength = 1;
 
 // Warning Functions
