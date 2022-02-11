@@ -566,7 +566,7 @@ function showChoice(a) {
 
 function chooseType(a, tp) {
     choice[a] = parseInt(tp);
-    updateLook();
+    updateLook(a);
     showChoice(a);
 }
 
