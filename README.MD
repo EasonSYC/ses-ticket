@@ -1,4 +1,4 @@
-# SES Ticket
+# SESTicket
 
 Developed by students from SES.
 
