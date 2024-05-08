@@ -393,7 +393,7 @@ function checkDt(y, m, d) {
 // Action Functions
 
 function noLogin(source) {
-	window.location.replace("/sesticket/login.html?ref=" + source);
+	window.location.replace("/login.html?ref=" + source);
 }
 
 function index() {
