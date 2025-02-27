@@ -58,7 +58,7 @@ gen.onclick = function () {
 
     if (chargeStat === 1) {
         gAlert("未找到有效充值！");
-        setTimeout(function () { window.location.replace("../charge.html") }, 800)
+        setTimeout(function () { window.location.replace("/charge.html") }, 800)
     } else if (agr.checked === false) {
         gAlert("请先勾选复选框！");
     } else if (checkDt(yr, mon, day) === false) {
@@ -66,6 +66,6 @@ gen.onclick = function () {
     } else if (ntyp === 0 || ntyp === undefined) {
         gAlert("请在生成前选餐！");
     } else {
-        window.location.replace("../result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);
+        window.location.replace("/result/print.html?" + encodeDate(yr, mon, day) + "&" + ntyp);
     }
 }

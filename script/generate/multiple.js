@@ -98,13 +98,13 @@ gen.onclick = function () {
 
     if (chargeStat === 1) {
         gAlert("未找到有效充值！");
-        setTimeout(function () { window.location.replace("../charge.html") }, 800)
+        setTimeout(function () { window.location.replace("/charge.html") }, 800)
     } else if (agr.checked === false) {
         gAlert("请先勾选复选框！");
     }
     else if (checkDt(syear, smon, sday) === false || checkDt(eyear, emon, eday) === false) {
         gAlert("请输入正确日期！");
     } else {
-        window.location.replace("../result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);
+        window.location.replace("/result/multiple.html?" + encodeDate(syear, smon, sday) + "&" + res);
     }
 }

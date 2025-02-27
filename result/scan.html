@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="UTF8">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>我的预订</title>
     <link href="/favicon.png" rel="shortcut icon">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
@@ -10,171 +11,178 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link href="/layout/common.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
     <link href="/layout/h5.css" rel="stylesheet">
-    <style type="text/css">.verify-msg {
-        font-size: 3em;
-        font-weight: 700;
-        margin-top: 50px;
-        text-align: center
-    }</style>
-
-    <style>.body-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 0;
-        z-index: 500
-    }
-
-    .content-bg {
-        background-color: #fff;
-        padding-bottom: 10em;
-        height: 100vh;
-        overflow-y: scroll;
-        overflow-x: hidden
-    }
-
-    /*.body-container {*/
-    /*    padding-top: 3.8em*/
-    /*}*/
+    <style type="text/css">
+        .verify-msg {
+            font-size: 3em;
+            font-weight: 700;
+            margin-top: 50px;
+            text-align: center
+        }
     </style>
 
-    <style>.order-panel {
-        width: 25em;
-        padding: 1em;
-        border: solid 1px #ccc;
-        text-align: center;
-        color: #333
-    }
+    <style>
+        .body-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0;
+            z-index: 500
+        }
 
-    .order-name {
-        width: 4.8em;
-        padding: 2px 4px;
-        color: #333;
-        font-size: 2em;
-        font-weight: 700
-    }
+        .content-bg {
+            background-color: #fff;
+            padding-bottom: 10em;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden
+        }
 
-    .img-qrcode {
-        width: 9.6em;
-        height: 9.6em;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
+        /*.body-container {*/
+        /*    padding-top: 3.8em*/
+        /*}*/
+    </style>
 
-    .user-name {
-        font-size: 2.4em;
-        margin-top: .2em
-    }
+    <style>
+        .order-panel {
+            width: 25em;
+            padding: 1em;
+            border: solid 1px #ccc;
+            text-align: center;
+            color: #333
+        }
 
-    .ticket-body {
-        padding-right: 1em
-    }
+        .order-name {
+            width: 4.8em;
+            padding: 2px 4px;
+            color: #333;
+            font-size: 2em;
+            font-weight: 700
+        }
 
-    .order-area {
-        margin: -.3em 0;
-        font-size: 10em;
-        font-weight: 700
-    }
+        .img-qrcode {
+            width: 9.6em;
+            height: 9.6em;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
 
-    .order-area-tail {
-        font-size: .2em
-    }
+        .user-name {
+            font-size: 2.4em;
+            margin-top: .2em
+        }
 
-    .order-location {
-        margin-top: .75em;
-        font-size: 1.8em;
-        line-height: 2em;
-        font-weight: 700
-    }</style>
+        .ticket-body {
+            padding-right: 1em
+        }
+
+        .order-area {
+            margin: -.3em 0;
+            font-size: 10em;
+            font-weight: 700
+        }
+
+        .order-area-tail {
+            font-size: .2em
+        }
+
+        .order-location {
+            margin-top: .75em;
+            font-size: 1.8em;
+            line-height: 2em;
+            font-weight: 700
+        }
+    </style>
 </head>
-<body>
-<script>
-    document.write("<script type='text/javascript' src='/script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
-</script>
-<script>
-    document.write("<script type='text/javascript' src='/script/show/scan.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
-</script>
-<div id="gApp">
-    <div class="body-wrapper">
-        <div class="container px-0">
-            <div class="row no-gutters">
-                <div class="col-xl-6 offset-xl-3">
-                    <div class="viewport">
-                        <div class="content-bg">
-                            <div class="p-3 text-right"><a><i class="fa fa-times fa-2x"></i></a></div>
-                            <div class="order-panel">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <div class="order-name">
-                                            <script>document.write(food);</script>
-                                        </div>
-                                        <img class="img-qrcode border" id="qrc">
-                                        <script>
 
-                                        </script>
-                                        <div class="user-name text-center">
-                                                    <span>
-                                                        <script>document.write(name);</script>
-                                                    </span>
-                                        </div>
-                                    </div>
-                                    <div class="ticket-body">
-                                        <div class="order-area">
-                                            <script>document.write(num);</script>
-                                            <span class="order-area-tail">
-                                                        区
-                                                    </span>
-                                        </div>
-                                        <div class="order-location">
-                                            <span id="loc">
-                                                <script>document.getElementById("loc").innerHTML = ("<div>" + loc + "</div>");</script>
+<body>
+    <script>
+        document.write("<script type='text/javascript' src='/script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
+    <script>
+        document.write("<script type='text/javascript' src='/script/show/scan.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
+    <div id="gApp">
+        <div class="body-wrapper">
+            <div class="container px-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="viewport">
+                            <div class="content-bg">
+                                <div class="p-3 text-right"><a><i class="fa fa-times fa-2x"></i></a></div>
+                                <div class="order-panel">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <div class="order-name">
+                                                <script>document.write(food);</script>
+                                            </div>
+                                            <img class="img-qrcode border" id="qrc">
+                                            <script>
+
+                                            </script>
+                                            <div class="user-name text-center">
                                                 <span>
+                                                    <script>document.write(name);</script>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-body">
+                                            <div class="order-area">
+                                                <script>document.write(num);</script>
+                                                <span class="order-area-tail">
+                                                    区
+                                                </span>
+                                            </div>
+                                            <div class="order-location">
+                                                <span id="loc">
+                                                    <script>document.getElementById("loc").innerHTML = ("<div>" + loc + "</div>");</script>
                                                     <span>
-                                                        <script>document.write(wkd);</script>
+                                                        <span>
+                                                            <script>document.write(wkd);</script>
+                                                        </span>
                                                     </span>
                                                 </span>
-                                            </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <h2 class="verify-msg" id="msg">
+                                <h2 class="verify-msg" id="msg">
 
-                            </h2>
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script type="text/javascript">
-    var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
-    QRCode.toDataURL(url, {errorCorrectionLevel: "M"}, function (rtt, url) {
-        document.getElementById("qrc").src = url;
-    })
-    document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
-    if (getTo().yr !== yr || getTo().mo !== mo || getTo().da !== da) {
-        document.getElementById("msg").innerHTML = info[2];
-    } else {
-        if (tkp !== 0) {
-            if (checkScan()) {
-                document.getElementById("msg").innerHTML = info[3];
-            } else {
-                document.getElementById("msg").innerHTML = info[1];
-                writeScan();
+    <script type="text/javascript">
+        var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
+        QRCode.toDataURL(url, { errorCorrectionLevel: "M" }, function (rtt, url) {
+            document.getElementById("qrc").src = url;
+        })
+        document.getElementsByClassName("order-panel")[0].style = "font-size: " + ratio + "vw !important;";
+        if (getTo().yr !== yr || getTo().mo !== mo || getTo().da !== da) {
+            document.getElementById("msg").innerHTML = info[2];
+        } else {
+            if (tkp !== 0) {
+                if (checkScan()) {
+                    document.getElementById("msg").innerHTML = info[3];
+                } else {
+                    document.getElementById("msg").innerHTML = info[1];
+                    writeScan();
+                }
             }
         }
-    }
-</script>
+    </script>
 </body>
+
 </html>

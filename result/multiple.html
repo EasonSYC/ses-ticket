@@ -1,121 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <script>
         document.write("<script type='text/javascript' src='/script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
     </script>
+
     <title>我的预订</title>
+
     <link href="/favicon.png" id="favicon" rel="shortcut icon" sizes="16x16 32x32 48x48" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="/layout/common.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <style>.order-panel {
-        width: 25em;
-        padding: 1em;
-        border: solid 1px #ccc;
-        text-align: center;
-        color: #333
-    }
 
-    .order-name {
-        width: 4.8em;
-        padding: 2px 4px;
-        color: #333;
-        font-size: 2em;
-        font-weight: 700
-    }
+    <style>
+        .order-panel {
+            width: 25em;
+            padding: 1em;
+            border: solid 1px #ccc;
+            text-align: center;
+            color: #333
+        }
 
-    .img-qrcode {
-        width: 9.6em
-    }
+        .order-name {
+            width: 4.8em;
+            padding: 2px 4px;
+            color: #333;
+            font-size: 2em;
+            font-weight: 700
+        }
 
-    .user-name {
-        font-size: 2.4em;
-        margin-top: .2em
-    }
+        .img-qrcode {
+            width: 9.6em
+        }
 
-    .ticket-body {
-        padding-right: 1em
-    }
+        .user-name {
+            font-size: 2.4em;
+            margin-top: .2em
+        }
 
-    .order-area {
-        margin: -.3em 0;
-        font-size: 10em;
-        font-weight: 700
-    }
+        .ticket-body {
+            padding-right: 1em
+        }
 
-    .order-area-tail {
-        font-size: .2em
-    }
+        .order-area {
+            margin: -.3em 0;
+            font-size: 10em;
+            font-weight: 700
+        }
 
-    .order-location {
-        margin-top: .75em;
-        font-size: 1.8em;
-        line-height: 2em;
-        font-weight: 700
-    }</style>
-    <style>.global-alert {
-        z-index: 2000
-    }
+        .order-area-tail {
+            font-size: .2em
+        }
 
-    #gAlertModal .modal-content {
-        padding: 8px
-    }
+        .order-location {
+            margin-top: .75em;
+            font-size: 1.8em;
+            line-height: 2em;
+            font-weight: 700
+        }
+    </style>
+    <style>
+        .global-alert {
+            z-index: 2000
+        }
 
-    #gAlertModal #gAlertMsg {
-        padding: 20px 8px
-    }</style>
+        #gAlertModal .modal-content {
+            padding: 8px
+        }
+
+        #gAlertModal #gAlertMsg {
+            padding: 20px 8px
+        }
+    </style>
 </head>
+
 <body>
-<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <button class="close float-right" id="gAlertButton" type="button">
-                <span aria-hidden="true">×</span>
-            </button>
-            <div class="text-center font-weight-bold" id="gAlertMsg"></div>
+    <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <button class="close float-right" id="gAlertButton" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <div class="text-center font-weight-bold" id="gAlertMsg"></div>
+            </div>
         </div>
     </div>
-</div>
-<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
-<script>
-    let urll = document.location.toString();
-    let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
-    if (!exists()) {
-        noLogin(window.location.pathname.replace("/sesticket/", "./") + "?" + urlParmmStr);
-    }
-</script>
-<script>
-    document.write("<script type='text/javascript' src='/script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
-</script>
-<div id="gApp">
-    <div class="row no-gutters" id="res">
+    <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+    <script>
+        let urll = document.location.toString();
+        let urlParmmStr = urll.slice(urll.indexOf("?") + 1);
+        if (!exists()) {
+            noLogin(window.location.pathname + "?" + urlParmmStr);
+        }
+    </script>
+    <script>
+        document.write("<script type='text/javascript' src='/script/qrcode.min.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
+    <div id="gApp">
+        <div class="row no-gutters" id="res">
 
+        </div>
     </div>
-</div>
-<script id="res2"></script>
-<script>
-    document.write("<script type='text/javascript' src='/script/show/multiple.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
-</script>
-<script>
-</script>
-<script type="text/javascript">
-    let arrr = document.getElementsByClassName("order-panel")
-    for (let i = 0; i < arrr.length; ++i) {
-        let ratio = 1.9 * (arrr[i].resize || 100) / 100;
-        arrr[i].style = "font-size: " + ratio + "vw !important;";
-    }
-</script>
-<script type="text/javascript">
-    document.getElementById("gAlertButton").onclick = gAlertClose;
-    document.getElementById("gAlertModal").onclick = gAlertClose;
-</script>
+    <script id="res2"></script>
+    <script>
+        document.write("<script type='text/javascript' src='/script/show/multiple.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+    </script>
+    <script>
+    </script>
+    <script type="text/javascript">
+        let arrr = document.getElementsByClassName("order-panel")
+        for (let i = 0; i < arrr.length; ++i) {
+            let ratio = 1.9 * (arrr[i].resize || 100) / 100;
+            arrr[i].style = "font-size: " + ratio + "vw !important;";
+        }
+    </script>
+    <script type="text/javascript">
+        document.getElementById("gAlertButton").onclick = gAlertClose;
+        document.getElementById("gAlertModal").onclick = gAlertClose;
+    </script>
 </body>
+
 </html>

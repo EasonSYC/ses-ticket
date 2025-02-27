@@ -127,7 +127,7 @@
 	<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
 	<script>
 		if (!exists()) {
-			noLogin("./my.html");
+			noLogin(window.location.pathname);
 		}
 	</script>
 	<div id="gApp">
@@ -141,7 +141,7 @@
 									<div class="row no-gutters">
 										<div class="col-3 col-sm-2">
 											<script>
-												document.write("<div id=\"port\" style=\"height: 86.828px; width: 86.828px; background-image: url(./image/portraits/" + getInfo("id") + ".png); background-size: 86.828px\" class=\"thumbnail img-port\"></div>");
+												document.write("<div id=\"port\" style=\"height: 86.828px; width: 86.828px; background-image: url(/image/portraits/" + getInfo("id") + ".png); background-size: 86.828px\" class=\"thumbnail img-port\"></div>");
 											</script>
 										</div>
 										<div class="col-9">
@@ -178,7 +178,7 @@
 										<script>
 											let charge = document.getElementById("charge");
 											charge.onclick = function () {
-												window.location.replace("./charge.html");
+												window.location.replace("/charge.html");
 											}
 										</script>
 									</div>
@@ -203,7 +203,7 @@
 											let exit = document.getElementById("exit");
 											exit.onclick = function () {
 												delCookie("acc");
-												window.location.replace("./login.html?ref=./index.html");
+												window.location.replace("/login.html?ref=/index.html");
 											}
 										</script>
 									</div>
@@ -220,22 +220,22 @@
 							<div class="viewport">
 								<div class="bg-light border-top"></div>
 								<div class="footer shadow-sm d-flex justify-content-around text-center">
-									<a data-nav="gen" href="./index.html">
+									<a data-nav="gen" href="/index.html">
 										<i class="fa fa-cubes footer-icon"></i>
 										<br>
 										服务
 									</a>
-									<a data-nav="pol" href="./policy.html">
+									<a data-nav="pol" href="/policy.html">
 										<i class="fa fa-comments footer-icon"></i>
 										<br>
 										协议
 									</a>
-									<a data-nav="help" href="./help.html">
+									<a data-nav="help" href="/help.html">
 										<i class="fa fa-question-circle footer-icon"></i>
 										<br>
 										帮助
 									</a>
-									<a class="focus" data-nav="mine" href="./my.html">
+									<a class="focus" data-nav="mine" href="/my.html">
 										<i class="fa fa-user footer-icon"></i>
 										<br>
 										我的

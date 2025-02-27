@@ -42,11 +42,13 @@ a:hover {
     display: table-cell;
     width: 1%;
   }
+
   .nav-justified>li>a {
     border-bottom: 1px solid #ddd !important;
     border-radius: 4px 4px 0 0 !important;
     margin-bottom: 0 !important;
   }
+
   .nav-justified>li.active>a {
     border-bottom: none !important;
   }
@@ -144,7 +146,8 @@ a:hover {
   padding-bottom: 80px;
 }
 
-.ticket-list .table, .ticket-list .list-group {
+.ticket-list .table,
+.ticket-list .list-group {
   margin: 0;
 }
 
@@ -174,7 +177,8 @@ a:hover {
   margin-bottom: 0 !important;
 }
 
-.ticket-item .ticket-type, .ticket-item .ticket-status {
+.ticket-item .ticket-type,
+.ticket-item .ticket-status {
   float: right;
   display: block;
   font-weight: normal;
@@ -222,7 +226,9 @@ a:hover {
   border-color: #fff8dc;
 }
 
-.ticket-item.active .ticket-title, .ticket-item.active .ticket-status, .ticket-item.active .ticket-msg {
+.ticket-item.active .ticket-title,
+.ticket-item.active .ticket-status,
+.ticket-item.active .ticket-msg {
   color: #fc8602;
 }
 
@@ -230,7 +236,9 @@ a:hover {
   border-color: #c5f9e3;
 }
 
-.ticket-item.approved .ticket-title, .ticket-item.approved .ticket-status, .ticket-item.approved .ticket-msg {
+.ticket-item.approved .ticket-title,
+.ticket-item.approved .ticket-status,
+.ticket-item.approved .ticket-msg {
   color: #40cc9d;
 }
 
@@ -238,7 +246,9 @@ a:hover {
   border-color: #fabdbb;
 }
 
-.ticket-item.rejected .ticket-title, .ticket-item.rejected .ticket-status, .ticket-item.rejected .ticket-msg {
+.ticket-item.rejected .ticket-title,
+.ticket-item.rejected .ticket-status,
+.ticket-item.rejected .ticket-msg {
   color: #d9534f;
 }
 

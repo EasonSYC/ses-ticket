@@ -48,14 +48,14 @@
         if (exists()) {
             let url = document.location.toString();
             let qlocurl = url.indexOf("?");
-            if (qlocurl === -1) window.location.replace("./index.html");
+            if (qlocurl === -1) window.location.replace("/index.html");
             else {
                 let urlParmStr = url.slice(qlocurl + 1);
                 let ulocurl = urlParmStr.indexOf("=");
-                if (ulocurl === -1) window.location.replace("./index.html");
+                if (ulocurl === -1) window.location.replace("/index.html");
                 else {
                     let lnk = urlParmStr.slice(ulocurl + 1);
-                    if (lnk === undefined || lnk === null) window.location.replace("./index.html");
+                    if (lnk === undefined || lnk === null) window.location.replace("/index.html");
                     else {
                         window.location.replace(lnk);
                     }

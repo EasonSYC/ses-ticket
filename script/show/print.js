@@ -16,7 +16,7 @@ let tkp = 0;
 
 if (chargeStat === 1) {
     gAlert("未找到有效充值！");
-    setTimeout(function () { window.location.replace("../charge.html") }, 800)
+    setTimeout(function () { window.location.replace("/charge.html") }, 800)
 } else if (!getUserInfo("name", name, "allow").includes(food)) {
     gAlert("权限不足以生成该餐票！");
     setTimeout(function () { window.history.back() }, 800);

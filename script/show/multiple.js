@@ -14,7 +14,7 @@ let chargeStat = verifyCharge(getUserInfo("name", getName(), "id"));
 
 if (chargeStat === 1) {
     gAlert("未找到有效充值！");
-    setTimeout(function () { window.location.replace("../charge.html") }, 800)
+    setTimeout(function () { window.location.replace("/charge.html") }, 800)
 } else {
     for (let i = 0; i < min(api.length, 250); ++i) {
         let chc = api[i];
