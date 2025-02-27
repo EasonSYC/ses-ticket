@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+
     <title>我的预订</title>
+
     <link href="/favicon.png" rel="shortcut icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/layout/common.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+    <link href="/layout/h5.css" rel="stylesheet">
+
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="/layout/common.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-    <link href="/layout/h5.css" rel="stylesheet">
     <style type="text/css">
         .verify-msg {
             font-size: 3em;
@@ -23,7 +26,6 @@
             text-align: center
         }
     </style>
-
     <style>
         .body-wrapper {
             position: absolute;
@@ -110,6 +112,7 @@
     <script>
         document.write("<script type='text/javascript' src='/script/show/scan.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
     </script>
+    
     <div id="gApp">
         <div class="body-wrapper">
             <div class="container px-0">
@@ -164,6 +167,7 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript">
         var ratio = 3.8 * (document.getElementsByClassName("order-panel")[0].resize || 100) / 100;
         QRCode.toDataURL(url, { errorCorrectionLevel: "M" }, function (rtt, url) {

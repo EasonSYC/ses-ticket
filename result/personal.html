@@ -3,19 +3,107 @@
 
 <head>
     <meta charset="utf-8">
+
     <title>个人设置</title>
     <link href="/favicon.png" rel="shortcut icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/layout/common.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+    <link href="/layout/h5.css" rel="stylesheet">
+
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta name="description" content="">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="/layout/common.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-    <link href="/layout/h5.css" rel="stylesheet">
+    <style>
+        .header-wrapper {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1000
+        }
+
+        .header {
+            height: 3.8em;
+            border-bottom: solid 1px #ccc;
+            background-color: #fff;
+            color: #666
+        }
+    </style>
+    <style>
+        .body-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0;
+            z-index: 500
+        }
+
+        .content-bg {
+            background-color: #fff;
+            padding-bottom: 10em;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden
+        }
+
+        .body-container {
+            padding-top: 3.8em
+        }
+    </style>
+    <style>
+        .footer-wrapper {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: auto;
+            z-index: 1000
+        }
+
+        .footer {
+            height: 56px;
+            background: #fff;
+            padding-top: 6px;
+            font-size: .8em
+        }
+
+        .footer a {
+            position: relative
+        }
+
+        .footer-badge {
+            position: absolute;
+            top: 0;
+            right: -1.5em;
+            display: block;
+            min-width: 1.6em;
+            height: 1.6em;
+            border-radius: .8em;
+            padding: 0 .5em;
+            background-color: #d00;
+            text-align: center;
+            color: #fff;
+            font-weight: 700
+        }
+
+        .footer a.focus {
+            color: #40cc9d
+        }
+
+        .footer .footer-icon {
+            margin: 2px;
+            font-size: 24px
+        }
+    </style>
 </head>
 
 <body>
@@ -106,92 +194,6 @@
             </div>
         </div>
     </div>
-    <style>
-        .header-wrapper {
-            width: 100%;
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 1000
-        }
-
-        .header {
-            height: 3.8em;
-            border-bottom: solid 1px #ccc;
-            background-color: #fff;
-            color: #666
-        }
-    </style>
-    <style>
-        .body-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 0;
-            z-index: 500
-        }
-
-        .content-bg {
-            background-color: #fff;
-            padding-bottom: 10em;
-            height: 100vh;
-            overflow-y: scroll;
-            overflow-x: hidden
-        }
-
-        .body-container {
-            padding-top: 3.8em
-        }
-    </style>
-    <style>
-        .footer-wrapper {
-            width: 100%;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            top: auto;
-            z-index: 1000
-        }
-
-        .footer {
-            height: 56px;
-            background: #fff;
-            padding-top: 6px;
-            font-size: .8em
-        }
-
-        .footer a {
-            position: relative
-        }
-
-        .footer-badge {
-            position: absolute;
-            top: 0;
-            right: -1.5em;
-            display: block;
-            min-width: 1.6em;
-            height: 1.6em;
-            border-radius: .8em;
-            padding: 0 .5em;
-            background-color: #d00;
-            text-align: center;
-            color: #fff;
-            font-weight: 700
-        }
-
-        .footer a.focus {
-            color: #40cc9d
-        }
-
-        .footer .footer-icon {
-            margin: 2px;
-            font-size: 24px
-        }
-    </style>
 </body>
 
 </html>
