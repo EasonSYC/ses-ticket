@@ -8,7 +8,11 @@ This is a system of generating or pulling tickets for SES canteen.
 
 #### Rules
 
-DO NOT USE IT FOR ILLEGAL USES. The user should bear the results themselves.
+This is only for demonstration purposes, and the authors do not endorse its use in any way.
+
+DO NOT USE IT FOR ILLEGAL ACTIVITIES.
+
+The users shall be responsible for their own activites, and the developers are not responsible of this in any way.
 
 #### TODO:
 
