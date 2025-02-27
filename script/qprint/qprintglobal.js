@@ -6,7 +6,7 @@ function delQprintCookie() {
     let d = new Date();
     d.setTime(d.getTime() - 1);
     let c = getCookie("qprint");
-    document.cookie = "qprint" + "=" + c + ";expires=" + d.toUTCString() + ";path=/sesticket/qprint";
+    document.cookie = "qprint" + "=" + c + ";expires=" + d.toUTCString() + ";path=/qprint";
 }
 
 function getQprintName() {

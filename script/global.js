@@ -89,7 +89,7 @@ let before =
 	"<p class=\"display-1 text-danger py-3\" id=\"error-typ\"> 404 </p>" +
 	"<p class=\"text-muted\" id=\"error-prompt\" style=\"font-size: 25px\">页面建设中...</p>";
 let home =
-	"<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/sesticket/index.html\" id=\"g-but\">" +
+	"<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/index.html\" id=\"g-but\">" +
 	"首页" +
 	"</a>";
 let back =
@@ -98,14 +98,14 @@ let back =
 	"</a>";
 let after =
 	"" +
-	"<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/sesticket/help.html#NotFound\">" +
+	"<a class=\"btn btn-outline-secondary px-5 mt-5\" href=\"/help.html#NotFound\">" +
 	"帮助" +
 	"</a>";
 
 // error functions
 
 function jumpError(a) {
-	window.location.replace("/sesticket/error.html#" + a);
+	window.location.replace("/error.html#" + a);
 }
 
 // Warning Arrays

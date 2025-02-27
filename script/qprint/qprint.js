@@ -8,7 +8,7 @@ log.onclick = function () {
     let d = new Date();
     d.setTime(d.getTime() + (5 * 60 * 1000));
     let expires = d.toUTCString();
-    let cookie = "qprint=" + username + "@" + password + ";expires=" + expires + ";path=/sesticket/qprint";
+    let cookie = "qprint=" + username + "@" + password + ";expires=" + expires + ";path=/qprint";
     document.cookie = cookie;
     if (qprintExists()) {
         window.location.reload();
