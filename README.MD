@@ -14,6 +14,10 @@ DO NOT USE IT FOR ILLEGAL ACTIVITIES.
 
 The users shall be responsible for their own activites, and the developers are not responsible of this in any way.
 
+#### Note
+
+Efforts had been made to identify sources of `qrcode.min.js` and the `sha1` function in `global.js`, however we couldn't identify the sources of the files.
+
 #### TODO:
 
 - Store Tickets Locally
