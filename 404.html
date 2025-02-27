@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 
 	<script>
-        document.write("<script type='text/javascript' src='/script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
-    </script>
+		document.write("<script type='text/javascript' src='/script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+	</script>
 
 	<title>餐票 - 404</title>
-	
+
 	<meta content="text/html;charset=UTF-8" http-equiv="Content-type">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
 	<meta content="" name="keywords">
 	<meta content="" name="description">
-	
+
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<button class="close float-right" id="gAlertButton" type="button">
-				<span aria-hidden="true">×</span>
-			</button>
-			<div class="text-center font-weight-bold" id="gAlertMsg"></div>
+	<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<button class="close float-right" id="gAlertButton" type="button">
+					<span aria-hidden="true">×</span>
+				</button>
+				<div class="text-center font-weight-bold" id="gAlertMsg"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
-<div class="container">
-	<div class="text-center py-5" id="but">
+	<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+	<div class="container">
+		<div class="text-center py-5" id="but">
+		</div>
 	</div>
-</div>
 
-<script>
-	document.write("<script type='text/javascript' src='/script/404.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
-</script>
-<script>
-	document.getElementById("gAlertButton").onclick = gAlertClose;
-	document.getElementById("gAlertModal").onclick = gAlertClose;
-</script>
+	<script>
+		document.write("<script type='text/javascript' src='/script/404.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
+	</script>
+	<script>
+		document.getElementById("gAlertButton").onclick = gAlertClose;
+		document.getElementById("gAlertModal").onclick = gAlertClose;
+	</script>
 </body>
 
 </html>

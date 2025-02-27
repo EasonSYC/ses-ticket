@@ -1,159 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <script>
         document.write("<script type='text/javascript' src='/script/global.js?v=" + Math.round(new Date().getTime() / 86400000) + "'><\/script>");
     </script>
+
     <title>餐票 - 帮助</title>
-    <link href="/favicon.png" rel="shortcut icon">
+
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+    <link href="/favicon.png" rel="shortcut icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="/layout/common.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
     <link href="/layout/h5.css" rel="stylesheet">
 
-    <style>.body-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 0;
-        z-index: 500
-    }
+    <style>
+        .body-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0;
+            z-index: 500
+        }
 
-    .content-bg {
-        background-color: #fff;
-        padding-bottom: 10em;
-        height: 100vh;
-        overflow-y: scroll;
-        overflow-x: hidden
-    }
+        .content-bg {
+            background-color: #fff;
+            padding-bottom: 10em;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden
+        }
 
-    .body-container {
-        padding-top: 3.8em
-    }</style>
-    <style>.footer-wrapper {
-        width: 100%;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        top: auto;
-        z-index: 1000
-    }
+        .body-container {
+            padding-top: 3.8em
+        }
+    </style>
+    <style>
+        .footer-wrapper {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: auto;
+            z-index: 1000
+        }
 
-    .footer {
-        height: 56px;
-        background: #fff;
-        border-top: solid 1px #ccc;
-        padding-top: 6px;
-        font-size: .8em
-    }
+        .footer {
+            height: 56px;
+            background: #fff;
+            border-top: solid 1px #ccc;
+            padding-top: 6px;
+            font-size: .8em
+        }
 
-    .footer a {
-        position: relative
-    }
+        .footer a {
+            position: relative
+        }
 
-    .footer-badge {
-        position: absolute;
-        top: 0;
-        right: -1.5em;
-        display: block;
-        min-width: 1.6em;
-        height: 1.6em;
-        border-radius: .8em;
-        padding: 0 .5em;
-        background-color: #d00;
-        text-align: center;
-        color: #fff;
-        font-weight: 700
-    }
+        .footer-badge {
+            position: absolute;
+            top: 0;
+            right: -1.5em;
+            display: block;
+            min-width: 1.6em;
+            height: 1.6em;
+            border-radius: .8em;
+            padding: 0 .5em;
+            background-color: #d00;
+            text-align: center;
+            color: #fff;
+            font-weight: 700
+        }
 
-    .footer a.focus {
-        color: #40cc9d
-    }
+        .footer a.focus {
+            color: #40cc9d
+        }
 
-    .footer .footer-icon {
-        margin: 2px;
-        font-size: 24px
-    }</style>
+        .footer .footer-icon {
+            margin: 2px;
+            font-size: 24px
+        }
+    </style>
 </head>
+
 <body>
-<div class="modal fade global-alert" id="gAlertModal" style="display: none;">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <button class="close float-right" id="gAlertButton" type="button">
-                <span aria-hidden="true">×</span>
-            </button>
-            <div class="text-center font-weight-bold" id="gAlertMsg"></div>
+    <div class="modal fade global-alert" id="gAlertModal" style="display: none;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <button class="close float-right" id="gAlertButton" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <div class="text-center font-weight-bold" id="gAlertMsg"></div>
+            </div>
         </div>
     </div>
-</div>
-<div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
-<div id="gApp">
-    <div class="body-wrapper">
-        <div class="container px-0">
-            <div class="row no-gutters">
-                <div class="col-xl-6 offset-xl-3">
-                    <div class="viewport">
-                        <div class="content-bg">
-                            <div class="p-2">
-                                <div class="row no-gutters">
-                                    <div class="col-12 p-1" id="AccountProblem">
-                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
-                                            <i class="fa fa-key icon-orange fa-2x mb-2"></i>
-                                            <br>
-                                            <h4>忘记密码/升级权限</h4>
-                                            <br>
-                                            <p>请联系网站管理者。</p>
-                                        </a>
+    <div class="modal-backdrop fade" id="gAlertBack" style="display: none;"></div>
+    <div id="gApp">
+        <div class="body-wrapper">
+            <div class="container px-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-6 offset-xl-3">
+                        <div class="viewport">
+                            <div class="content-bg">
+                                <div class="p-2">
+                                    <div class="row no-gutters">
+                                        <div class="col-12 p-1" id="AccountProblem">
+                                            <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                                <i class="fa fa-key icon-orange fa-2x mb-2"></i>
+                                                <br>
+                                                <h4>忘记密码/升级权限</h4>
+                                                <br>
+                                                <p>请联系网站管理者。</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 p-1" id="WrongInformation">
+                                            <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                                <i class="fa fa-address-card icon-red fa-2x mb-2"></i>
+                                                <br>
+                                                <h4>信息有误</h4>
+                                                <br>
+                                                <p>部分浏览器有缓存问题，</p>
+                                                <p>请清空历史记录并刷新重试。</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 p-1" id="NotFound">
+                                            <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                                <i class="fa fa-question icon-green fa-2x mb-2"></i>
+                                                <br>
+                                                <h4>400 401</h4>
+                                                <br>
+                                                <p>请稍后刷新重试！</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 p-1">
+                                            <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                                <i class="fa fa-microchip icon-purple fa-2x mb-2"></i>
+                                                <br>
+                                                <h4>403 404 405</h4>
+                                                <br>
+                                                <p>请检查您所输入的内容！</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 p-1">
+                                            <a class="d-block rounded shadow-sm text-center px-1 py-3">
+                                                <i class="fa fa-window-close icon-orange fa-2x mb-2"></i>
+                                                <br>
+                                                <h4>500 502</h4>
+                                                <br>
+                                                <p>服务器错误，请稍后刷新重试！</p>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="col-12 p-1" id="WrongInformation">
-                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
-                                            <i class="fa fa-address-card icon-red fa-2x mb-2"></i>
-                                            <br>
-                                            <h4>信息有误</h4>
-                                            <br>
-                                            <p>部分浏览器有缓存问题，</p>
-                                            <p>请清空历史记录并刷新重试。</p>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 p-1" id="NotFound">
-                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
-                                            <i class="fa fa-question icon-green fa-2x mb-2"></i>
-                                            <br>
-                                            <h4>400 401</h4>
-                                            <br>
-                                            <p>请稍后刷新重试！</p>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 p-1">
-                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
-                                            <i class="fa fa-microchip icon-purple fa-2x mb-2"></i>
-                                            <br>
-                                            <h4>403 404 405</h4>
-                                            <br>
-                                            <p>请检查您所输入的内容！</p>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 p-1">
-                                        <a class="d-block rounded shadow-sm text-center px-1 py-3">
-                                            <i class="fa fa-window-close icon-orange fa-2x mb-2"></i>
-                                            <br>
-                                            <h4>500 502</h4>
-                                            <br>
-                                            <p>服务器错误，请稍后刷新重试！</p>
-                                        </a>
-                                    </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -195,10 +204,12 @@
             </div>
         </div>
     </div>
-</div>
-<script>
-    document.getElementById("gAlertButton").onclick = gAlertClose;
-    document.getElementById("gAlertModal").onclick = gAlertClose;
-</script>
+    </div>
+
+    <script>
+        document.getElementById("gAlertButton").onclick = gAlertClose;
+        document.getElementById("gAlertModal").onclick = gAlertClose;
+    </script>
 </body>
+
 </html>
